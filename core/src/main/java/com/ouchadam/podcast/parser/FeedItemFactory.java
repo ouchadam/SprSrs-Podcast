@@ -30,40 +30,32 @@ public class FeedItemFactory implements FeedParser {
 
     @Override
     public List<Message> parse(Document doc) {
-        NodeList body = doc.getElementsByTagName("rss").item(0).getChildNodes().item(1).getChildNodes();
-        System.out.println("Test ::  body length : " + body.getLength());
-        System.out.println("Test ::  item 0 : " + body.item(0).getTextContent());
+        int itemAmount = doc.getElementsByTagName("item").getLength();
 
         List<Message> messages = new ArrayList<Message>();
-//        for (int i = 0; i < 1; i ++) {
-//            messages.add(parseMessage(body.item(i).getChildNodes()));
-//        }
+        for (int i = 0; i < 10; i ++) {
+            messages.add(parseMessage(doc.getElementsByTagName("item").item(i).getChildNodes()));
+        }
 
         return messages;
     }
 
     private static Message parseMessage(NodeList item) {
-        System.out.println("Test ::  item length : " + item.getLength());
-
         final Message message = new Message();
-        for (int i = 0; i < item.getLength(); i++) {
-            Node n = item.item(i);
-
-//            if (n.getNodeType() == Node.ELEMENT_NODE) {
-
-            System.out.println("Test :: item : " + i + " is : " + nodeToString(n));
-            System.out.println("Test :: type : " + n.getNodeType());
-
-                if (TITLE.equalsIgnoreCase(n.getNodeName())) {
-                    message.setTitle(nodeToString(n));
-                } else if (LINK.equalsIgnoreCase(n.getNodeName())) {
-                    message.setLink(nodeToString(n));
-                } else if (DESCRIPTION.equalsIgnoreCase(n.getNodeName())) {
-                    message.setDescription(nodeToString(n));
-                } else if (PUB_DATE.equalsIgnoreCase(n.getNodeName())) {
-                        message.setDate(nodeToString(n));
+        for (int i = 0; i < item.getLength(); i ++) {
+            if (item.item(i).getNodeType() == 1) {
+                if (item.item(i).getNodeName().equalsIgnoreCase(TITLE)) {
+                    message.setTitle(nodeToString(item.item(i)));
+                } else if (item.item(i).getNodeName().equalsIgnoreCase(LINK)) {
+                    message.setLink(nodeToString(item.item(i)));
+                } else if (item.item(i).getNodeName().equalsIgnoreCase(DESCRIPTION)) {
+                    message.setDescription(nodeToString(item.item(i)));
+                } else if (item.item(i).getNodeName().equalsIgnoreCase(PUB_DATE)) {
+                    message.setDate(nodeToString(item.item(i)));
+                } else if (item.item(i).getNodeName().equalsIgnoreCase(IMAGE_URL)) {
+                    message.setImageLink(nodeToString(item.item(i)));
                 }
-//            }
+            }
         }
         return message;
     }

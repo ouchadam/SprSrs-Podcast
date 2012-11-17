@@ -35,7 +35,13 @@ public class Message implements Comparable<Message>{
 	}
 
     public URL getImageLink() {
-        return imageLink;
+        try {
+            return new URL("http://google.com");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return null;
+//        return imageLink;
     }
 
     public void setImageLink(String link) {
@@ -55,8 +61,7 @@ public class Message implements Comparable<Message>{
 	}
 
 	public String getDate() {
-        return "date";
-//		return FORMATTER.format(this.date);
+		return FORMATTER.format(this.date);
 	}
 
 	public void setDate(String date) {

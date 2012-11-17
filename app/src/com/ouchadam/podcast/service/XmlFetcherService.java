@@ -2,10 +2,10 @@ package com.ouchadam.podcast.service;
 
 import android.app.IntentService;
 import android.content.Intent;
+import com.ouchadam.podcast.Message;
 import com.ouchadam.podcast.builder.IntentFactory;
 import com.ouchadam.podcast.database.DatabaseUtil;
 import com.ouchadam.podcast.helper.RSSFeedHelper;
-import com.ouchadam.podcast.util.Message;
 
 import java.util.List;
 
