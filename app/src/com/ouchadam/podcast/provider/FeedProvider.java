@@ -21,7 +21,7 @@ public class FeedProvider extends ContentProvider {
     private static final int FEEDS = 10;
     private static final int FEED_TABLE_ID = 20;
 
-    private static final String AUTHORITY = "com.adam.podcast.provider.FeedProvider";
+    private static final String AUTHORITY = "com.ouchadam.podcast.provider.FeedProvider";
 
     public static final String BASE_PATH = "feeds";
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + BASE_PATH);
