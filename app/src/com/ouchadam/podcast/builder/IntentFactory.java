@@ -2,7 +2,7 @@ package com.ouchadam.podcast.builder;
 
 import android.content.Intent;
 import com.ouchadam.podcast.activity.DetailsActivity;
-import com.ouchadam.podcast.activity.MessageList;
+import com.ouchadam.podcast.activity.FeedListActivity;
 import com.ouchadam.podcast.activity.SubscriptionsActivity;
 import com.ouchadam.podcast.application.RSS;
 import com.ouchadam.podcast.receiver.ParseReceiver;
@@ -36,7 +36,7 @@ public class IntentFactory {
     }
 
     public static Intent getSubscriptionFeed() {
-        Intent intent = new Intent(RSS.getContext(), MessageList.class);
+        Intent intent = new Intent(RSS.getContext(), FeedListActivity.class);
         return intent;
     }
 

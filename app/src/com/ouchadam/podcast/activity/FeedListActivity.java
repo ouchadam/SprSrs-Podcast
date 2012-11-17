@@ -18,7 +18,7 @@ import com.ouchadam.podcast.receiver.ParseReceiver;
 
 import java.util.List;
 
-public class MessageList extends ListActivity implements OnParseFinished {
+public class FeedListActivity extends ListActivity implements OnParseFinished {
 	
     private FeedItemAdapter adapter;
     private ParseReceiver receiver;
@@ -67,7 +67,6 @@ public class MessageList extends ListActivity implements OnParseFinished {
         initAdapter(messages);
         progressBar.setVisibility(View.INVISIBLE);
     }
-
 
     private void initAdapter(List<FeedItem> messages) {
         adapter = new FeedItemAdapter(this, R.layout.item_feed, messages);

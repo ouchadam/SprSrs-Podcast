@@ -10,7 +10,7 @@
 
         <service android:enabled="true" android:name="com.ouchadam.podcast.service.XmlFetcherService"></service>
 
-        <activity android:name="com.ouchadam.podcast.activity.MessageList"
+        <activity android:name=".activity.FeedListActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
