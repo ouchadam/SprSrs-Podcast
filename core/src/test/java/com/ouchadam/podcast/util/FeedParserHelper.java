@@ -13,9 +13,10 @@ import static org.junit.Assert.fail;
 
 public class FeedParserHelper {
 
-    private static final String TEST_FILE_PATH = "core/src/main/res/";
-
     private static final DocumentBuilderFactory FACTORY = DocumentBuilderFactory.newInstance();
+    private static final String TEST_FILE_PATH = "core/src/main/res/";
+    private static final String STUFF_YOU_SHOULD_KNOW = "stuff_you_should_know.rss";
+    private static final String STUFF_TO_BLOW_YOUR_MIND = "stuff_to_blow_your_mind.rss";
     private final DocumentBuilder builder;
 
     public FeedParserHelper() {
@@ -38,7 +39,7 @@ public class FeedParserHelper {
     }
 
     private File createFile() {
-        return new File((TEST_FILE_PATH + "stuff_you_should_know.rss").toString());
+        return new File((TEST_FILE_PATH + STUFF_TO_BLOW_YOUR_MIND).toString());
     }
 
 }
