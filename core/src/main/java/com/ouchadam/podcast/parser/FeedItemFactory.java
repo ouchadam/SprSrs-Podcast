@@ -52,8 +52,6 @@ public class FeedItemFactory implements FeedParser {
                     message.setDescription(nodeToString(item.item(i)));
                 } else if (item.item(i).getNodeName().equalsIgnoreCase(PUB_DATE)) {
                     message.setDate(nodeToString(item.item(i)));
-                } else if (item.item(i).getNodeName().equalsIgnoreCase(IMAGE_URL)) {
-                    message.setImageLink(nodeToString(item.item(i)));
                 }
             }
         }

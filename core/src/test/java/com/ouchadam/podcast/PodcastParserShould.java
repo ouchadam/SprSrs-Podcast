@@ -15,7 +15,8 @@ import static org.mockito.Mockito.verify;
 public class PodcastParserShould {
 
     Document doc = new FeedParserHelper().getDocFromRes();
-    NodeList item = doc.getElementsByTagName("item").item(0).getChildNodes();
+    NodeList itemList = doc.getElementsByTagName("item");
+    NodeList tenthItem = itemList.item(10).getChildNodes();
     FeedItem paresedItem = mock(FeedItem.class);
 
 
@@ -26,9 +27,9 @@ public class PodcastParserShould {
 
     @Test
     public void shouldParseItemTitle() {
-        for (int i = 0; i < item.getLength(); i ++) {
-            if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
-                if (item.item(i).getNodeName().equalsIgnoreCase("title")) {
+        for (int i = 0; i < tenthItem.getLength(); i ++) {
+            if (tenthItem.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                if (tenthItem.item(i).getNodeName().equalsIgnoreCase("title")) {
                     paresedItem.setTitle("");
                 }
             }
@@ -39,9 +40,9 @@ public class PodcastParserShould {
 
     @Test
     public void shouldParseItemDescription() {
-        for (int i = 0; i < item.getLength(); i ++) {
-            if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
-                if (item.item(i).getNodeName().equalsIgnoreCase("description")) {
+        for (int i = 0; i < tenthItem.getLength(); i ++) {
+            if (tenthItem.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                if (tenthItem.item(i).getNodeName().equalsIgnoreCase("description")) {
                     paresedItem.setDescription("");
                 }
             }
@@ -52,9 +53,9 @@ public class PodcastParserShould {
 
     @Test
     public void shouldParseItemDate() {
-        for (int i = 0; i < item.getLength(); i ++) {
-            if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
-                if (item.item(i).getNodeName().equalsIgnoreCase("pubDate")) {
+        for (int i = 0; i < tenthItem.getLength(); i ++) {
+            if (tenthItem.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                if (tenthItem.item(i).getNodeName().equalsIgnoreCase("pubDate")) {
                     paresedItem.setDate("");
                 }
             }
@@ -65,9 +66,9 @@ public class PodcastParserShould {
 
     @Test
     public void shouldParseItemLink() {
-        for (int i = 0; i < item.getLength(); i ++) {
-            if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
-                if (item.item(i).getNodeName().equalsIgnoreCase("link")) {
+        for (int i = 0; i < tenthItem.getLength(); i ++) {
+            if (tenthItem.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                if (tenthItem.item(i).getNodeName().equalsIgnoreCase("link")) {
                     paresedItem.setLink("");
                 }
             }
