@@ -9,11 +9,11 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import com.ouchadam.podcast.pojo.Message;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.adapter.FeedItemAdapter;
 import com.ouchadam.podcast.builder.IntentFactory;
 import com.ouchadam.podcast.parser.interfaces.OnParseFinished;
+import com.ouchadam.podcast.pojo.Message;
 import com.ouchadam.podcast.receiver.ParseReceiver;
 
 import java.util.List;
@@ -30,7 +30,11 @@ public class MessageList extends ListActivity implements OnParseFinished {
         setContentView(R.layout.main);
         initReceiver();
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
-        loadFeed();
+        startLoadingFeed();
+        initListFooter();
+    }
+
+    private void initListFooter() {
         View footerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.footer_layout, null, false);
         getListView().addFooterView(footerView);
     }
@@ -40,7 +44,7 @@ public class MessageList extends ListActivity implements OnParseFinished {
         receiver.setOnParseListener(this);
     }
 
-    private void loadFeed(){
+    private void startLoadingFeed(){
         startService(IntentFactory.getParseService());
     }
 
@@ -57,6 +61,13 @@ public class MessageList extends ListActivity implements OnParseFinished {
         super.onPause();
         unregisterReceiver(receiver);
     }
+
+    @Override
+    public void onParseFinished(List<Message> messages) {
+        initAdapter(messages);
+        progressBar.setVisibility(View.INVISIBLE);
+    }
+
 
     private void initAdapter(List<Message> messages) {
         adapter = new FeedItemAdapter(this, R.layout.item_feed, messages);
@@ -75,11 +86,6 @@ public class MessageList extends ListActivity implements OnParseFinished {
 		startActivity(IntentFactory.getMessageDetails(((Message) l.getItemAtPosition(position)).getTitle()));
 	}
 
-    @Override
-    public void onParseFinished(List<Message> messages) {
-        initAdapter(messages);
-        progressBar.setVisibility(View.INVISIBLE);
-    }
 
 }
 
