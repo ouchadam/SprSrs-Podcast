@@ -76,13 +76,13 @@ public class ItemListFragment extends ListFragment implements OnParseFinished {
     }
 
     @Override
-    public void onParseFinished(List<FeedItem> messages) {
-        initAdapter(messages);
+    public void onParseFinished(List<FeedItem> items) {
+        initAdapter(items);
         progressBar.setVisibility(View.GONE);
     }
 
-    private void initAdapter(List<FeedItem> messages) {
-        adapter = new FeedItemAdapter(context, R.layout.item_feed, messages);
+    private void initAdapter(List<FeedItem> items) {
+        adapter = new FeedItemAdapter(context, R.layout.item_feed, items);
         this.setListAdapter(adapter);
     }
 
