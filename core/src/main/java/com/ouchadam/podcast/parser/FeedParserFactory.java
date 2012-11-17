@@ -1,6 +1,6 @@
 package com.ouchadam.podcast.parser;
 
-import com.ouchadam.podcast.Message;
+import com.ouchadam.podcast.pojo.Message;
 import org.w3c.dom.Document;
 
 import java.util.List;

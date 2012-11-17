@@ -1,6 +1,6 @@
 package com.ouchadam.podcast.parser.interfaces;
 
-import com.ouchadam.podcast.Message;
+import com.ouchadam.podcast.pojo.Message;
 
 import java.util.List;
 

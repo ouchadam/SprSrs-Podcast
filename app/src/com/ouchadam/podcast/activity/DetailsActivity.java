@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.ouchadam.podcast.Message;
+import com.ouchadam.podcast.pojo.Message;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.database.DatabaseUtil;
 import com.ouchadam.podcast.loader.ImageLoader;

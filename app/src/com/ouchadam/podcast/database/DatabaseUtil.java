@@ -3,7 +3,7 @@ package com.ouchadam.podcast.database;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.util.Log;
-import com.ouchadam.podcast.Message;
+import com.ouchadam.podcast.pojo.Message;
 import com.ouchadam.podcast.application.RSS;
 import com.ouchadam.podcast.provider.FeedProvider;
 

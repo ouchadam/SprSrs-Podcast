@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.ouchadam.podcast.Message;
+import com.ouchadam.podcast.pojo.Message;
 import com.ouchadam.podcast.R;
 
 import java.util.List;

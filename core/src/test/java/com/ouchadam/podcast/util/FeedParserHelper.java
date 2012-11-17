@@ -1,6 +1,6 @@
 package com.ouchadam.podcast.util;
 
-import com.ouchadam.podcast.Message;
+import com.ouchadam.podcast.pojo.Message;
 import com.ouchadam.podcast.parser.FeedParserFactory;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;

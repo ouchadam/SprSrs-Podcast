@@ -1,7 +1,7 @@
 package com.ouchadam.podcast.parser;
 
 
-import com.ouchadam.podcast.Message;
+import com.ouchadam.podcast.pojo.Message;
 import com.ouchadam.podcast.parser.interfaces.FeedParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -30,11 +30,11 @@ public class FeedItemFactory implements FeedParser {
 
     @Override
     public List<Message> parse(Document doc) {
-        int itemAmount = doc.getElementsByTagName("item").getLength();
+        int itemAmount = doc.getElementsByTagName(ITEM).getLength();
 
         List<Message> messages = new ArrayList<Message>();
         for (int i = 0; i < 10; i ++) {
-            messages.add(parseMessage(doc.getElementsByTagName("item").item(i).getChildNodes()));
+            messages.add(parseMessage(doc.getElementsByTagName(ITEM).item(i).getChildNodes()));
         }
 
         return messages;

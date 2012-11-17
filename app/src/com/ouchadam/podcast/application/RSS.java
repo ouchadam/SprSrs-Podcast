@@ -2,15 +2,13 @@ package com.ouchadam.podcast.application;
 
 import android.app.Application;
 import android.content.Context;
-import com.ouchadam.podcast.util.Message;
+import com.ouchadam.podcast.pojo.Message;
 
 import java.util.List;
 
 public class RSS extends Application {
 
     public static Context context;
-    public static List<Message> messages;
-
 
     @Override
     public void onCreate() {

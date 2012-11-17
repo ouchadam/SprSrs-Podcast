@@ -1,5 +1,6 @@
 package com.ouchadam.podcast;
 
+import com.ouchadam.podcast.pojo.Message;
 import com.ouchadam.podcast.util.FeedParserHelper;
 import org.junit.Test;
 import org.w3c.dom.Document;

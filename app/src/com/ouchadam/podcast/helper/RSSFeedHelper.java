@@ -1,7 +1,7 @@
 package com.ouchadam.podcast.helper;
 
 import android.content.Context;
-import com.ouchadam.podcast.Message;
+import com.ouchadam.podcast.pojo.Message;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.parser.FeedParserFactory;
 import org.xml.sax.SAXException;
