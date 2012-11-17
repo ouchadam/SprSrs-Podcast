@@ -34,13 +34,7 @@ public class FeedItem implements Comparable<FeedItem>{
 	}
 
     public URL getImageLink() {
-        try {
-            return new URL("http://google.com");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        return null;
-//        return imageLink;
+        return imageLink;
     }
 
     public void setImageLink(String link) {
