@@ -86,7 +86,6 @@ public class MessageList extends ListActivity implements OnParseFinished {
 		startActivity(IntentFactory.getMessageDetails(((Message) l.getItemAtPosition(position)).getTitle()));
 	}
 
-
 }
 
 
