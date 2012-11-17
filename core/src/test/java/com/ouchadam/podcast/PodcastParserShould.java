@@ -17,7 +17,7 @@ public class PodcastParserShould {
     Document doc = new FeedParserHelper().getDocFromRes();
     NodeList itemList = doc.getElementsByTagName("item");
     NodeList tenthItem = itemList.item(10).getChildNodes();
-    FeedItem paresedItem = mock(FeedItem.class);
+    FeedItem parsedItem = mock(FeedItem.class);
 
 
     @Test
@@ -30,12 +30,12 @@ public class PodcastParserShould {
         for (int i = 0; i < tenthItem.getLength(); i ++) {
             if (tenthItem.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 if (tenthItem.item(i).getNodeName().equalsIgnoreCase("title")) {
-                    paresedItem.setTitle("");
+                    parsedItem.setTitle("");
                 }
             }
         }
 
-        verify(paresedItem).setTitle(anyString());
+        verify(parsedItem).setTitle(anyString());
     }
 
     @Test
@@ -43,12 +43,12 @@ public class PodcastParserShould {
         for (int i = 0; i < tenthItem.getLength(); i ++) {
             if (tenthItem.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 if (tenthItem.item(i).getNodeName().equalsIgnoreCase("description")) {
-                    paresedItem.setDescription("");
+                    parsedItem.setDescription("");
                 }
             }
         }
 
-        verify(paresedItem).setDescription(anyString());
+        verify(parsedItem).setDescription(anyString());
     }
 
     @Test
@@ -56,12 +56,12 @@ public class PodcastParserShould {
         for (int i = 0; i < tenthItem.getLength(); i ++) {
             if (tenthItem.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 if (tenthItem.item(i).getNodeName().equalsIgnoreCase("pubDate")) {
-                    paresedItem.setDate("");
+                    parsedItem.setDate("");
                 }
             }
         }
 
-        verify(paresedItem).setDate(anyString());
+        verify(parsedItem).setDate(anyString());
     }
 
     @Test
@@ -69,12 +69,12 @@ public class PodcastParserShould {
         for (int i = 0; i < tenthItem.getLength(); i ++) {
             if (tenthItem.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 if (tenthItem.item(i).getNodeName().equalsIgnoreCase("link")) {
-                    paresedItem.setLink("");
+                    parsedItem.setLink("");
                 }
             }
         }
 
-        verify(paresedItem).setLink(anyString());
+        verify(parsedItem).setLink(anyString());
     }
 
 }

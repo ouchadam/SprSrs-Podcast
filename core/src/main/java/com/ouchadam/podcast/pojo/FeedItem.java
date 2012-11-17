@@ -8,9 +8,8 @@ import java.util.Date;
 
 public class FeedItem implements Comparable<FeedItem>{
 	private static final SimpleDateFormat FORMATTER = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
-	private String title = "test";
+	private String title;
 	private URL link;
-    private URL imageLink;
 	private String description;
 	private Date date;
 
