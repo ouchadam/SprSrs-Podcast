@@ -1,7 +1,7 @@
 package com.ouchadam.podcast.helper;
 
 import android.content.Context;
-import com.ouchadam.podcast.pojo.Message;
+import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.parser.FeedParserFactory;
 import org.xml.sax.SAXException;
@@ -28,7 +28,7 @@ public class RSSFeedHelper {
         this.context = context;
     }
 
-    public List<Message> getArticle() {
+    public List<FeedItem> getArticle() {
         InputStream in = context.getResources().openRawResource(R.raw.stuff_you_should_know);
         try {
             return FeedParserFactory.getParser(builder.parse(in));

@@ -13,7 +13,7 @@ import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.adapter.FeedItemAdapter;
 import com.ouchadam.podcast.builder.IntentFactory;
 import com.ouchadam.podcast.parser.interfaces.OnParseFinished;
-import com.ouchadam.podcast.pojo.Message;
+import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.receiver.ParseReceiver;
 
 import java.util.List;
@@ -63,13 +63,13 @@ public class MessageList extends ListActivity implements OnParseFinished {
     }
 
     @Override
-    public void onParseFinished(List<Message> messages) {
+    public void onParseFinished(List<FeedItem> messages) {
         initAdapter(messages);
         progressBar.setVisibility(View.INVISIBLE);
     }
 
 
-    private void initAdapter(List<Message> messages) {
+    private void initAdapter(List<FeedItem> messages) {
         adapter = new FeedItemAdapter(this, R.layout.item_feed, messages);
         this.setListAdapter(adapter);
     }
@@ -83,7 +83,7 @@ public class MessageList extends ListActivity implements OnParseFinished {
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
-		startActivity(IntentFactory.getMessageDetails(((Message) l.getItemAtPosition(position)).getTitle()));
+		startActivity(IntentFactory.getMessageDetails(((FeedItem) l.getItemAtPosition(position)).getTitle()));
 	}
 
 }

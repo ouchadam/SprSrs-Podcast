@@ -24,7 +24,7 @@
 
         <provider
                 android:name="com.ouchadam.podcast.provider.FeedProvider"
-                android:authorities="com.adam.podcast.provider.FeedProvider" >
+                android:authorities="com.ouchadam.podcast.provider.FeedProvider" >
         </provider>
     </application>
 

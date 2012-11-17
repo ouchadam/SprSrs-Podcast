@@ -1,7 +1,7 @@
 package com.ouchadam.podcast.parser;
 
 
-import com.ouchadam.podcast.pojo.Message;
+import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.parser.interfaces.FeedParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -29,10 +29,10 @@ public class FeedItemFactory implements FeedParser {
     protected static final  String ITEM = "item";
 
     @Override
-    public List<Message> parse(Document doc) {
+    public List<FeedItem> parse(Document doc) {
         int itemAmount = doc.getElementsByTagName(ITEM).getLength();
 
-        List<Message> messages = new ArrayList<Message>();
+        List<FeedItem> messages = new ArrayList<FeedItem>();
         for (int i = 0; i < 10; i ++) {
             messages.add(parseMessage(doc.getElementsByTagName(ITEM).item(i).getChildNodes()));
         }
@@ -40,8 +40,8 @@ public class FeedItemFactory implements FeedParser {
         return messages;
     }
 
-    private static Message parseMessage(NodeList item) {
-        final Message message = new Message();
+    private static FeedItem parseMessage(NodeList item) {
+        final FeedItem message = new FeedItem();
         for (int i = 0; i < item.getLength(); i ++) {
             if (item.item(i).getNodeType() == 1) {
                 if (item.item(i).getNodeName().equalsIgnoreCase(TITLE)) {

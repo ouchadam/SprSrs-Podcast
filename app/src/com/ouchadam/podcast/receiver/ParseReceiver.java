@@ -3,7 +3,7 @@ package com.ouchadam.podcast.receiver;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.ouchadam.podcast.pojo.Message;
+import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.database.DatabaseUtil;
 import com.ouchadam.podcast.parser.interfaces.OnParseFinished;
 
@@ -27,7 +27,7 @@ public class ParseReceiver extends BroadcastReceiver {
         this.onParseFinished = onParseListener;
     }
 
-    private List<Message> getMessageListFromDb() {
+    private List<FeedItem> getMessageListFromDb() {
         return DatabaseUtil.getAllFeeds();
     }
 

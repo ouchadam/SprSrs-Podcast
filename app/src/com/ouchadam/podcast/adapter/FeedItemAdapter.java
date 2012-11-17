@@ -7,18 +7,18 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.ouchadam.podcast.pojo.Message;
+import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.R;
 
 import java.util.List;
 
-public class FeedItemAdapter extends ArrayAdapter<Message> {
+public class FeedItemAdapter extends ArrayAdapter<FeedItem> {
 
     private final Context context;
     private final int itemLayout;
-    private final List<Message> messages;
+    private final List<FeedItem> messages;
 
-    public FeedItemAdapter(Context context, int textViewResourceId, List<Message> messages) {
+    public FeedItemAdapter(Context context, int textViewResourceId, List<FeedItem> messages) {
         super(context, textViewResourceId, messages);
         this.messages = messages;
         this.itemLayout = textViewResourceId;

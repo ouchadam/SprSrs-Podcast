@@ -1,6 +1,6 @@
 package com.ouchadam.podcast.util;
 
-import com.ouchadam.podcast.pojo.Message;
+import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.parser.FeedParserFactory;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
@@ -40,7 +40,7 @@ public class FeedParserHelper {
         return null;
     }
 
-    public List<Message> getArticle() {
+    public List<FeedItem> getArticle() {
         try {
             return FeedParserFactory.getParser(builder.parse(createFile()));
         } catch (SAXException e) {

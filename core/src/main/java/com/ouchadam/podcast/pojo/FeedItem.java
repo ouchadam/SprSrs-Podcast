@@ -6,9 +6,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Message implements Comparable<Message>{
-	static SimpleDateFormat FORMATTER = 
-		new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
+public class FeedItem implements Comparable<FeedItem>{
+	private static final SimpleDateFormat FORMATTER = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
 	private String title = "test";
 	private URL link;
     private URL imageLink;
@@ -76,8 +75,8 @@ public class Message implements Comparable<Message>{
 		}
 	}
 	
-	public Message copy(){
-		Message copy = new Message();
+	public FeedItem copy(){
+		FeedItem copy = new FeedItem();
 		copy.title = title;
 		copy.link = link;
 		copy.description = description;
@@ -123,7 +122,7 @@ public class Message implements Comparable<Message>{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Message other = (Message) obj;
+		FeedItem other = (FeedItem) obj;
 		if (date == null) {
 			if (other.date != null)
 				return false;
@@ -152,7 +151,7 @@ public class Message implements Comparable<Message>{
 		return true;
 	}
 
-	public int compareTo(Message another) {
+	public int compareTo(FeedItem another) {
 		if (another == null) return 1;
 		// sort descending, most recent first
 		return another.date.compareTo(date);

@@ -1,6 +1,6 @@
 package com.ouchadam.podcast;
 
-import com.ouchadam.podcast.pojo.Message;
+import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.util.FeedParserHelper;
 import org.junit.Test;
 import org.w3c.dom.Document;
@@ -30,7 +30,7 @@ public class PodcastParserShould {
     @Test
     public void shouldParseItemTagToMesage() {
         NodeList item = doc.getElementsByTagName("item").item(0).getChildNodes();
-        Message message = new Message();
+        FeedItem message = new FeedItem();
         for (int i = 0; i < item.getLength(); i ++) {
             if (item.item(i).getNodeType() == 1) {
                 if (item.item(i).getNodeName().equalsIgnoreCase("title")) {

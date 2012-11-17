@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.ouchadam.podcast.pojo.Message;
+import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.database.DatabaseUtil;
 import com.ouchadam.podcast.loader.ImageLoader;
@@ -20,7 +20,7 @@ import java.io.IOException;
 public class DetailsActivity extends Activity implements View.OnClickListener, MediaPlayer.OnPreparedListener, LoaderManager.LoaderCallbacks<Bitmap> {
 
     private static final int LOADER_IMAGE = 1;
-    private Message message;
+    private FeedItem message;
     private static MediaPlayer mediaPlayer;
     private ImageView imageView;
     private Button button;
