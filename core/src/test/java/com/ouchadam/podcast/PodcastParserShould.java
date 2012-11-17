@@ -9,8 +9,8 @@ import static org.junit.Assert.assertNotNull;
 public class PodcastParserShould {
 
     @Test
-    public void shouldReadRes() {
-        Document doc = new FeedParserHelper().getDocFromInput();
+    public void shouldReadFileFromRes() {
+        Document doc = new FeedParserHelper().getDocFromRes();
 
         assertNotNull(doc);
     }

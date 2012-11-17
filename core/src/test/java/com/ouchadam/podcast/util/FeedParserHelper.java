@@ -29,7 +29,7 @@ public class FeedParserHelper {
         }
     }
 
-    public Document getDocFromInput() {
+    public Document getDocFromRes() {
         try {
             return builder.parse(createFile());
         } catch (SAXException e) {
