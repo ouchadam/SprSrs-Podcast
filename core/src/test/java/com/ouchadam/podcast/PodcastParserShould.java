@@ -18,6 +18,7 @@ public class PodcastParserShould {
     NodeList itemList = doc.getElementsByTagName("item");
     NodeList tenthItem = itemList.item(10).getChildNodes();
     FeedItem parsedItem = mock(FeedItem.class);
+
     @Test
     public void shouldReadFileFromRes() {
         assertNotNull(doc);
