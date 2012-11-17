@@ -88,7 +88,7 @@ public class DetailsActivity extends Activity implements View.OnClickListener, M
 
     @Override
     public Loader<Bitmap> onCreateLoader(int i, Bundle bundle) {
-        return new ImageLoader(this, message.getImageLink().toString());
+        return new ImageLoader(this, " ");
     }
 
     @Override

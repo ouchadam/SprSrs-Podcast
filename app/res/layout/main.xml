@@ -5,20 +5,11 @@
         android:layout_height="fill_parent"
         android:orientation="vertical">
 
-    <RelativeLayout
-            android:layout_weight="0.1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <ProgressBar
-                android:id="@+id/progress_bar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"/>
+    <fragment
+        android:name="com.ouchadam.podcast.fragment.ItemListFragment"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
 
-        <ListView android:id="@id/android:list"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"/>
-    </RelativeLayout>
 
     <LinearLayout
             android:layout_weight="0.9"

@@ -61,7 +61,6 @@ public class DatabaseUtil {
         message.setDate(cursor.getString(cursor.getColumnIndexOrThrow(BaseTable.COLUMN_ITEM_DATE)));
         message.setDescription(cursor.getString(cursor.getColumnIndexOrThrow(BaseTable.COLUMN_ITEM_DETAILS)));
         message.setLink(cursor.getString(cursor.getColumnIndexOrThrow(BaseTable.COLUMN_ITEM_AUDIO_URL)));
-        message.setImageLink(cursor.getString(cursor.getColumnIndexOrThrow(BaseTable.COLUMN_ITEM_IMAGE_URL)));
         return message;
     }
 
@@ -75,7 +74,6 @@ public class DatabaseUtil {
         values.put(BaseTable.COLUMN_ITEM_DETAILS, message.getDescription());
         values.put(BaseTable.COLUMN_ITEM_DATE, message.getDate());
         values.put(BaseTable.COLUMN_ITEM_AUDIO_URL, message.getLink().toString());
-        values.put(BaseTable.COLUMN_ITEM_IMAGE_URL, message.getImageLink().toString());
         return values;
     }
 
