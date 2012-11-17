@@ -11,60 +11,60 @@
             android:layout_weight="0.1">
 
         <ImageView
-            android:id="@+id/channel_image"
-            android:layout_height="120dp"
-            android:layout_width="100dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"/>
+                android:id="@+id/channel_image"
+                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"/>
 
         <TextView
-            android:id="@+id/message_title"
-            style="@style/Wrap"
-            android:text="title"
+                android:id="@+id/message_title"
+                style="@style/Wrap"
+                android:text="title"
                 android:layout_toLeftOf="@id/channel_image"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/message_details"
-            style="@style/Wrap"
-            android:text="details"
-            android:paddingTop="60dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:layout_below="@id/channel_image"
-            android:layout_centerHorizontal="true" />
+                android:id="@+id/message_details"
+                style="@style/Wrap"
+                android:text="details"
+                android:paddingTop="60dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_below="@id/channel_image"
+                android:layout_centerHorizontal="true"/>
 
         <Button
-            android:id="@+id/play_button"
-            style="@style/MatchWidth"
-            android:text="Play!"
-            android:layout_below="@id/message_details"/>
+                android:id="@+id/play_button"
+                style="@style/MatchWidth"
+                android:text="Play!"
+                android:layout_below="@id/message_details"/>
 
     </RelativeLayout>
 
-        <LinearLayout
-                android:layout_weight="0.9"
-                style="@style/Match"
-                android:orientation="horizontal">
+    <LinearLayout
+            android:layout_weight="0.9"
+            style="@style/Match"
+            android:orientation="horizontal">
 
-            <ImageButton
-                    android:id="@+id/refreshButton"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_menu_refresh"
-                    android:background="@android:color/transparent"
-                    android:padding="10dp"/>
+        <ImageButton
+                android:id="@+id/refreshButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_menu_refresh"
+                android:background="@android:color/transparent"
+                android:padding="10dp"/>
 
-            <ImageButton
-                    android:id="@+id/deleteButton"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_menu_delete"
-                    android:background="@android:color/transparent"
-                    android:padding="10dp"/>
-        </LinearLayout>
+        <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_menu_delete"
+                android:background="@android:color/transparent"
+                android:padding="10dp"/>
+    </LinearLayout>
 
 </LinearLayout>

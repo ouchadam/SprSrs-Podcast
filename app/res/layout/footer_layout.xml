@@ -23,6 +23,6 @@
                 android:layout_height="wrap_content"
                 android:textSize="14dip"
                 android:textStyle="bold"
-                android:layout_marginRight="5dip" />
+                android:layout_marginRight="5dip"/>
     </LinearLayout>
 </LinearLayout> 
