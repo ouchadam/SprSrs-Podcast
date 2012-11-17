@@ -16,7 +16,7 @@ public class PodcastParserShould {
 
     Document doc = new FeedParserHelper().getDocFromRes();
     NodeList item = doc.getElementsByTagName("item").item(0).getChildNodes();
-    FeedItem message = mock(FeedItem.class);
+    FeedItem paresedItem = mock(FeedItem.class);
 
 
     @Test
@@ -29,12 +29,12 @@ public class PodcastParserShould {
         for (int i = 0; i < item.getLength(); i ++) {
             if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 if (item.item(i).getNodeName().equalsIgnoreCase("title")) {
-                    message.setTitle("");
+                    paresedItem.setTitle("");
                 }
             }
         }
 
-        verify(message).setTitle(anyString());
+        verify(paresedItem).setTitle(anyString());
     }
 
     @Test
@@ -42,12 +42,12 @@ public class PodcastParserShould {
         for (int i = 0; i < item.getLength(); i ++) {
             if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 if (item.item(i).getNodeName().equalsIgnoreCase("description")) {
-                    message.setDescription("");
+                    paresedItem.setDescription("");
                 }
             }
         }
 
-        verify(message).setDescription(anyString());
+        verify(paresedItem).setDescription(anyString());
     }
 
     @Test
@@ -55,12 +55,12 @@ public class PodcastParserShould {
         for (int i = 0; i < item.getLength(); i ++) {
             if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 if (item.item(i).getNodeName().equalsIgnoreCase("pubDate")) {
-                    message.setDate("");
+                    paresedItem.setDate("");
                 }
             }
         }
 
-        verify(message).setDate(anyString());
+        verify(paresedItem).setDate(anyString());
     }
 
     @Test
@@ -68,12 +68,12 @@ public class PodcastParserShould {
         for (int i = 0; i < item.getLength(); i ++) {
             if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 if (item.item(i).getNodeName().equalsIgnoreCase("link")) {
-                    message.setLink("");
+                    paresedItem.setLink("");
                 }
             }
         }
 
-        verify(message).setLink(anyString());
+        verify(paresedItem).setLink(anyString());
     }
 
     @Test
@@ -81,12 +81,12 @@ public class PodcastParserShould {
         for (int i = 0; i < item.getLength(); i ++) {
             if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 if (item.item(i).getNodeName().equalsIgnoreCase("url")) {
-                    message.setImageLink("");
+                    paresedItem.setImageLink("");
                 }
             }
         }
 
-        verify(message).setImageLink(anyString());
+        verify(paresedItem).setImageLink(anyString());
     }
 
 }

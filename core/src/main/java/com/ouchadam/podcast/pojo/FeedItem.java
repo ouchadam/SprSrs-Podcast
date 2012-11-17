@@ -33,18 +33,6 @@ public class FeedItem implements Comparable<FeedItem>{
 		}
 	}
 
-    public URL getImageLink() {
-        return imageLink;
-    }
-
-    public void setImageLink(String link) {
-        try {
-            this.imageLink = new URL(link);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
 	public String getDescription() {
 		return description;
 	}
@@ -75,7 +63,6 @@ public class FeedItem implements Comparable<FeedItem>{
 		copy.link = link;
 		copy.description = description;
 		copy.date = date;
-        copy.imageLink = imageLink;
 		return copy;
 	}
 	
@@ -132,11 +119,6 @@ public class FeedItem implements Comparable<FeedItem>{
 				return false;
 		} else if (!link.equals(other.link))
 			return false;
-        if (imageLink == null) {
-            if (other.imageLink != null)
-                return false;
-        } else if (!imageLink.equals(other.imageLink))
-            return false;
 		if (title == null) {
 			if (other.title != null)
 				return false;
