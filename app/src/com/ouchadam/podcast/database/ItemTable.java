@@ -5,13 +5,12 @@ import android.util.Log;
 import com.ouchadam.podcast.application.RSS;
 import com.ouchadam.podcast.provider.FeedProvider;
 
-public class BaseTable {
+public class ItemTable {
 
-    public static final String TABLE_FEED = "BaseTable";
+    public static final String TABLE_FEED = "ItemTable";
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_ITEM_TITLE = "title";
     public static final String COLUMN_ITEM_AUDIO_URL = "audioUrl";
-    public static final String COLUMN_ITEM_IMAGE_URL = "imageUrl";
     public static final String COLUMN_ITEM_DETAILS = "details";
     public static final String COLUMN_ITEM_DATE = "date";
 
@@ -22,7 +21,6 @@ public class BaseTable {
             + COLUMN_ITEM_TITLE + " text,"
             + COLUMN_ITEM_DETAILS + " text,"
             + COLUMN_ITEM_AUDIO_URL + " text,"
-            + COLUMN_ITEM_IMAGE_URL + " text,"
             + COLUMN_ITEM_DATE + " text"
             + ");";
 
@@ -32,7 +30,7 @@ public class BaseTable {
 
     public static void onUpgrade(SQLiteDatabase database, int oldVersion,
                                  int newVersion) {
-        Log.w(BaseTable.class.getName(), "Upgrading database from version "
+        Log.w(ItemTable.class.getName(), "Upgrading database from version "
                 + oldVersion + " to " + newVersion
                 + ", which will destroy all old data");
         database.execSQL("DROP TABLE IF EXISTS " + TABLE_FEED);

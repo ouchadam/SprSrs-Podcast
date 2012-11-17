@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.text.TextUtils;
-import com.ouchadam.podcast.database.BaseTable;
+import com.ouchadam.podcast.database.ItemTable;
 import com.ouchadam.podcast.database.DatabaseHelper;
 
 import java.util.Arrays;
@@ -43,7 +43,7 @@ public class FeedProvider extends ContentProvider {
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
 
         checkIfColumnsExist(projection);
-        queryBuilder.setTables(BaseTable.TABLE_FEED);
+        queryBuilder.setTables(ItemTable.TABLE_FEED);
         addIdToQuery(uri, queryBuilder);
 
         SQLiteDatabase db = database.getWritableDatabase();
@@ -58,7 +58,7 @@ public class FeedProvider extends ContentProvider {
             case FEEDS:
                 break;
             case FEED_TABLE_ID:
-                queryBuilder.appendWhere(BaseTable.COLUMN_ID + "=" + uri.getLastPathSegment());
+                queryBuilder.appendWhere(ItemTable.COLUMN_ID + "=" + uri.getLastPathSegment());
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI: " + uri);
@@ -77,14 +77,11 @@ public class FeedProvider extends ContentProvider {
         long id = 0;
         switch (uriType) {
             case FEEDS:
-                id = sqlDB.insert(BaseTable.TABLE_FEED, null, values);
+                id = sqlDB.insert(ItemTable.TABLE_FEED, null, values);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI: " + uri);
         }
-
-        //Log.d(Log.TAG, "URI : " + uri);
-
         getContext().getContentResolver().notifyChange(uri, null);
         return Uri.parse(BASE_PATH + "/" + id);
     }
@@ -96,14 +93,14 @@ public class FeedProvider extends ContentProvider {
         int rowsDeleted = 0;
         switch (uriType) {
             case FEEDS:
-                rowsDeleted = sqlDB.delete(BaseTable.TABLE_FEED, selection, selectionArgs);
+                rowsDeleted = sqlDB.delete(ItemTable.TABLE_FEED, selection, selectionArgs);
                 break;
             case FEED_TABLE_ID:
                 String id = uri.getLastPathSegment();
                 if (TextUtils.isEmpty(selection)) {
-                    rowsDeleted = sqlDB.delete(BaseTable.TABLE_FEED, BaseTable.COLUMN_ID + "=" + id, null);
+                    rowsDeleted = sqlDB.delete(ItemTable.TABLE_FEED, ItemTable.COLUMN_ID + "=" + id, null);
                 } else {
-                    rowsDeleted = sqlDB.delete(BaseTable.TABLE_FEED, BaseTable.COLUMN_ID + "=" + id + " and " + selection,
+                    rowsDeleted = sqlDB.delete(ItemTable.TABLE_FEED, ItemTable.COLUMN_ID + "=" + id + " and " + selection,
                             selectionArgs);
                 }
                 break;
@@ -122,14 +119,14 @@ public class FeedProvider extends ContentProvider {
         int rowsUpdated = 0;
         switch (uriType) {
             case FEEDS:
-                rowsUpdated = sqlDB.update(BaseTable.TABLE_FEED, values, selection, selectionArgs);
+                rowsUpdated = sqlDB.update(ItemTable.TABLE_FEED, values, selection, selectionArgs);
                 break;
             case FEED_TABLE_ID:
                 String id = uri.getLastPathSegment();
                 if (TextUtils.isEmpty(selection)) {
-                    rowsUpdated = sqlDB.update(BaseTable.TABLE_FEED, values, BaseTable.COLUMN_ID + "=" + id, null);
+                    rowsUpdated = sqlDB.update(ItemTable.TABLE_FEED, values, ItemTable.COLUMN_ID + "=" + id, null);
                 } else {
-                    rowsUpdated = sqlDB.update(BaseTable.TABLE_FEED, values, BaseTable.COLUMN_ID + "=" + id + " and "
+                    rowsUpdated = sqlDB.update(ItemTable.TABLE_FEED, values, ItemTable.COLUMN_ID + "=" + id + " and "
                             + selection, selectionArgs);
                 }
                 break;
@@ -142,12 +139,11 @@ public class FeedProvider extends ContentProvider {
 
     private void checkIfColumnsExist(String[] projection) {
         String[] available = {
-                BaseTable.COLUMN_ID,
-                BaseTable.COLUMN_ITEM_IMAGE_URL,
-                BaseTable.COLUMN_ITEM_TITLE,
-                BaseTable.COLUMN_ITEM_AUDIO_URL,
-                BaseTable.COLUMN_ITEM_DATE,
-                BaseTable.COLUMN_ITEM_DETAILS };
+                ItemTable.COLUMN_ID,
+                ItemTable.COLUMN_ITEM_TITLE,
+                ItemTable.COLUMN_ITEM_AUDIO_URL,
+                ItemTable.COLUMN_ITEM_DATE,
+                ItemTable.COLUMN_ITEM_DETAILS };
 
         if (projection != null) {
             HashSet<String> requestedColumns = new HashSet<String>(Arrays.asList(projection));
