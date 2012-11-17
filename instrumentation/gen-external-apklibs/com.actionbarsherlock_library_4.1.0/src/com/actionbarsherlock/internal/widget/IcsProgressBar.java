@@ -69,7 +69,7 @@ import android.widget.RemoteViews.RemoteView;
  * </p>
  *
  * <p>The following code example shows how a progress bar can be used from
- * a worker thread to update the user interface to notify the user of progress:
+ * a worker thread to update the user interfaces to notify the user of progress:
  * </p>
  *
  * <pre>

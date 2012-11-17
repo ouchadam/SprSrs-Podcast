@@ -17,7 +17,7 @@
 package com.actionbarsherlock.view;
 
 /**
- * When a {@link View} implements this interface it will receive callbacks
+ * When a {@link View} implements this interfaces it will receive callbacks
  * when expanded or collapsed as an action view alongside the optional,
  * app-specified callbacks to {@link OnActionExpandListener}.
  *

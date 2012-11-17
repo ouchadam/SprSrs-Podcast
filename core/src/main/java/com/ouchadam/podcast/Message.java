@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.util;
+package com.ouchadam.podcast;
 
 import java.net.MalformedURLException;
 import java.net.URL;

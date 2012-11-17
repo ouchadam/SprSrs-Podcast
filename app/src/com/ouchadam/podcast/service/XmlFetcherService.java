@@ -2,14 +2,14 @@ package com.ouchadam.podcast.service;
 
 import android.app.IntentService;
 import android.content.Intent;
-import com.ouchadam.podcast.builder.FeedParserFactory;
 import com.ouchadam.podcast.builder.IntentFactory;
 import com.ouchadam.podcast.database.DatabaseUtil;
+import com.ouchadam.podcast.helper.RSSFeedHelper;
 import com.ouchadam.podcast.util.Message;
 
 import java.util.List;
 
-public class XmlFetcherService extends IntentService{
+public class XmlFetcherService extends IntentService {
 
     public XmlFetcherService(String name) {
         super(name);
@@ -33,7 +33,7 @@ public class XmlFetcherService extends IntentService{
     }
 
     private void parseXml() {
-        List<Message> messages = FeedParserFactory.getParser().parse();
+        List<Message> messages = new RSSFeedHelper(getApplicationContext()).getArticle();
         for (Message message : messages) {
             DatabaseUtil.setItem(null, message);
         }

@@ -46,7 +46,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.SubMenu;
 
 /**
- * Implementation of the {@link android.view.Menu} interface for creating a
+ * Implementation of the {@link android.view.Menu} interfaces for creating a
  * standard menu UI.
  */
 public class MenuBuilder implements Menu {

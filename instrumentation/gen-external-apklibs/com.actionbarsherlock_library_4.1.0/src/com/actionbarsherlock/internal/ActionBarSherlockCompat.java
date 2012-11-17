@@ -90,13 +90,13 @@ public class ActionBarSherlockCompat extends ActionBarSherlock implements MenuBu
     private boolean mMenuRefreshContent;
     private Bundle mMenuFrozenActionViewState;
 
-    /** Implementation which backs the action bar interface API. */
+    /** Implementation which backs the action bar interfaces API. */
     private ActionBarImpl aActionBar;
     /** Main action bar view which displays the core content. */
     private ActionBarView wActionBar;
     /** Relevant window and action bar features flags. */
     private int mFeatures = DEFAULT_FEATURES;
-    /** Relevant user interface option flags. */
+    /** Relevant user interfaces option flags. */
     private int mUiOptions = 0;
 
     /** Decor indeterminate progress indicator. */

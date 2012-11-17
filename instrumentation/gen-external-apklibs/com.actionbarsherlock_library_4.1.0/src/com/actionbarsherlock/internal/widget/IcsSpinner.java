@@ -564,7 +564,7 @@ public class IcsSpinner extends IcsAbsSpinner implements OnClickListener {
     }
 
     /**
-     * Implements some sort of popup selection interface for selecting a spinner option.
+     * Implements some sort of popup selection interfaces for selecting a spinner option.
      * Allows for different spinner modes.
      */
     private interface SpinnerPopup {

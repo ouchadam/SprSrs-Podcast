@@ -669,7 +669,7 @@ public abstract class ActionBar {
     public Context getThemedContext() { return null; }
 
     /**
-     * Listener interface for ActionBar navigation events.
+     * Listener interfaces for ActionBar navigation events.
      */
     public interface OnNavigationListener {
         /**
@@ -852,7 +852,7 @@ public abstract class ActionBar {
     }
 
     /**
-     * Callback interface invoked when a tab is focused, unfocused, added, or removed.
+     * Callback interfaces invoked when a tab is focused, unfocused, added, or removed.
      */
     public interface TabListener {
         /**

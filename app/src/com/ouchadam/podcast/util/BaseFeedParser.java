@@ -1,6 +1,6 @@
 package com.ouchadam.podcast.util;
 
-import com.ouchadam.podcast.interfaces.FeedParser;
+import com.ouchadam.podcast.parser.interfaces.FeedParser;
 
 import java.io.IOException;
 import java.io.InputStream;

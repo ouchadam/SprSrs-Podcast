@@ -20,7 +20,7 @@ import android.view.View;
 
 
 /**
- * Represents a contextual mode of the user interface. Action modes can be used for
+ * Represents a contextual mode of the user interfaces. Action modes can be used for
  * modal interactions with content and replace parts of the normal UI until finished.
  * Examples of good action modes include selection modes, search, content editing, etc.
  */
@@ -167,7 +167,7 @@ public abstract class ActionMode {
     }
 
     /**
-     * Callback interface for action modes. Supplied to
+     * Callback interfaces for action modes. Supplied to
      * {@link View#startActionMode(Callback)}, a Callback
      * configures and handles events raised by a user's interaction with an action mode.
      *

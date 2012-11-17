@@ -5,6 +5,7 @@ import android.sax.EndElementListener;
 import android.sax.EndTextElementListener;
 import android.sax.RootElement;
 import android.util.Xml;
+import org.w3c.dom.Document;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +17,8 @@ public class AndroidSaxFeedParser extends BaseFeedParser {
 		super(feedUrl);
 	}
 
-	public List<Message> parse() {
+    @Override
+	public List<Message> parse(Document doc) {
 		final Message currentMessage = new Message();
 		RootElement root = new RootElement(RSS);
 		final List<Message> messages = new ArrayList<Message>();
@@ -28,7 +30,6 @@ public class AndroidSaxFeedParser extends BaseFeedParser {
                 currentMessage.setImageLink(body);
             }
         });
-
 
 		Element item = channel.getChild(ITEM);
 		item.setEndElementListener(new EndElementListener(){

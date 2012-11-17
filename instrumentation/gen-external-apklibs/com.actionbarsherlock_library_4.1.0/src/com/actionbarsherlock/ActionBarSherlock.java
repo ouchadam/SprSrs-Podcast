@@ -68,35 +68,35 @@ public abstract class ActionBarSherlock {
     }
 
 
-    /** Activity interface for menu creation callback. */
+    /** Activity interfaces for menu creation callback. */
     public interface OnCreatePanelMenuListener {
         public boolean onCreatePanelMenu(int featureId, Menu menu);
     }
-    /** Activity interface for menu creation callback. */
+    /** Activity interfaces for menu creation callback. */
     public interface OnCreateOptionsMenuListener {
         public boolean onCreateOptionsMenu(Menu menu);
     }
-    /** Activity interface for menu item selection callback. */
+    /** Activity interfaces for menu item selection callback. */
     public interface OnMenuItemSelectedListener {
         public boolean onMenuItemSelected(int featureId, MenuItem item);
     }
-    /** Activity interface for menu item selection callback. */
+    /** Activity interfaces for menu item selection callback. */
     public interface OnOptionsItemSelectedListener {
         public boolean onOptionsItemSelected(MenuItem item);
     }
-    /** Activity interface for menu preparation callback. */
+    /** Activity interfaces for menu preparation callback. */
     public interface OnPreparePanelListener {
         public boolean onPreparePanel(int featureId, View view, Menu menu);
     }
-    /** Activity interface for menu preparation callback. */
+    /** Activity interfaces for menu preparation callback. */
     public interface OnPrepareOptionsMenuListener {
         public boolean onPrepareOptionsMenu(Menu menu);
     }
-    /** Activity interface for action mode finished callback. */
+    /** Activity interfaces for action mode finished callback. */
     public interface OnActionModeFinishedListener {
         public void onActionModeFinished(ActionMode mode);
     }
-    /** Activity interface for action mode started callback. */
+    /** Activity interfaces for action mode started callback. */
     public interface OnActionModeStartedListener {
         public void onActionModeStarted(ActionMode mode);
     }

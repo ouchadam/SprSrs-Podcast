@@ -1,7 +1,6 @@
-package com.ouchadam.podcast.builder;
+package com.ouchadam.podcast.parser;
 
-import com.ouchadam.podcast.util.FeedItemFactory;
-import com.ouchadam.podcast.util.Message;
+import com.ouchadam.podcast.Message;
 import org.w3c.dom.Document;
 
 import java.util.List;

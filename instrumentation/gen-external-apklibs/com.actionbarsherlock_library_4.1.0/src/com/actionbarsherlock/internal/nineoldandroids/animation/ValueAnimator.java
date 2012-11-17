@@ -1213,7 +1213,7 @@ public class ValueAnimator extends Animator {
     }
 
     /**
-     * Implementors of this interface can add themselves as update listeners
+     * Implementors of this interfaces can add themselves as update listeners
      * to an <code>ValueAnimator</code> instance to receive callbacks on every animation
      * frame, after the current frame's values have been calculated for that
      * <code>ValueAnimator</code>.

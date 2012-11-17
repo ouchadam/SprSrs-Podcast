@@ -19,7 +19,7 @@ package com.actionbarsherlock.internal.view.menu;
 import android.graphics.drawable.Drawable;
 
 /**
- * Minimal interface for a menu view.  {@link #initialize(MenuBuilder)} must be called for the
+ * Minimal interfaces for a menu view.  {@link #initialize(MenuBuilder)} must be called for the
  * menu to be functional.
  *
  * @hide
@@ -40,7 +40,7 @@ public interface MenuView {
     public int getWindowAnimations();
 
     /**
-     * Minimal interface for a menu item view.  {@link #initialize(MenuItemImpl, int)} must be called
+     * Minimal interfaces for a menu item view.  {@link #initialize(MenuItemImpl, int)} must be called
      * for the item to be functional.
      */
     public interface ItemView {

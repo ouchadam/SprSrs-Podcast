@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.interfaces;
+package com.ouchadam.podcast.parser.interfaces;
 
 import com.ouchadam.podcast.util.Message;
 

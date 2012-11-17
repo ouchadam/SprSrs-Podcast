@@ -17,15 +17,15 @@ public abstract class _ActionBarSherlockTrojanHorse extends FragmentActivity imp
     private static final boolean DEBUG = false;
     private static final String TAG = "_ActionBarSherlockTrojanHorse";
 
-    /** Fragment interface for menu creation callback. */
+    /** Fragment interfaces for menu creation callback. */
     public interface OnCreateOptionsMenuListener {
         public void onCreateOptionsMenu(Menu menu, MenuInflater inflater);
     }
-    /** Fragment interface for menu preparation callback. */
+    /** Fragment interfaces for menu preparation callback. */
     public interface OnPrepareOptionsMenuListener {
         public void onPrepareOptionsMenu(Menu menu);
     }
-    /** Fragment interface for menu item selection callback. */
+    /** Fragment interfaces for menu item selection callback. */
     public interface OnOptionsItemSelectedListener {
       public boolean onOptionsItemSelected(MenuItem item);
     }
