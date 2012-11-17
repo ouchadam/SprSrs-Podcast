@@ -82,7 +82,7 @@ public class ItemListFragment extends ListFragment implements OnParseFinished {
     }
 
     private void initAdapter(List<FeedItem> items) {
-        adapter = new FeedItemAdapter(context, R.layout.item_feed, items);
+        adapter = new FeedItemAdapter(context, R.layout.adapter_item_layout, items);
         this.setListAdapter(adapter);
     }
 
