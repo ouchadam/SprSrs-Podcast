@@ -76,17 +76,4 @@ public class PodcastParserShould {
         verify(paresedItem).setLink(anyString());
     }
 
-    @Test
-    public void shouldParseItemImageLink() {
-        for (int i = 0; i < item.getLength(); i ++) {
-            if (item.item(i).getNodeType() == Node.ELEMENT_NODE) {
-                if (item.item(i).getNodeName().equalsIgnoreCase("url")) {
-                    paresedItem.setImageLink("");
-                }
-            }
-        }
-
-        verify(paresedItem).setImageLink(anyString());
-    }
-
 }
