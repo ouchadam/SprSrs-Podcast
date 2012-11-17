@@ -9,6 +9,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
@@ -107,6 +108,19 @@ public class PodcastParserShould {
     }
 
     @Test
+    public void shouldParseChannelLink() {
+        for (int i = 0; i < channel.getLength(); i ++) {
+            if (channel.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                if (channel.item(i).getNodeName().equalsIgnoreCase("link")) {
+                    parsedChannel.setLink("");
+                }
+            }
+        }
+
+        verify(parsedChannel).setLink(anyString());
+    }
+
+    @Test
     public void shouldParseChannelImage() {
         for (int i = 0; i < channel.getLength(); i ++) {
             if (channel.item(i).getNodeType() == Node.ELEMENT_NODE) {
@@ -117,6 +131,59 @@ public class PodcastParserShould {
         }
 
         verify(parsedChannel).setImage(any(Channel.Image.class));
+    }
+
+    @Test
+    public void shouldParseChannelImageTitle() {
+        NodeList image = getImageNode().getChildNodes();
+        for (int i = 0; i < image.getLength(); i ++) {
+            if (image.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                if (image.item(i).getNodeName().equalsIgnoreCase("title")) {
+                    return;
+                }
+            }
+        }
+
+        fail("Image has no title element");
+    }
+
+    @Test
+    public void shouldParseChannelImageUrl() {
+        NodeList image = getImageNode().getChildNodes();
+        for (int i = 0; i < image.getLength(); i ++) {
+            if (image.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                if (image.item(i).getNodeName().equalsIgnoreCase("url")) {
+                    return;
+                }
+            }
+        }
+
+        fail("Image has no url element");
+    }
+
+    @Test
+    public void shouldParseChannelImageLink() {
+        NodeList image = getImageNode().getChildNodes();
+        for (int i = 0; i < image.getLength(); i ++) {
+            if (image.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                if (image.item(i).getNodeName().equalsIgnoreCase("link")) {
+                    return;
+                }
+            }
+        }
+
+        fail("Image has no link element");
+    }
+
+    private Node getImageNode() {
+        for (int i = 0; i < channel.getLength(); i ++) {
+            if (channel.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                if (channel.item(i).getNodeName().equalsIgnoreCase("image")) {
+                    return  channel.item(i);
+                }
+            }
+        }
+        throw new NullPointerException("No image node found");
     }
 
 }
