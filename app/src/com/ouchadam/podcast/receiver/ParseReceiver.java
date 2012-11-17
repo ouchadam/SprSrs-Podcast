@@ -3,9 +3,9 @@ package com.ouchadam.podcast.receiver;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import uk.co.ouch.adam.database.DatabaseUtil;
-import uk.co.ouch.adam.interfaces.OnParseFinished;
-import uk.co.ouch.adam.util.Message;
+import com.ouchadam.podcast.database.DatabaseUtil;
+import com.ouchadam.podcast.interfaces.OnParseFinished;
+import com.ouchadam.podcast.util.Message;
 
 import java.util.List;
 

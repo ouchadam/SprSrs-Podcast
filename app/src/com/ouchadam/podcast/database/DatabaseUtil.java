@@ -3,9 +3,9 @@ package com.ouchadam.podcast.database;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.util.Log;
-import uk.co.ouch.adam.application.RSS;
-import uk.co.ouch.adam.provider.FeedProvider;
-import uk.co.ouch.adam.util.Message;
+import com.ouchadam.podcast.application.RSS;
+import com.ouchadam.podcast.provider.FeedProvider;
+import com.ouchadam.podcast.util.Message;
 
 import java.util.ArrayList;
 import java.util.List;

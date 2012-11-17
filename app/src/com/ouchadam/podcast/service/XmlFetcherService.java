@@ -2,10 +2,10 @@ package com.ouchadam.podcast.service;
 
 import android.app.IntentService;
 import android.content.Intent;
-import uk.co.ouch.adam.builder.FeedParserFactory;
-import uk.co.ouch.adam.builder.IntentFactory;
-import uk.co.ouch.adam.database.DatabaseUtil;
-import uk.co.ouch.adam.util.Message;
+import com.ouchadam.podcast.builder.FeedParserFactory;
+import com.ouchadam.podcast.builder.IntentFactory;
+import com.ouchadam.podcast.database.DatabaseUtil;
+import com.ouchadam.podcast.util.Message;
 
 import java.util.List;
 

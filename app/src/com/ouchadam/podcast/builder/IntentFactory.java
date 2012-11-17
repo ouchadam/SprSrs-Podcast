@@ -1,12 +1,12 @@
 package com.ouchadam.podcast.builder;
 
 import android.content.Intent;
-import uk.co.ouch.adam.activity.DetailsActivity;
-import uk.co.ouch.adam.activity.MessageList;
-import uk.co.ouch.adam.activity.SubscriptionsActivity;
-import uk.co.ouch.adam.receiver.ParseReceiver;
-import uk.co.ouch.adam.application.RSS;
-import uk.co.ouch.adam.service.XmlFetcherService;
+import com.ouchadam.podcast.activity.DetailsActivity;
+import com.ouchadam.podcast.activity.MessageList;
+import com.ouchadam.podcast.activity.SubscriptionsActivity;
+import com.ouchadam.podcast.application.RSS;
+import com.ouchadam.podcast.receiver.ParseReceiver;
+import com.ouchadam.podcast.service.XmlFetcherService;
 
 public class IntentFactory {
 

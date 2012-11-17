@@ -2,7 +2,7 @@ package com.ouchadam.podcast.application;
 
 import android.app.Application;
 import android.content.Context;
-import uk.co.ouch.adam.util.Message;
+import com.ouchadam.podcast.util.Message;
 
 import java.util.List;
 

@@ -1,13 +1,13 @@
 package com.ouchadam.podcast.util;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.sax.Element;
 import android.sax.EndElementListener;
 import android.sax.EndTextElementListener;
 import android.sax.RootElement;
 import android.util.Xml;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AndroidSaxFeedParser extends BaseFeedParser {
 

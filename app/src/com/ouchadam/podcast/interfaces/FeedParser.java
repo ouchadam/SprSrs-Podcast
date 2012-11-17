@@ -1,5 +1,6 @@
 package com.ouchadam.podcast.interfaces;
-import uk.co.ouch.adam.util.Message;
+
+import com.ouchadam.podcast.util.Message;
 
 import java.util.List;
 

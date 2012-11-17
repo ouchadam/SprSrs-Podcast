@@ -1,8 +1,6 @@
-PROJECT NAME
+SPR SRS PODCAST
 ============
 
-Project info, like steps to setup and build, share any account details like test account for facebook or coding standards.
+I miss Google Listen very much and so far I have been able to find a replacement I enjoy using.
 
-For example:
-4 spaces for tabs in Java
-2 spaces in XML
+This project aims to be an incredibly simple rss feed frontend for podcasts.

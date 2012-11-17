@@ -2,8 +2,8 @@ package com.ouchadam.podcast.database;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-import uk.co.ouch.adam.application.RSS;
-import uk.co.ouch.adam.provider.FeedProvider;
+import com.ouchadam.podcast.application.RSS;
+import com.ouchadam.podcast.provider.FeedProvider;
 
 public class BaseTable {
 

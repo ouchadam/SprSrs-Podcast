@@ -9,12 +9,12 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import org.developerworks.android.R;
-import uk.co.ouch.adam.adapter.FeedItemAdapter;
-import uk.co.ouch.adam.builder.IntentFactory;
-import uk.co.ouch.adam.interfaces.OnParseFinished;
-import uk.co.ouch.adam.receiver.ParseReceiver;
-import uk.co.ouch.adam.util.Message;
+import com.ouchadam.podcast.R;
+import com.ouchadam.podcast.adapter.FeedItemAdapter;
+import com.ouchadam.podcast.builder.IntentFactory;
+import com.ouchadam.podcast.interfaces.OnParseFinished;
+import com.ouchadam.podcast.receiver.ParseReceiver;
+import com.ouchadam.podcast.util.Message;
 
 import java.util.List;
 

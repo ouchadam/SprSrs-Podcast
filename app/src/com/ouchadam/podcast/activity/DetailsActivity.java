@@ -10,10 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import org.developerworks.android.R;
-import uk.co.ouch.adam.database.DatabaseUtil;
-import uk.co.ouch.adam.loader.ImageLoader;
-import uk.co.ouch.adam.util.Message;
+import com.ouchadam.podcast.R;
+import com.ouchadam.podcast.database.DatabaseUtil;
+import com.ouchadam.podcast.loader.ImageLoader;
+import com.ouchadam.podcast.util.Message;
 
 import java.io.IOException;
 
