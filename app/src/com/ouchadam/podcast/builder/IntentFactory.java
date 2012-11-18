@@ -5,6 +5,7 @@ import com.ouchadam.podcast.activity.DetailsActivity;
 import com.ouchadam.podcast.activity.FeedListActivity;
 import com.ouchadam.podcast.activity.SubscriptionsActivity;
 import com.ouchadam.podcast.application.RSS;
+import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.receiver.ParseReceiver;
 import com.ouchadam.podcast.service.XmlFetcherService;
 
@@ -12,16 +13,17 @@ public class IntentFactory {
 
     private static final String ACTION_START_PARSE = "parse";
 
-    public static Intent getParseFinished(String channel) {
-        Intent intent = new Intent();
-        intent.setAction(ParseReceiver.ACTION_ON_PARSE_FINISHED);
+    public static Intent getParseService(String channel, String url) {
+        Intent intent = new Intent(RSS.getContext(), XmlFetcherService.class);
+        intent.setAction(ACTION_START_PARSE);
         intent.putExtra("channel", channel);
+        intent.putExtra("url", url);
         return intent;
     }
 
-    public static Intent getParseService(String channel) {
-        Intent intent = new Intent(RSS.getContext(), XmlFetcherService.class);
-        intent.setAction(ACTION_START_PARSE);
+    public static Intent getParseFinished(String channel) {
+        Intent intent = new Intent();
+        intent.setAction(ParseReceiver.ACTION_ON_PARSE_FINISHED);
         intent.putExtra("channel", channel);
         return intent;
     }
@@ -37,9 +39,10 @@ public class IntentFactory {
         return intent;
     }
 
-    public static Intent getSubscriptionFeed(String channel) {
+    public static Intent getSubscriptionFeed(Channel channel) {
         Intent intent = new Intent(RSS.getContext(), FeedListActivity.class);
-        intent.putExtra("channel", channel);
+        intent.putExtra("channel", channel.getTitle());
+        intent.putExtra("url", channel.getLink().toString());
         return intent;
     }
 

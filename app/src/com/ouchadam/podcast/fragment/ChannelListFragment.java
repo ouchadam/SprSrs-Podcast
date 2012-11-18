@@ -27,18 +27,27 @@ public class ChannelListFragment extends ListFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         context = activity;
-        addTestChannel();
+//        addTestChannel();
         initAdapter(getChannels());
     }
 
     private void addTestChannel() {
         Channel channel = new Channel();
-        channel.setTitle("Test Channel");
-        channel.setLink("http://testlink.com");
+        channel.setTitle("Test Channel 1");
+        channel.setLink("http://www.howstuffworks.com/podcasts/stuff-you-should-know.rss");
         channel.setCategory("Category : Test");
         channel.setImage(new Channel.Image("http://google.com", "Image Title", "http://google.com"));
         ChannelDatabaseUtil.addChannel(channel);
+
+        channel = new Channel();
+        channel.setTitle("Test Channel 2");
+        channel.setLink("http://www.howstuffworks.com/stuff-to-blow-your-mind.rss");
+        channel.setCategory("Category : Test 2" );
+        channel.setImage(new Channel.Image("http://google.com", "Image Title", "http://google.com"));
+        ChannelDatabaseUtil.addChannel(channel);
+
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -60,7 +69,7 @@ public class ChannelListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        startActivity(IntentFactory.getSubscriptionFeed("Test Channel"));
+        startActivity(IntentFactory.getSubscriptionFeed(((Channel) getListAdapter().getItem(position))));
     }
 
 }

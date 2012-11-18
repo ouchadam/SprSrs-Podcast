@@ -27,7 +27,7 @@ public class XmlFetcherService extends IntentService {
             channel = intent.getStringExtra("channel");
             if (FeedDatabaseUtil.getFeedCount(channel) < 1) {
                 if (intent.getAction().equals("parse")) {
-                    parseXml();
+                    parseXml(intent.getStringExtra("url"));
                 }
             } else {
                 sendBroadcast(IntentFactory.getParseFinished(channel));
@@ -35,8 +35,8 @@ public class XmlFetcherService extends IntentService {
         }
     }
 
-    private void parseXml() {
-        List<FeedItem> messages = new RSSFeedHelper(getApplicationContext()).getArticle();
+    private void parseXml(String url) {
+        List<FeedItem> messages = new RSSFeedHelper(getApplicationContext()).getArticle(url);
         for (FeedItem message : messages) {
             FeedDatabaseUtil.setItem(channel, message);
         }

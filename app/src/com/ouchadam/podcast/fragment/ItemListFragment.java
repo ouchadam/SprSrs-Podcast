@@ -28,10 +28,11 @@ public class ItemListFragment extends ListFragment implements OnParseFinished {
 
     public ItemListFragment() {}
 
-    public static ItemListFragment newInstance(String channel) {
+    public static ItemListFragment newInstance(String channel, String url) {
         ItemListFragment fragment = new ItemListFragment();
         Bundle b = new Bundle();
         b.putString("channel", channel);
+        b.putString("url", url);
         fragment.setArguments(b);
         return fragment;
     }
@@ -68,7 +69,7 @@ public class ItemListFragment extends ListFragment implements OnParseFinished {
     }
 
     private void startLoadingFeed(){
-        context.startService(IntentFactory.getParseService(getArguments().getString("channel")));
+        context.startService(IntentFactory.getParseService(getArguments().getString("channel"), getArguments().getString("url")));
     }
 
     @Override

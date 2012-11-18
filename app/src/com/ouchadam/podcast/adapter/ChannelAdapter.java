@@ -60,4 +60,8 @@ public class ChannelAdapter extends ArrayAdapter<Channel> {
         ImageView channelImage;
     }
 
+    @Override
+    public Channel getItem(int position) {
+        return channels.get(position);
+    }
 }
