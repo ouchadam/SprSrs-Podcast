@@ -38,6 +38,6 @@ public class ItemTable {
     }
 
     public static void dropTable() {
-        RSS.getContext().getContentResolver().delete(FeedProvider.CONTENT_URI, null, null);
+        RSS.getContext().getContentResolver().delete(FeedProvider.CONTENT_ITEM_URI, null, null);
     }
 }

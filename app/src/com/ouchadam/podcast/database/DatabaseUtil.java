@@ -27,7 +27,7 @@ public class DatabaseUtil {
 
     public static List<Channel> getAllChannels() {
         List<Channel> channelList = new ArrayList<Channel>(getChannelCount());
-        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_URI, CHANNEL_PROJECTION,null, null,null);
+        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_CHANNEL_URI, CHANNEL_PROJECTION,null, null,null);
         if (cursor.moveToFirst()) {
             for (int i = 0; i < channelList.size(); i ++) {
                 channelList.add(i, createChannelFromCursor(cursor));
@@ -56,7 +56,7 @@ public class DatabaseUtil {
 
     public static int getChannelCount() {
         String [] countProjection = { ItemTable.COLUMN_ID };
-        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_URI, countProjection, null, null,null);
+        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_ITEM_URI, countProjection, null, null,null);
         int feedCount = cursor.getCount();
         cursor.close();
         return feedCount;
@@ -65,7 +65,7 @@ public class DatabaseUtil {
     public static List<FeedItem> getAllFeeds() {
         int feedCount = getFeedCount();
         List<FeedItem> messageList = new ArrayList<FeedItem>(feedCount);
-        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_URI, PROJECTION,null, null,null);
+        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_ITEM_URI, PROJECTION,null, null,null);
         if (cursor.moveToFirst()) {
             for (int i = 0; i < 10; i ++) {
                 messageList.add(i, createFeedItemFromCursor(cursor));
@@ -78,7 +78,7 @@ public class DatabaseUtil {
 
     public static int getFeedCount() {
         String [] countProjection = { ItemTable.COLUMN_ID };
-        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_URI, countProjection, null, null,null);
+        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_ITEM_URI, countProjection, null, null,null);
         int feedCount = cursor.getCount();
         cursor.close();
         return feedCount;
@@ -86,7 +86,7 @@ public class DatabaseUtil {
 
     public static FeedItem getFeedItem(String channel, String title) {
         String mSelectionClause = ItemTable.COLUMN_ITEM_TITLE + "=?";
-        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_URI, PROJECTION,
+        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_ITEM_URI, PROJECTION,
                 mSelectionClause, new String[]{title},null);
         if (cursor.moveToFirst()) {
             FeedItem message = createFeedItemFromCursor(cursor);
@@ -107,7 +107,7 @@ public class DatabaseUtil {
     }
 
     public static void setItem(String channel, FeedItem message) {
-        RSS.getContext().getContentResolver().insert(FeedProvider.CONTENT_URI, createValuesFromMessage(message));
+        RSS.getContext().getContentResolver().insert(FeedProvider.CONTENT_ITEM_URI, createValuesFromMessage(message));
     }
 
     private static ContentValues createValuesFromMessage(FeedItem message) {

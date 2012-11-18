@@ -16,12 +16,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase database) {
         ItemTable.onCreate(database);
+        ChannelTable.onCreate(database);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion,
                           int newVersion) {
         ItemTable.onUpgrade(database, oldVersion, newVersion);
+        ChannelTable.onUpgrade(database, oldVersion, newVersion);
     }
 
 }

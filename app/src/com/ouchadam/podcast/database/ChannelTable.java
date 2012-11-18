@@ -7,7 +7,7 @@ import com.ouchadam.podcast.provider.FeedProvider;
 
 public class ChannelTable {
 
-    public static final String TABLE_FEED = "ItemTable";
+    public static final String TABLE_FEED = "ChannelTable";
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_LINK = "channelLink";
     public static final String COLUMN_TITLE = "channelTitle";
@@ -42,6 +42,6 @@ public class ChannelTable {
     }
 
     public static void dropTable() {
-        RSS.getContext().getContentResolver().delete(FeedProvider.CONTENT_URI, null, null);
+        RSS.getContext().getContentResolver().delete(FeedProvider.CONTENT_CHANNEL_URI, null, null);
     }
 }
