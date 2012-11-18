@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.ouchadam.podcast.database.FeedDatabaseUtil;
 import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.database.DatabaseUtil;
 import com.ouchadam.podcast.loader.ImageLoader;
 
 import java.io.IOException;
@@ -30,7 +30,7 @@ public class DetailsActivity extends Activity implements View.OnClickListener, M
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
         String messagePos = getIntent().getStringExtra("title");
-        message = DatabaseUtil.getFeedItem(null, messagePos);
+        message = FeedDatabaseUtil.getFeedItem(null, messagePos);
         initTextViews();
         initButton();
         initImage();

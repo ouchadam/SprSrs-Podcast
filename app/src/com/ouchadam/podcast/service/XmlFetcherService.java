@@ -2,9 +2,9 @@ package com.ouchadam.podcast.service;
 
 import android.app.IntentService;
 import android.content.Intent;
+import com.ouchadam.podcast.database.FeedDatabaseUtil;
 import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.builder.IntentFactory;
-import com.ouchadam.podcast.database.DatabaseUtil;
 import com.ouchadam.podcast.helper.RSSFeedHelper;
 
 import java.util.List;
@@ -22,7 +22,7 @@ public class XmlFetcherService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         if (intent != null) {
-            if (DatabaseUtil.getFeedCount() < 1) {
+            if (FeedDatabaseUtil.getFeedCount() < 1) {
                 if (intent.getAction().equals("parse")) {
                     parseXml();
                 }
@@ -35,7 +35,7 @@ public class XmlFetcherService extends IntentService {
     private void parseXml() {
         List<FeedItem> messages = new RSSFeedHelper(getApplicationContext()).getArticle();
         for (FeedItem message : messages) {
-            DatabaseUtil.setItem(null, message);
+            FeedDatabaseUtil.setItem(null, message);
         }
         sendBroadcast(IntentFactory.getParseFinished());
     }
