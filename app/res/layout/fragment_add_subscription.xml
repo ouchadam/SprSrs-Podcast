@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/Match">
+
+    <TextView
+            android:id="@+id/add_subscription_title"
+            style="@style/MatchWidth"
+            android:text="@string/add_subscription_title"/>
+
+    <Button
+        android:id="@+id/add_subscription_btn"
+        style="@style/MatchWidth"
+        android:text="OK"/>
+
+</LinearLayout>

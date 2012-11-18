@@ -9,6 +9,6 @@ public class SubscriptionsActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feed_list);
+        setContentView(R.layout.activity_channel_list);
     }
 }
