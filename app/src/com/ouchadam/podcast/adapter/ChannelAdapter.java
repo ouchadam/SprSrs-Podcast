@@ -26,18 +26,6 @@ public class ChannelAdapter extends CursorAdapter {
         return view;
     }
 
-    @Override
-    public void bindView(View view, Context context, Cursor cursor) {
-        ViewHolder holder = (ViewHolder) view.getTag();
-        initViews(cursor, holder);
-    }
-
-    private void initViews(Cursor cursor, ViewHolder holder) {
-        holder.title.setText(cursor.getString((cursor.getColumnIndex(ChannelTable.COLUMN_TITLE))));
-        holder.category.setText(cursor.getString((cursor.getColumnIndex(ChannelTable.COLUMN_CATEGORY))));
-        holder.channelImage.setImageResource(R.drawable.feedicon);
-    }
-
     private ViewHolder initViews(View view) {
         ViewHolder holder = new ViewHolder();
         holder.title = (TextView) view.findViewById(R.id.channel_title);
@@ -46,16 +34,28 @@ public class ChannelAdapter extends CursorAdapter {
         return holder;
     }
 
-    private static class ViewHolder {
-        TextView title;
-        TextView category;
-        ImageView channelImage;
+    @Override
+    public void bindView(View view, Context context, Cursor cursor) {
+        ViewHolder holder = (ViewHolder) view.getTag();
+        setViews(cursor, holder);
+    }
+
+    private void setViews(Cursor cursor, ViewHolder holder) {
+        holder.title.setText(cursor.getString((cursor.getColumnIndex(ChannelTable.COLUMN_TITLE))));
+        holder.category.setText(cursor.getString((cursor.getColumnIndex(ChannelTable.COLUMN_CATEGORY))));
+        holder.channelImage.setImageResource(R.drawable.feedicon);
     }
 
     @Override
     public Channel getItem(int position) {
         Cursor cursor = (Cursor) super.getItem(position);
         return ChannelDatabaseUtil.createChannelFromCursor(cursor);
+    }
+
+    private static class ViewHolder {
+        TextView title;
+        TextView category;
+        ImageView channelImage;
     }
 
 }
