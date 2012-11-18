@@ -2,6 +2,7 @@ package com.ouchadam.podcast.database;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.util.Log;
 import com.ouchadam.podcast.application.RSS;
 import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.provider.FeedProvider;
@@ -15,14 +16,18 @@ public class ChannelDatabaseUtil {
             ChannelTable.COLUMN_ID,
             ChannelTable.COLUMN_TITLE,
             ChannelTable.COLUMN_LINK,
+            ChannelTable.COLUMN_CATEGORY,
+            ChannelTable.COLUMN_IMAGE_LINK,
+            ChannelTable.COLUMN_IMAGE_TITLE,
             ChannelTable.COLUMN_IMAGE_URL
     };
 
     public static List<Channel> getAllChannels() {
-        List<Channel> channelList = new ArrayList<Channel>(getChannelCount());
+        int channelCount = getChannelCount();
+        List<Channel> channelList = new ArrayList<Channel>(channelCount);
         Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_CHANNEL_URI, CHANNEL_PROJECTION,null, null,null);
         if (cursor.moveToFirst()) {
-            for (int i = 0; i < channelList.size(); i ++) {
+            for (int i = 0; i < channelCount; i ++) {
                 channelList.add(i, createChannelFromCursor(cursor));
                 cursor.moveToNext();
             }
@@ -48,15 +53,16 @@ public class ChannelDatabaseUtil {
     }
 
     public static int getChannelCount() {
-        String [] countProjection = { ItemTable.COLUMN_ID };
-        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_ITEM_URI, countProjection, null, null,null);
+        String [] countProjection = { ChannelTable.COLUMN_ID };
+        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_CHANNEL_URI, countProjection, null, null,null);
         int feedCount = cursor.getCount();
         cursor.close();
+        Log.e("Test", "Get count : " + feedCount);
         return feedCount;
     }
 
     public static void addChannel(Channel channel) {
-        RSS.getContext().getContentResolver().insert(FeedProvider.CONTENT_ITEM_URI, createValuesFromMessage(channel));
+        RSS.getContext().getContentResolver().insert(FeedProvider.CONTENT_CHANNEL_URI, createValuesFromMessage(channel));
     }
 
     private static ContentValues createValuesFromMessage(Channel channel) {
@@ -65,8 +71,8 @@ public class ChannelDatabaseUtil {
         values.put(ChannelTable.COLUMN_LINK, channel.getLink().toString());
         values.put(ChannelTable.COLUMN_CATEGORY, channel.getCategory());
         values.put(ChannelTable.COLUMN_IMAGE_TITLE,channel.getImage().imageTitle);
-        values.put(ChannelTable.COLUMN_IMAGE_URL,channel.getImage().imageUrl);
-        values.put(ChannelTable.COLUMN_IMAGE_LINK,channel.getImage().imageLink);
+        values.put(ChannelTable.COLUMN_IMAGE_URL, channel.getImage().imageUrl);
+        values.put(ChannelTable.COLUMN_IMAGE_LINK, channel.getImage().imageLink);
         return values;
     }
 

@@ -102,7 +102,7 @@ public class FeedProvider extends ContentProvider {
                 break;
             case CHANNELS:
                 id = sqlDB.insert(ChannelTable.TABLE_FEED, null, values);
-                _uri = ContentUris.withAppendedId(CONTENT_ITEM_URI, id);
+                _uri = ContentUris.withAppendedId(CONTENT_CHANNEL_URI, id);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI: " + uri);

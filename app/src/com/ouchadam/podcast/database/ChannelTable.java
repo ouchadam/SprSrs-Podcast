@@ -24,7 +24,7 @@ public class ChannelTable {
             + COLUMN_LINK + " text,"
             + COLUMN_CATEGORY + " text,"
             + COLUMN_IMAGE_URL + " text,"
-            + COLUMN_IMAGE_TITLE + " text"
+            + COLUMN_IMAGE_TITLE + " text,"
             + COLUMN_IMAGE_LINK + " text"
             + ");";
 

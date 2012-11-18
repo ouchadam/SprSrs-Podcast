@@ -2,7 +2,6 @@ package com.ouchadam.podcast.fragment;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
@@ -11,18 +10,16 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.adapter.FeedItemAdapter;
+import com.ouchadam.podcast.adapter.ChannelAdapter;
 import com.ouchadam.podcast.builder.IntentFactory;
-import com.ouchadam.podcast.parser.interfaces.OnParseFinished;
-import com.ouchadam.podcast.pojo.FeedItem;
-import com.ouchadam.podcast.receiver.ParseReceiver;
+import com.ouchadam.podcast.database.ChannelDatabaseUtil;
+import com.ouchadam.podcast.pojo.Channel;
 
 import java.util.List;
 
-public class ChannelListFragment extends ListFragment implements OnParseFinished {
+public class ChannelListFragment extends ListFragment {
 
-    private FeedItemAdapter adapter;
-    private ParseReceiver receiver;
+    private ChannelAdapter adapter;
     private ProgressBar progressBar;
     private Context context;
 
@@ -30,66 +27,40 @@ public class ChannelListFragment extends ListFragment implements OnParseFinished
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         context = activity;
-        initReceiver();
-        startLoadingFeed();
+//        addTestChannel();
+        initAdapter(getChannels());
+    }
+
+    private void addTestChannel() {
+        Channel channel = new Channel();
+        channel.setTitle("Test Channel");
+        channel.setLink("http://testlink.com");
+        channel.setCategory("Category : Test");
+        channel.setImage(new Channel.Image("http://google.com", "Image Title", "http://google.com"));
+        ChannelDatabaseUtil.addChannel(channel);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_feed_list, container, false);
         progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
+        progressBar.setVisibility(View.GONE);
         return view;
     }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        initListFooter();
+    private List<Channel> getChannels(){
+        return ChannelDatabaseUtil.getAllChannels();
     }
 
-    private void initListFooter() {
-        View footerView = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.footer_layout, null, false);
-        getListView().addFooterView(footerView);
-    }
-
-    private void initReceiver() {
-        receiver = new ParseReceiver();
-        receiver.setOnParseListener(this);
-    }
-
-    private void startLoadingFeed(){
-        context.startService(IntentFactory.getParseService());
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(ParseReceiver.ACTION_ON_PARSE_FINISHED);
-        context.registerReceiver(receiver, filter);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        context.unregisterReceiver(receiver);
-    }
-
-    @Override
-    public void onParseFinished(List<FeedItem> items) {
-        initAdapter(items);
-        progressBar.setVisibility(View.GONE);
-    }
-
-    private void initAdapter(List<FeedItem> items) {
-        adapter = new FeedItemAdapter(context, R.layout.adapter_item_layout, items);
+    private void initAdapter(List<Channel> items) {
+        adapter = new ChannelAdapter(context, R.layout.adapter_channel_layout, items);
         this.setListAdapter(adapter);
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        startActivity(IntentFactory.getMessageDetails(((FeedItem) l.getItemAtPosition(position)).getTitle()));
+        startActivity(IntentFactory.getSubscriptionFeed());
     }
 
 }
