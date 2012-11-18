@@ -15,6 +15,7 @@ public class ChannelDatabaseUtil {
             ChannelTable.COLUMN_ID,
             ChannelTable.COLUMN_TITLE,
             ChannelTable.COLUMN_LINK,
+            ChannelTable.COLUMN_RSS_LINK,
             ChannelTable.COLUMN_CATEGORY,
             ChannelTable.COLUMN_IMAGE_LINK,
             ChannelTable.COLUMN_IMAGE_TITLE,
@@ -35,11 +36,12 @@ public class ChannelDatabaseUtil {
         return channelList;
     }
 
-    private static Channel createChannelFromCursor(Cursor cursor) {
+    public static Channel createChannelFromCursor(Cursor cursor) {
         Channel message = new Channel();
         message.setTitle(cursor.getString(cursor.getColumnIndexOrThrow(ChannelTable.COLUMN_TITLE)));
         message.setCategory(cursor.getString(cursor.getColumnIndexOrThrow(ChannelTable.COLUMN_CATEGORY)));
         message.setLink(cursor.getString(cursor.getColumnIndexOrThrow(ChannelTable.COLUMN_LINK)));
+        message.setRssLink(cursor.getString(cursor.getColumnIndexOrThrow(ChannelTable.COLUMN_RSS_LINK)));
         message.setImage(createImageFromCursor(cursor));
         return message;
     }
@@ -67,6 +69,7 @@ public class ChannelDatabaseUtil {
         ContentValues values = new ContentValues();
         values.put(ChannelTable.COLUMN_TITLE, channel.getTitle());
         values.put(ChannelTable.COLUMN_LINK, channel.getLink().toString());
+        values.put(ChannelTable.COLUMN_RSS_LINK, channel.getRssLink().toString());
         values.put(ChannelTable.COLUMN_CATEGORY, channel.getCategory());
         values.put(ChannelTable.COLUMN_IMAGE_TITLE,channel.getImage().imageTitle);
         values.put(ChannelTable.COLUMN_IMAGE_URL, channel.getImage().imageUrl);

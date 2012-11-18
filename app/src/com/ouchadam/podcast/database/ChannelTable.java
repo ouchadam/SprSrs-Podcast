@@ -14,14 +14,16 @@ public class ChannelTable {
     public static final String COLUMN_CATEGORY = "channelCategory";
     public static final String COLUMN_IMAGE_URL = "imageUrl";
     public static final String COLUMN_IMAGE_TITLE = "imageTitle";
-    public static final String COLUMN_IMAGE_LINK = "imageLink";
+    public static final String COLUMN_RSS_LINK = "rssLink";
 
+    public static final String COLUMN_IMAGE_LINK = "imageLink";
     private static final String DATABASE_CREATE = "create table "
             + TABLE_FEED
             + "("
             + COLUMN_ID + " integer primary key autoincrement,"
             + COLUMN_TITLE + " text,"
             + COLUMN_LINK + " text,"
+            + COLUMN_RSS_LINK + " text,"
             + COLUMN_CATEGORY + " text,"
             + COLUMN_IMAGE_URL + " text,"
             + COLUMN_IMAGE_TITLE + " text,"

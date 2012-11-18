@@ -1,7 +1,9 @@
 package com.ouchadam.podcast.helper;
 
 import android.content.Context;
+import android.util.Log;
 import com.ouchadam.podcast.parser.FeedParserFactory;
+import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.pojo.FeedItem;
 import org.xml.sax.SAXException;
 
@@ -29,10 +31,23 @@ public class RSSFeedHelper {
         this.context = context;
     }
 
-    public List<FeedItem> getArticle(String url) {
+    public List<FeedItem> getFeedItems(String url) {
 //        InputStream in = context.getResources().openRawResource(R.raw.stuff_you_should_know);
         try {
-            return FeedParserFactory.getParser(builder.parse(getInputStream(url)));
+            return FeedParserFactory.getItemParser(builder.parse(getInputStream(url)));
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Channel getChannel(String url) {
+        try {
+            Channel channel = FeedParserFactory.getChannelParser(builder.parse(getInputStream(url)));
+            channel.setRssLink(url);
+            return channel;
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -43,6 +58,7 @@ public class RSSFeedHelper {
 
     private InputStream getInputStream(String url) {
         URL oracle = null;
+        Log.e("Test", "URL : " + url);
         try {
             oracle = new URL(url);
         } catch (MalformedURLException e) {

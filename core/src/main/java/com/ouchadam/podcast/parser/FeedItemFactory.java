@@ -60,11 +60,11 @@ public class FeedItemFactory implements FeedParser {
         return message;
     }
 
-    public static Channel parseChannel(Document doc) {
+    public Channel parseChannel(Document doc) {
         return createChannel(doc.getElementsByTagName(CHANNEL).item(0).getChildNodes());
     }
 
-    private static Channel createChannel(NodeList item) {
+    private Channel createChannel(NodeList item) {
         final Channel channel = new Channel();
         for (int i = 0; i < item.getLength(); i ++) {
             Node n = item.item(i);
@@ -83,7 +83,7 @@ public class FeedItemFactory implements FeedParser {
         return channel;
     }
 
-    private static Channel.Image createImage(NodeList imageNode) {
+    private Channel.Image createImage(NodeList imageNode) {
         String title = null;
         String url = null;
         String link = null;

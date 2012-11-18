@@ -42,7 +42,7 @@ public class IntentFactory {
     public static Intent getSubscriptionFeed(Channel channel) {
         Intent intent = new Intent(RSS.getContext(), FeedListActivity.class);
         intent.putExtra("channel", channel.getTitle());
-        intent.putExtra("url", channel.getLink().toString());
+        intent.putExtra("url", channel.getRssLink().toString());
         return intent;
     }
 

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/subscription_parent"
               style="@style/Match">
+
+    <FrameLayout
+        android:id="@+id/add_subscription_container"
+        style="@style/Match"
+        android:visibility="gone"/>
 
     <fragment
             android:name="com.ouchadam.podcast.fragment.ChannelListFragment"

@@ -2,13 +2,13 @@ package com.ouchadam.podcast.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.fragment.ItemListFragment;
 
-public class FeedListActivity extends FragmentActivity {
+public class FeedListActivity extends SherlockFragmentActivity {
 
     @Override
     public void onCreate(Bundle icicle) {

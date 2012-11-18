@@ -2,24 +2,28 @@ package com.ouchadam.podcast.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import com.actionbarsherlock.app.SherlockListFragment;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.adapter.ChannelAdapter;
 import com.ouchadam.podcast.builder.IntentFactory;
-import com.ouchadam.podcast.database.ChannelDatabaseUtil;
+import com.ouchadam.podcast.database.ChannelTable;
 import com.ouchadam.podcast.pojo.Channel;
+import com.ouchadam.podcast.provider.FeedProvider;
 
-import java.util.List;
+public class ChannelListFragment extends SherlockListFragment implements LoaderManager.LoaderCallbacks<Cursor> {
 
-public class ChannelListFragment extends ListFragment {
+    private static final int LOADER_CURSOR = 1;
 
-    private ChannelAdapter adapter;
     private ProgressBar progressBar;
     private Context context;
 
@@ -27,27 +31,8 @@ public class ChannelListFragment extends ListFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         context = activity;
-//        addTestChannel();
-        initAdapter(getChannels());
+        getLoaderManager().initLoader(LOADER_CURSOR, null, this);
     }
-
-    private void addTestChannel() {
-        Channel channel = new Channel();
-        channel.setTitle("Test Channel 1");
-        channel.setLink("http://www.howstuffworks.com/podcasts/stuff-you-should-know.rss");
-        channel.setCategory("Category : Test");
-        channel.setImage(new Channel.Image("http://google.com", "Image Title", "http://google.com"));
-        ChannelDatabaseUtil.addChannel(channel);
-
-        channel = new Channel();
-        channel.setTitle("Test Channel 2");
-        channel.setLink("http://www.howstuffworks.com/stuff-to-blow-your-mind.rss");
-        channel.setCategory("Category : Test 2" );
-        channel.setImage(new Channel.Image("http://google.com", "Image Title", "http://google.com"));
-        ChannelDatabaseUtil.addChannel(channel);
-
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -57,19 +42,35 @@ public class ChannelListFragment extends ListFragment {
         return view;
     }
 
-    private List<Channel> getChannels(){
-        return ChannelDatabaseUtil.getAllChannels();
-    }
-
-    private void initAdapter(List<Channel> items) {
-        adapter = new ChannelAdapter(context, R.layout.adapter_channel_layout, items);
-        this.setListAdapter(adapter);
-    }
-
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         startActivity(IntentFactory.getSubscriptionFeed(((Channel) getListAdapter().getItem(position))));
     }
 
+    @Override
+    public Loader<Cursor> onCreateLoader(int loaderId, Bundle bundle) {
+        return new CursorLoader(context, FeedProvider.CONTENT_CHANNEL_URI, null,
+                null,
+                null,
+                ChannelTable.COLUMN_ID);
+    }
+
+    @Override
+    public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
+        if (getListAdapter() == null && getActivity() != null) {
+            setListAdapter(new ChannelAdapter(context, cursor));
+        }else {
+            ((ChannelAdapter) getListAdapter()).changeCursor(cursor);
+        }
+    }
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+        if (getListAdapter() instanceof ChannelAdapter) {
+            ((ChannelAdapter) getListAdapter()).changeCursor(null);
+        }
+        loader = null;
+        setListAdapter(null);
+    }
 }

@@ -7,6 +7,12 @@
             style="@style/MatchWidth"
             android:text="@string/add_subscription_title"/>
 
+    <EditText
+        android:id="@+id/add_subscription_edit_text"
+        style="@style/MatchWidth"
+        android:inputType="textFilter"
+        android:text="http://www.howstuffworks.com/podcasts/stuff-you-should-know.rss"/>
+
     <Button
         android:id="@+id/add_subscription_btn"
         style="@style/MatchWidth"

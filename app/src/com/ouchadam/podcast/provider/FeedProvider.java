@@ -211,6 +211,7 @@ public class FeedProvider extends ContentProvider {
                 ChannelTable.COLUMN_ID,
                 ChannelTable.COLUMN_TITLE,
                 ChannelTable.COLUMN_LINK,
+                ChannelTable.COLUMN_RSS_LINK,
                 ChannelTable.COLUMN_CATEGORY,
                 ChannelTable.COLUMN_IMAGE_URL,
                 ChannelTable.COLUMN_IMAGE_TITLE,

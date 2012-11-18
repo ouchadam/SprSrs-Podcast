@@ -7,6 +7,7 @@ public class Channel {
 
     private String title;
     private URL link;
+    private URL rsslink;
     private String category;
     private Image image;
 
@@ -17,6 +18,14 @@ public class Channel {
     public void setLink(String link) {
         try {
             this.link = new URL(link);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setRssLink(String link) {
+        try {
+            this.rsslink = new URL(link);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -44,6 +53,10 @@ public class Channel {
 
     public Image getImage() {
         return image;
+    }
+
+    public URL getRssLink() {
+        return rsslink;
     }
 
     public static class Image {

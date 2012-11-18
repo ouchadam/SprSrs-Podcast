@@ -36,7 +36,7 @@ public class XmlFetcherService extends IntentService {
     }
 
     private void parseXml(String url) {
-        List<FeedItem> messages = new RSSFeedHelper(getApplicationContext()).getArticle(url);
+        List<FeedItem> messages = new RSSFeedHelper(getApplicationContext()).getFeedItems(url);
         for (FeedItem message : messages) {
             FeedDatabaseUtil.setItem(channel, message);
         }

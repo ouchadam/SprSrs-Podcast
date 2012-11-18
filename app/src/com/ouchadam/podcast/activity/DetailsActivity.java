@@ -1,6 +1,5 @@
 package com.ouchadam.podcast.activity;
 
-import android.app.Activity;
 import android.app.LoaderManager;
 import android.content.Loader;
 import android.graphics.Bitmap;
@@ -10,14 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.ouchadam.podcast.database.FeedDatabaseUtil;
-import com.ouchadam.podcast.pojo.FeedItem;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.ouchadam.podcast.R;
+import com.ouchadam.podcast.database.FeedDatabaseUtil;
 import com.ouchadam.podcast.loader.ImageLoader;
+import com.ouchadam.podcast.pojo.FeedItem;
 
 import java.io.IOException;
 
-public class DetailsActivity extends Activity implements View.OnClickListener, MediaPlayer.OnPreparedListener, LoaderManager.LoaderCallbacks<Bitmap> {
+public class DetailsActivity extends SherlockFragmentActivity implements View.OnClickListener, MediaPlayer.OnPreparedListener, LoaderManager.LoaderCallbacks<Bitmap> {
 
     private static final int LOADER_IMAGE = 1;
     private FeedItem message;
