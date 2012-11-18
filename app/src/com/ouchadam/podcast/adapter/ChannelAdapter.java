@@ -1,7 +1,6 @@
 package com.ouchadam.podcast.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,9 +49,6 @@ public class ChannelAdapter extends ArrayAdapter<Channel> {
     }
 
     private void setViewText(ViewHolder holder, int position) {
-        Log.e("Test", "Adapter position : " + position);
-        Log.e("Test", "Holder : " + holder);
-        Log.e("Test", "Text view title : " + holder.title);
         holder.title.setText(channels.get(position).getTitle());
         holder.category.setText(channels.get(position).getCategory());
         holder.channelImage.setImageResource(R.drawable.feedicon);

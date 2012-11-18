@@ -11,6 +11,8 @@ import java.util.List;
 
 public class XmlFetcherService extends IntentService {
 
+    private String channel;
+
     public XmlFetcherService(String name) {
         super(name);
     }
@@ -22,12 +24,13 @@ public class XmlFetcherService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         if (intent != null) {
-            if (FeedDatabaseUtil.getFeedCount() < 1) {
+            channel = intent.getStringExtra("channel");
+            if (FeedDatabaseUtil.getFeedCount(channel) < 1) {
                 if (intent.getAction().equals("parse")) {
                     parseXml();
                 }
             } else {
-                sendBroadcast(IntentFactory.getParseFinished());
+                sendBroadcast(IntentFactory.getParseFinished(channel));
             }
         }
     }
@@ -35,9 +38,9 @@ public class XmlFetcherService extends IntentService {
     private void parseXml() {
         List<FeedItem> messages = new RSSFeedHelper(getApplicationContext()).getArticle();
         for (FeedItem message : messages) {
-            FeedDatabaseUtil.setItem(null, message);
+            FeedDatabaseUtil.setItem(channel, message);
         }
-        sendBroadcast(IntentFactory.getParseFinished());
+        sendBroadcast(IntentFactory.getParseFinished(channel));
     }
 
 }

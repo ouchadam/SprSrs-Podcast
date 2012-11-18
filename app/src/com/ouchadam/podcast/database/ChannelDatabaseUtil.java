@@ -2,7 +2,6 @@ package com.ouchadam.podcast.database;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.util.Log;
 import com.ouchadam.podcast.application.RSS;
 import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.provider.FeedProvider;
@@ -57,7 +56,6 @@ public class ChannelDatabaseUtil {
         Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_CHANNEL_URI, countProjection, null, null,null);
         int feedCount = cursor.getCount();
         cursor.close();
-        Log.e("Test", "Get count : " + feedCount);
         return feedCount;
     }
 

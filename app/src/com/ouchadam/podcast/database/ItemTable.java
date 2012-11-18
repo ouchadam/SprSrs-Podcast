@@ -12,8 +12,9 @@ public class ItemTable {
     public static final String COLUMN_ITEM_TITLE = "title";
     public static final String COLUMN_ITEM_AUDIO_URL = "audioUrl";
     public static final String COLUMN_ITEM_DETAILS = "details";
-    public static final String COLUMN_ITEM_DATE = "date";
+    public static final String COLUMN_CHANNEL = "channel";
 
+    public static final String COLUMN_ITEM_DATE = "date";
     private static final String DATABASE_CREATE = "create table "
             + TABLE_FEED
             + "("
@@ -21,7 +22,8 @@ public class ItemTable {
             + COLUMN_ITEM_TITLE + " text,"
             + COLUMN_ITEM_DETAILS + " text,"
             + COLUMN_ITEM_AUDIO_URL + " text,"
-            + COLUMN_ITEM_DATE + " text"
+            + COLUMN_ITEM_DATE + " text,"
+            + COLUMN_CHANNEL + " text"
             + ");";
 
     public static void onCreate(SQLiteDatabase database) {

@@ -18,7 +18,7 @@ public class ParseReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (intent != null) {
             if (intent.getAction().equals(ACTION_ON_PARSE_FINISHED)) {
-                onParseFinished.onParseFinished(getMessageListFromDb());
+                onParseFinished.onParseFinished(getMessageListFromDb(intent.getStringExtra("channel")));
             }
         }
     }
@@ -27,8 +27,8 @@ public class ParseReceiver extends BroadcastReceiver {
         this.onParseFinished = onParseListener;
     }
 
-    private List<FeedItem> getMessageListFromDb() {
-        return FeedDatabaseUtil.getAllFeeds();
+    private List<FeedItem> getMessageListFromDb(String channel) {
+        return FeedDatabaseUtil.getAllFeeds(channel);
     }
 
 }

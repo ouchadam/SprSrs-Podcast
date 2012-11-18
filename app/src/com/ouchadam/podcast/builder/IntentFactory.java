@@ -12,15 +12,17 @@ public class IntentFactory {
 
     private static final String ACTION_START_PARSE = "parse";
 
-    public static Intent getParseFinished() {
+    public static Intent getParseFinished(String channel) {
         Intent intent = new Intent();
         intent.setAction(ParseReceiver.ACTION_ON_PARSE_FINISHED);
+        intent.putExtra("channel", channel);
         return intent;
     }
 
-    public static Intent getParseService() {
+    public static Intent getParseService(String channel) {
         Intent intent = new Intent(RSS.getContext(), XmlFetcherService.class);
         intent.setAction(ACTION_START_PARSE);
+        intent.putExtra("channel", channel);
         return intent;
     }
 
@@ -35,8 +37,9 @@ public class IntentFactory {
         return intent;
     }
 
-    public static Intent getSubscriptionFeed() {
+    public static Intent getSubscriptionFeed(String channel) {
         Intent intent = new Intent(RSS.getContext(), FeedListActivity.class);
+        intent.putExtra("channel", channel);
         return intent;
     }
 

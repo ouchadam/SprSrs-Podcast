@@ -26,6 +26,16 @@ public class ItemListFragment extends ListFragment implements OnParseFinished {
     private ProgressBar progressBar;
     private Context context;
 
+    public ItemListFragment() {}
+
+    public static ItemListFragment newInstance(String channel) {
+        ItemListFragment fragment = new ItemListFragment();
+        Bundle b = new Bundle();
+        b.putString("channel", channel);
+        fragment.setArguments(b);
+        return fragment;
+    }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -58,7 +68,7 @@ public class ItemListFragment extends ListFragment implements OnParseFinished {
     }
 
     private void startLoadingFeed(){
-        context.startService(IntentFactory.getParseService());
+        context.startService(IntentFactory.getParseService(getArguments().getString("channel")));
     }
 
     @Override

@@ -193,7 +193,8 @@ public class FeedProvider extends ContentProvider {
                 ItemTable.COLUMN_ITEM_TITLE,
                 ItemTable.COLUMN_ITEM_AUDIO_URL,
                 ItemTable.COLUMN_ITEM_DATE,
-                ItemTable.COLUMN_ITEM_DETAILS };
+                ItemTable.COLUMN_ITEM_DETAILS,
+                ItemTable.COLUMN_CHANNEL };
 
         if (projection != null) {
             HashSet<String> requestedColumns = new HashSet<String>(Arrays.asList(projection));

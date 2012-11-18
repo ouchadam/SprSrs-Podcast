@@ -15,12 +15,15 @@ public class FeedDatabaseUtil {
             ItemTable.COLUMN_ITEM_TITLE,
             ItemTable.COLUMN_ITEM_AUDIO_URL,
             ItemTable.COLUMN_ITEM_DATE,
-            ItemTable.COLUMN_ITEM_DETAILS };
+            ItemTable.COLUMN_ITEM_DETAILS,
+            ItemTable.COLUMN_CHANNEL };
 
-    public static List<FeedItem> getAllFeeds() {
-        int feedCount = getFeedCount();
+    public static List<FeedItem> getAllFeeds(String channel) {
+        int feedCount = getFeedCount(channel);
+        String mSelectionClause = ItemTable.COLUMN_CHANNEL + "=?";
         List<FeedItem> messageList = new ArrayList<FeedItem>(feedCount);
-        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_ITEM_URI, PROJECTION,null, null,null);
+        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_ITEM_URI, PROJECTION,
+                mSelectionClause, new String[] { channel },null);
         if (cursor.moveToFirst()) {
             for (int i = 0; i < 10; i ++) {
                 messageList.add(i, createFeedItemFromCursor(cursor));
@@ -31,9 +34,11 @@ public class FeedDatabaseUtil {
         return messageList;
     }
 
-    public static int getFeedCount() {
+    public static int getFeedCount(String channel) {
         String [] countProjection = { ItemTable.COLUMN_ID };
-        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_ITEM_URI, countProjection, null, null,null);
+        String mSelectionClause = ItemTable.COLUMN_CHANNEL + "=?";
+        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_ITEM_URI, countProjection,
+                mSelectionClause, new String[] { channel } ,null);
         int feedCount = cursor.getCount();
         cursor.close();
         return feedCount;
@@ -62,11 +67,12 @@ public class FeedDatabaseUtil {
     }
 
     public static void setItem(String channel, FeedItem message) {
-        RSS.getContext().getContentResolver().insert(FeedProvider.CONTENT_ITEM_URI, createValuesFromMessage(message));
+        RSS.getContext().getContentResolver().insert(FeedProvider.CONTENT_ITEM_URI, createValuesFromMessage(channel, message));
     }
 
-    private static ContentValues createValuesFromMessage(FeedItem message) {
+    private static ContentValues createValuesFromMessage(String channel, FeedItem message) {
         ContentValues values = new ContentValues();
+        values.put(ItemTable.COLUMN_CHANNEL, channel);
         values.put(ItemTable.COLUMN_ITEM_TITLE, message.getTitle());
         values.put(ItemTable.COLUMN_ITEM_DETAILS, message.getDescription());
         values.put(ItemTable.COLUMN_ITEM_DATE, message.getDate());

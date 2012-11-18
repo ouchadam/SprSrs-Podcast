@@ -27,7 +27,7 @@ public class ChannelListFragment extends ListFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         context = activity;
-//        addTestChannel();
+        addTestChannel();
         initAdapter(getChannels());
     }
 
@@ -60,7 +60,7 @@ public class ChannelListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        startActivity(IntentFactory.getSubscriptionFeed());
+        startActivity(IntentFactory.getSubscriptionFeed("Test Channel"));
     }
 
 }

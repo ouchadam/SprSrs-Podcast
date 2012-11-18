@@ -4,8 +4,8 @@
         style="@style/Match"
         android:orientation="vertical">
 
-    <fragment
-            android:name="com.ouchadam.podcast.fragment.ItemListFragment"
+    <FrameLayout
+            android:id="@+id/item_fragment_container"
             style="@style/Match"
             android:layout_weight="0.1"/>
 
