@@ -1,8 +1,9 @@
 package com.ouchadam.podcast.parser;
 
 
-import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.parser.interfaces.FeedParser;
+import com.ouchadam.podcast.pojo.Channel;
+import com.ouchadam.podcast.pojo.FeedItem;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -27,6 +28,7 @@ public class FeedItemFactory implements FeedParser {
     protected static final  String IMAGE = "image";
     protected static final  String TITLE = "title";
     protected static final  String ITEM = "item";
+    private static final String CATEGORY = "category";
 
     @Override
     public List<FeedItem> parse(Document doc) {
@@ -56,6 +58,49 @@ public class FeedItemFactory implements FeedParser {
             }
         }
         return message;
+    }
+
+    public static Channel parseChannel(Document doc) {
+        return createChannel(doc.getElementsByTagName(CHANNEL).item(0).getChildNodes());
+    }
+
+    private static Channel createChannel(NodeList item) {
+        final Channel channel = new Channel();
+        for (int i = 0; i < item.getLength(); i ++) {
+            Node n = item.item(i);
+            if (n.getNodeType() == 1) {
+                if (n.getNodeName().equalsIgnoreCase(TITLE)) {
+                    channel.setTitle(nodeToString(n));
+                } else if (n.getNodeName().equalsIgnoreCase(LINK)) {
+                    channel.setLink(nodeToString(n));
+                } else if (n.getNodeName().equalsIgnoreCase(IMAGE)) {
+                    channel.setImage(createImage(n.getChildNodes()));
+                } else if (n.getNodeName().equalsIgnoreCase(CATEGORY)) {
+                    channel.setCategory(nodeToString(n));
+                }
+            }
+        }
+        return channel;
+    }
+
+    private static Channel.Image createImage(NodeList imageNode) {
+        String title = null;
+        String url = null;
+        String link = null;
+
+        for (int i = 0; i < imageNode.getLength(); i ++) {
+            Node n = imageNode.item(i);
+            if (n.getNodeType() == 1) {
+                if (n.getNodeName().equalsIgnoreCase(TITLE)) {
+                    title = nodeToString(n);
+                } else if (n.getNodeName().equalsIgnoreCase(IMAGE_URL)) {
+                    url = nodeToString(n);
+                } else if (n.getNodeName().equalsIgnoreCase(LINK)) {
+                    link = nodeToString(n);
+                }
+            }
+        }
+        return new Channel.Image(url, title, link);
     }
 
     private static String nodeToString(Node node) {
