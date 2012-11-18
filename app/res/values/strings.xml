@@ -3,4 +3,5 @@
     <string name="app_name">podcast</string>
     <string name="add_subscription_title">Add Subscription!</string>
     <string name="subscription_add">add</string>
+    <string name="subscription_title">Your Subscriptions</string>
 </resources>

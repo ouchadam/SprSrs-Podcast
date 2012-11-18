@@ -36,7 +36,7 @@ public class ChannelListFragment extends SherlockListFragment implements LoaderM
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_feed_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_channel_list, container, false);
         progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         progressBar.setVisibility(View.GONE);
         return view;

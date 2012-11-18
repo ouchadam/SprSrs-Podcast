@@ -5,9 +5,9 @@
               style="@style/Match">
 
     <FrameLayout
-        android:id="@+id/add_subscription_container"
-        style="@style/Match"
-        android:visibility="gone"/>
+            android:id="@+id/add_subscription_container"
+            style="@style/Match"
+            android:visibility="gone"/>
 
     <fragment
             android:name="com.ouchadam.podcast.fragment.ChannelListFragment"
