@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -13,6 +14,9 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import com.actionbarsherlock.app.SherlockListFragment;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.adapter.ChannelAdapter;
 import com.ouchadam.podcast.builder.IntentFactory;
@@ -24,8 +28,15 @@ public class ChannelListFragment extends SherlockListFragment implements LoaderM
 
     private static final int LOADER_CURSOR = 1;
 
+    private AddSubscriptionFragment addSubscriptionFragment;
     private ProgressBar progressBar;
     private Context context;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
     @Override
     public void onAttach(Activity activity) {
@@ -72,5 +83,41 @@ public class ChannelListFragment extends SherlockListFragment implements LoaderM
         }
         loader = null;
         setListAdapter(null);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.subscription, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.subscription_menu_add:
+                initFragment();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void initFragment() {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        if (addSubscriptionFragment == null) {
+            addSubscriptionFragment = AddSubscriptionFragment.newInstance();
+        }
+        addSubscriptionFragment.setTargetFragment(this, 0);
+        ft.add(R.id.add_subscription_container, addSubscriptionFragment).commit();
+        View view = getActivity().findViewById(R.id.add_subscription_container);
+        view.setVisibility(View.VISIBLE);
+    }
+
+    public void onChannelAdded() {
+        View view = getActivity().findViewById(R.id.add_subscription_container);
+        view.setVisibility(View.GONE);
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.remove(addSubscriptionFragment).commit();
+        addSubscriptionFragment = null;
     }
 }
