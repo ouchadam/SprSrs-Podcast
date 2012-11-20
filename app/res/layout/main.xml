@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         style="@style/Match">
 
     <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"
             style="@style/Match"/>
 
-</LinearLayout>
+    <FrameLayout
+            android:id="@+id/add_subscription_container"
+            style="@style/Match"
+            android:visibility="gone"/>
+
+
+</RelativeLayout>
