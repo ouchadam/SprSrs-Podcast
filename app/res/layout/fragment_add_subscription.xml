@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            style="@style/Match">
+              style="@style/MatchWidth">
 
     <TextView
             android:id="@+id/add_subscription_title"
@@ -8,14 +8,27 @@
             android:text="@string/add_subscription_title"/>
 
     <EditText
-        android:id="@+id/add_subscription_edit_text"
-        style="@style/MatchWidth"
-        android:inputType="textFilter"
-        android:text="http://www.howstuffworks.com/podcasts/stuff-you-should-know.rss"/>
+            android:id="@+id/add_subscription_edit_text"
+            style="@style/MatchWidth"
+            android:inputType="textFilter"
+            android:text="http://www.howstuffworks.com/podcasts/stuff-you-should-know.rss"/>
 
-    <Button
-        android:id="@+id/add_subscription_btn"
-        style="@style/MatchWidth"
-        android:text="OK"/>
+    <LinearLayout
+            style="@style/MatchWidth"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/cancel_subscription_btn"
+                style="@style/MatchWidth"
+                android:layout_weight="1"
+                android:text="Cancel"/>
+
+        <Button
+                android:id="@+id/add_subscription_btn"
+                style="@style/MatchWidth"
+                android:layout_weight="1"
+                android:text="OK"/>
+
+    </LinearLayout>
 
 </LinearLayout>

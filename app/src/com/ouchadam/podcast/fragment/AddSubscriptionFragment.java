@@ -14,6 +14,7 @@ public class AddSubscriptionFragment extends SherlockFragment implements View.On
 
     private Button addSubBtn;
     private EditText editText;
+    private Button cancelSubBtn;
 
     public AddSubscriptionFragment(){}
 
@@ -36,13 +37,25 @@ public class AddSubscriptionFragment extends SherlockFragment implements View.On
     private void initAddBtn(View view) {
         addSubBtn = (Button) view.findViewById(R.id.add_subscription_btn);
         addSubBtn.setOnClickListener(this);
+        cancelSubBtn = (Button) view.findViewById(R.id.cancel_subscription_btn);
+        cancelSubBtn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        new GetChannelTask().execute(editText.getText().toString());
+
+        switch (view.getId()) {
+            case R.id.add_subscription_btn :
+                addSub();
+                break;
+        }
+
         ChannelListFragment f = (ChannelListFragment) getTargetFragment();
         f.onChannelAdded();
+    }
+
+    private void addSub() {
+        new GetChannelTask().execute(editText.getText().toString());
     }
 
 }
