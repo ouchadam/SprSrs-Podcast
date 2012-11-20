@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
@@ -24,7 +23,7 @@ import com.ouchadam.podcast.database.ChannelTable;
 import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.provider.FeedProvider;
 
-public class ChannelListFragment extends SherlockListFragment implements LoaderManager.LoaderCallbacks<Cursor> {
+public class ChannelListFragment extends BaseListFragment implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final int LOADER_CURSOR = 1;
 
@@ -39,16 +38,15 @@ public class ChannelListFragment extends SherlockListFragment implements LoaderM
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
-    }
-
-    @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         context = activity;
         getLoaderManager().initLoader(LOADER_CURSOR, null, this);
+    }
+
+    @Override
+    public CharSequence getFragmentPageTitle() {
+        return "Subscriptions";
     }
 
     @Override
@@ -126,4 +124,5 @@ public class ChannelListFragment extends SherlockListFragment implements LoaderM
         ft.remove(addSubscriptionFragment).commit();
         addSubscriptionFragment = null;
     }
+
 }

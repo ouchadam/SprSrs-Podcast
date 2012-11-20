@@ -1,6 +1,10 @@
 package com.ouchadam.podcast.fragment;
 
-import com.actionbarsherlock.app.SherlockListFragment;
+public class DownloadsFragment extends BaseListFragment {
 
-public class DownloadsFragment extends SherlockListFragment {
+    @Override
+    public CharSequence getFragmentPageTitle() {
+        return "Downloads";
+    }
+
 }

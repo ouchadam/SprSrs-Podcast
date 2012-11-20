@@ -3,7 +3,6 @@ package com.ouchadam.podcast.builder;
 import android.content.Intent;
 import com.ouchadam.podcast.activity.DetailsActivity;
 import com.ouchadam.podcast.activity.FeedListActivity;
-import com.ouchadam.podcast.activity.SubscriptionsActivity;
 import com.ouchadam.podcast.application.RSS;
 import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.receiver.ParseReceiver;
@@ -31,11 +30,6 @@ public class IntentFactory {
     public static Intent getMessageDetails(String messageTitle) {
         Intent intent = new Intent(RSS.getContext(), DetailsActivity.class);
         intent.putExtra("title", messageTitle);
-        return intent;
-    }
-
-    public static Intent getSubscriptions() {
-        Intent intent = new Intent(RSS.getContext(), SubscriptionsActivity.class);
         return intent;
     }
 
