@@ -32,6 +32,12 @@ public class ChannelListFragment extends SherlockListFragment implements LoaderM
     private ProgressBar progressBar;
     private Context context;
 
+    public ChannelListFragment() {}
+
+    public static ChannelListFragment newInstance() {
+        return new ChannelListFragment();
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
