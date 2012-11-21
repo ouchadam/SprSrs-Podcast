@@ -33,11 +33,15 @@ public class ItemListFragment extends SherlockListFragment implements OnParseFin
 
     public static ItemListFragment newInstance(String channel, String url) {
         ItemListFragment fragment = new ItemListFragment();
+        fragment.setArguments(createArgs(channel, url));
+        return fragment;
+    }
+
+    private static Bundle createArgs(String channel, String url) {
         Bundle b = new Bundle();
         b.putString("channel", channel);
         b.putString("url", url);
-        fragment.setArguments(b);
-        return fragment;
+        return b;
     }
 
     @Override
@@ -122,10 +126,15 @@ public class ItemListFragment extends SherlockListFragment implements OnParseFin
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.feed_list_refresh:
-                context.startService(IntentFactory.getRefreshService(getArguments().getString("channel")));
+                progressBar.setVisibility(View.VISIBLE);
+                startRefreshService();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void startRefreshService() {
+        context.startService(IntentFactory.getRefreshService(getArguments().getString("channel")));
     }
 }
