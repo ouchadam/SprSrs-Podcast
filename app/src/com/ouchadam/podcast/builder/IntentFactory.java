@@ -11,6 +11,7 @@ import com.ouchadam.podcast.service.XmlFetcherService;
 public class IntentFactory {
 
     private static final String ACTION_START_PARSE = "parse";
+    private static final String ACTION_REFRESH = "refresh";
 
     public static Intent getParseService(String channel, String url) {
         Intent intent = new Intent(RSS.getContext(), XmlFetcherService.class);
@@ -40,4 +41,10 @@ public class IntentFactory {
         return intent;
     }
 
+    public static Intent getRefreshService(String channel) {
+        Intent intent = new Intent(RSS.getContext(), XmlFetcherService.class);
+        intent.setAction(ACTION_REFRESH);
+        intent.putExtra("channel", channel);
+        return intent;
+    }
 }

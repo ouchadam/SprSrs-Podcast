@@ -2,6 +2,7 @@ package com.ouchadam.podcast.service;
 
 import android.app.IntentService;
 import android.content.Intent;
+import com.ouchadam.podcast.database.ChannelDatabaseUtil;
 import com.ouchadam.podcast.database.FeedDatabaseUtil;
 import com.ouchadam.podcast.pojo.FeedItem;
 import com.ouchadam.podcast.builder.IntentFactory;
@@ -25,9 +26,11 @@ public class XmlFetcherService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         if (intent != null) {
             channel = intent.getStringExtra("channel");
-            if (FeedDatabaseUtil.getFeedCount(channel) < 1) {
+            if (FeedDatabaseUtil.getFeedCount(channel) < 1 || intent.getAction().equals("refresh")) {
                 if (intent.getAction().equals("parse")) {
                     parseXml(intent.getStringExtra("url"));
+                } else if (intent.getAction().equals("refresh")) {
+                    parseXml(ChannelDatabaseUtil.getChannelUrl(channel));
                 }
             } else {
                 sendBroadcast(IntentFactory.getParseFinished(channel));

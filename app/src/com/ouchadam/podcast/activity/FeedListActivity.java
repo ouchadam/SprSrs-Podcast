@@ -1,6 +1,5 @@
 package com.ouchadam.podcast.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -14,10 +13,10 @@ public class FeedListActivity extends SherlockFragmentActivity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.activity_feed_list);
-        initFragment(getIntent());
+        initFragment();
     }
 
-    private void initFragment(Intent intent) {
+    private void initFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.add(R.id.item_fragment_container, ItemListFragment.newInstance(getIntent().getStringExtra("channel"), getIntent().getStringExtra("url")));

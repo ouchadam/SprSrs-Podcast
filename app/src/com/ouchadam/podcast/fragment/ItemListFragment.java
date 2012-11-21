@@ -112,7 +112,6 @@ public class ItemListFragment extends SherlockListFragment implements OnParseFin
         startActivity(IntentFactory.getMessageDetails(((FeedItem) l.getItemAtPosition(position)).getTitle()));
     }
 
-
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.item_list, menu);
@@ -123,6 +122,7 @@ public class ItemListFragment extends SherlockListFragment implements OnParseFin
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.feed_list_refresh:
+                context.startService(IntentFactory.getRefreshService(getArguments().getString("channel")));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

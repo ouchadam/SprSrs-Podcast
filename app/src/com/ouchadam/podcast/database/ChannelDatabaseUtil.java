@@ -77,4 +77,16 @@ public class ChannelDatabaseUtil {
         return values;
     }
 
+    public static String getChannelUrl(String channel) {
+        String [] countProjection = { ChannelTable.COLUMN_RSS_LINK };
+        String mSelectionClause = ChannelTable.COLUMN_TITLE + "=?";
+        Cursor cursor = RSS.getContext().getContentResolver().query(FeedProvider.CONTENT_CHANNEL_URI, countProjection,
+                mSelectionClause, new String[] { channel },null);
+        String channelUrl = null;
+        if (cursor.moveToFirst()) {
+            channelUrl = cursor.getString(cursor.getColumnIndexOrThrow(ChannelTable.COLUMN_RSS_LINK));
+        }
+        cursor.close();
+        return channelUrl;
+    }
 }
