@@ -4,4 +4,6 @@
     <string name="add_subscription_title">Add Subscription!</string>
     <string name="subscription_add">add</string>
     <string name="subscription_title">Your Subscriptions</string>
+
+    <string name="feed_list_refresh">refresh</string>
 </resources>

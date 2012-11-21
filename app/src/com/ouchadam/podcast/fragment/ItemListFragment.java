@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import com.actionbarsherlock.app.SherlockListFragment;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.adapter.FeedItemAdapter;
 import com.ouchadam.podcast.builder.IntentFactory;
@@ -19,7 +22,7 @@ import com.ouchadam.podcast.receiver.ParseReceiver;
 
 import java.util.List;
 
-public class ItemListFragment extends ListFragment implements OnParseFinished {
+public class ItemListFragment extends SherlockListFragment implements OnParseFinished {
 
     private FeedItemAdapter adapter;
     private ParseReceiver receiver;
@@ -43,6 +46,12 @@ public class ItemListFragment extends ListFragment implements OnParseFinished {
         context = activity;
         initReceiver();
         startLoadingFeed();
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -103,4 +112,20 @@ public class ItemListFragment extends ListFragment implements OnParseFinished {
         startActivity(IntentFactory.getMessageDetails(((FeedItem) l.getItemAtPosition(position)).getTitle()));
     }
 
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.item_list, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.feed_list_refresh:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
