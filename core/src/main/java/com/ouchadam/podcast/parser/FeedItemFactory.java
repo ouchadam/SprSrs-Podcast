@@ -3,10 +3,7 @@ package com.ouchadam.podcast.parser;
 
 import com.ouchadam.podcast.parser.interfaces.FeedParser;
 import com.ouchadam.podcast.pojo.Channel;
-import com.ouchadam.podcast.pojo.FeedItem;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import com.ouchadam.podcast.pojo.Episode;
 
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
@@ -17,6 +14,10 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 public class FeedItemFactory implements FeedParser {
 
@@ -31,10 +32,10 @@ public class FeedItemFactory implements FeedParser {
     private static final String CATEGORY = "category";
 
     @Override
-    public List<FeedItem> parse(Document doc) {
+    public List<Episode> parse(Document doc) {
         int itemAmount = doc.getElementsByTagName(ITEM).getLength();
 
-        List<FeedItem> messages = new ArrayList<FeedItem>();
+        List<Episode> messages = new ArrayList<Episode>();
         for (int i = 0; i < 10; i ++) {
             messages.add(parseMessage(doc.getElementsByTagName(ITEM).item(i).getChildNodes()));
         }
@@ -42,8 +43,8 @@ public class FeedItemFactory implements FeedParser {
         return messages;
     }
 
-    private static FeedItem parseMessage(NodeList item) {
-        final FeedItem message = new FeedItem();
+    private static Episode parseMessage(NodeList item) {
+        final Episode message = new Episode();
         for (int i = 0; i < item.getLength(); i ++) {
             if (item.item(i).getNodeType() == 1) {
                 if (item.item(i).getNodeName().equalsIgnoreCase(TITLE)) {
@@ -65,22 +66,27 @@ public class FeedItemFactory implements FeedParser {
     }
 
     private Channel createChannel(NodeList item) {
-        final Channel channel = new Channel();
+        String title = "";
+        String link = "";
+        String rssLink = "";
+        String category = "";
+        Channel.Image image = null;
+
         for (int i = 0; i < item.getLength(); i ++) {
             Node n = item.item(i);
             if (n.getNodeType() == 1) {
                 if (n.getNodeName().equalsIgnoreCase(TITLE)) {
-                    channel.setTitle(nodeToString(n));
+                    title = nodeToString(n);
                 } else if (n.getNodeName().equalsIgnoreCase(LINK)) {
-                    channel.setLink(nodeToString(n));
+                    link = nodeToString(n);
                 } else if (n.getNodeName().equalsIgnoreCase(IMAGE)) {
-                    channel.setImage(createImage(n.getChildNodes()));
+                    image = createImage(n.getChildNodes());
                 } else if (n.getNodeName().equalsIgnoreCase(CATEGORY)) {
-                    channel.setCategory(nodeToString(n));
+                    category = nodeToString(n);
                 }
             }
         }
-        return channel;
+        return new Channel(title, link, rssLink, category, image);
     }
 
     private Channel.Image createImage(NodeList imageNode) {

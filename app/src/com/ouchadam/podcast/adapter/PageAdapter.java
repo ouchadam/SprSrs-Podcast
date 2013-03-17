@@ -2,33 +2,31 @@ package com.ouchadam.podcast.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
+
 import com.ouchadam.podcast.fragment.ChannelListFragment;
 import com.ouchadam.podcast.fragment.DownloadsFragment;
 
-public class PageAdapter extends FragmentPagerAdapter {
+public class PageAdapter extends FragmentStatePagerAdapter {
+
+    private final Fragment[] fragments = {
+            ChannelListFragment.newInstance(),
+            DownloadsFragment.newInstance(),
+            ChannelListFragment.newInstance()
+    };
 
     public PageAdapter(FragmentManager fm) {
         super(fm);
     }
 
     @Override
-    public Fragment getItem(int i) {
-
-        switch (i) {
-            case 0:
-                return ChannelListFragment.newInstance();
-            case 1:
-                return DownloadsFragment.newInstance();
-            default:
-                return ChannelListFragment.newInstance();
-        }
-
+    public Fragment getItem(int position) {
+        return fragments[position];
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return fragments.length;
     }
 
 }

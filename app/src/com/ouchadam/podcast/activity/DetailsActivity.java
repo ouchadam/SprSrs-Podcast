@@ -9,18 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.database.FeedDatabaseUtil;
 import com.ouchadam.podcast.loader.ImageLoader;
-import com.ouchadam.podcast.pojo.FeedItem;
+import com.ouchadam.podcast.pojo.Episode;
 
 import java.io.IOException;
 
 public class DetailsActivity extends SherlockFragmentActivity implements View.OnClickListener, MediaPlayer.OnPreparedListener, LoaderManager.LoaderCallbacks<Bitmap> {
 
     private static final int LOADER_IMAGE = 1;
-    private FeedItem message;
+    private Episode episode;
     private static MediaPlayer mediaPlayer;
     private ImageView imageView;
     private Button button;
@@ -29,8 +29,7 @@ public class DetailsActivity extends SherlockFragmentActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-        String messagePos = getIntent().getStringExtra("title");
-        message = FeedDatabaseUtil.getFeedItem(null, messagePos);
+        episode = (Episode) getIntent().getSerializableExtra("episode");
         initTextViews();
         initButton();
         initImage();
@@ -48,9 +47,9 @@ public class DetailsActivity extends SherlockFragmentActivity implements View.On
 
     private void initTextViews() {
         TextView title = (TextView) findViewById(R.id.message_title);
-        title.setText(message.getTitle());
+        title.setText(episode.getTitle());
         TextView details = (TextView) findViewById(R.id.message_details);
-        details.setText(message.getDescription());
+        details.setText(episode.getDescription());
     }
 
     @Override
@@ -74,7 +73,7 @@ public class DetailsActivity extends SherlockFragmentActivity implements View.On
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setOnPreparedListener(this);
         try {
-            mediaPlayer.setDataSource(message.getLink().toString());
+            mediaPlayer.setDataSource(episode.getLink());
             mediaPlayer.prepareAsync();
         } catch (IOException e) {
             e.printStackTrace();

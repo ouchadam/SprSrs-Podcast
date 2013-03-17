@@ -1,33 +1,30 @@
 package com.ouchadam.podcast.fragment;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.ouchadam.podcast.GetEpisodesTask;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.adapter.FeedItemAdapter;
 import com.ouchadam.podcast.builder.IntentFactory;
-import com.ouchadam.podcast.parser.interfaces.OnParseFinished;
-import com.ouchadam.podcast.pojo.FeedItem;
-import com.ouchadam.podcast.receiver.ParseReceiver;
+import com.ouchadam.podcast.database.episode.EpisodeLoader;
+import com.ouchadam.podcast.pojo.Episode;
 
 import java.util.List;
 
-public class ItemListFragment extends SherlockListFragment implements OnParseFinished {
+public class ItemListFragment extends SherlockListFragment implements EpisodeLoader.Callback {
 
-    private FeedItemAdapter adapter;
-    private ParseReceiver receiver;
     private ProgressBar progressBar;
-    private Context context;
+    private EpisodeLoader episodeLoader;
 
     public ItemListFragment() {}
 
@@ -47,8 +44,6 @@ public class ItemListFragment extends SherlockListFragment implements OnParseFin
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        context = activity;
-        initReceiver();
         startLoadingFeed();
     }
 
@@ -56,6 +51,11 @@ public class ItemListFragment extends SherlockListFragment implements OnParseFin
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+    }
+
+    private void startLoadingFeed(){
+        episodeLoader = new EpisodeLoader(getActivity(), getLoaderManager(), this, getArguments().getString("channel"));
+        episodeLoader.startWatchingData();
     }
 
     @Override
@@ -72,48 +72,14 @@ public class ItemListFragment extends SherlockListFragment implements OnParseFin
     }
 
     private void initListFooter() {
-        View footerView = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.footer_layout, null, false);
+        View footerView = getActivity().getLayoutInflater().inflate(R.layout.footer_layout, null, false);
         getListView().addFooterView(footerView);
-    }
-
-    private void initReceiver() {
-        receiver = new ParseReceiver();
-        receiver.setOnParseListener(this);
-    }
-
-    private void startLoadingFeed(){
-        context.startService(IntentFactory.getParseService(getArguments().getString("channel"), getArguments().getString("url")));
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(ParseReceiver.ACTION_ON_PARSE_FINISHED);
-        context.registerReceiver(receiver, filter);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        context.unregisterReceiver(receiver);
-    }
-
-    @Override
-    public void onParseFinished(List<FeedItem> items) {
-        initAdapter(items);
-        progressBar.setVisibility(View.GONE);
-    }
-
-    private void initAdapter(List<FeedItem> items) {
-        adapter = new FeedItemAdapter(context, R.layout.adapter_item_layout, items);
-        this.setListAdapter(adapter);
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        startActivity(IntentFactory.getMessageDetails(((FeedItem) l.getItemAtPosition(position)).getTitle()));
+        startActivity(IntentFactory.getMessageDetails(((Episode) l.getItemAtPosition(position))));
     }
 
     @Override
@@ -135,6 +101,15 @@ public class ItemListFragment extends SherlockListFragment implements OnParseFin
     }
 
     private void startRefreshService() {
-        context.startService(IntentFactory.getRefreshService(getArguments().getString("channel")));
+        String url = getArguments().getString("url");
+        String channel = getArguments().getString("channel");
+        new GetEpisodesTask(getActivity().getContentResolver()).execute(url, channel);
     }
+
+    @Override
+    public void onFinish(List<Episode> episodes) {
+        progressBar.setVisibility(View.GONE);
+        getListView().setAdapter(new FeedItemAdapter(getActivity().getApplicationContext(), R.layout.adapter_item_layout, episodes));
+    }
+
 }

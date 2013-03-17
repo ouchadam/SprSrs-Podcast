@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.tests;
+package com.ouchadam.podcast;
 
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 import org.junit.runners.model.InitializationError;

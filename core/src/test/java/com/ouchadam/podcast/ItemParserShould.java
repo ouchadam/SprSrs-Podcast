@@ -1,7 +1,6 @@
 package com.ouchadam.podcast;
 
-import com.ouchadam.podcast.pojo.Channel;
-import com.ouchadam.podcast.pojo.FeedItem;
+import com.ouchadam.podcast.pojo.Episode;
 import com.ouchadam.podcast.util.FeedParserHelper;
 import org.junit.Test;
 import org.w3c.dom.Document;
@@ -18,7 +17,7 @@ public class ItemParserShould {
     Document doc = new FeedParserHelper().getDocFromRes();
     NodeList itemList = doc.getElementsByTagName("item");
     NodeList tenthItem = itemList.item(10).getChildNodes();
-    FeedItem parsedItem = mock(FeedItem.class);
+    Episode parsedItem = mock(Episode.class);
 
     @Test
     public void shouldReadFileFromRes() {

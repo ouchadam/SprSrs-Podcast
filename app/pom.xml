@@ -15,31 +15,6 @@
   <packaging>apk</packaging>
   <name>podcast - Application</name>
 
-  <profiles>
-    <profile>
-      <id>emma</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>com.jayway.maven.plugins.android.generation2</groupId>
-            <artifactId>android-maven-plugin</artifactId>
-            <configuration>
-              <emma>
-                <enable>true</enable>
-                <classFolders>${project.basedir}/target/classes/</classFolders>
-                <outputMetaFile>${project.basedir}/target/emma/coverage.em</outputMetaFile>
-              </emma>
-              <dex>
-                <noLocals>true</noLocals>
-              </dex>
-            </configuration>
-            <extensions>true</extensions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
-
   <dependencies>
     <dependency>
       <groupId>com.google.android</groupId>
@@ -57,8 +32,14 @@
     <dependency>
       <groupId>com.actionbarsherlock</groupId>
       <artifactId>library</artifactId>
-      <version>4.1.0</version>
+      <version>4.2.0</version>
       <type>apklib</type>
+    </dependency>
+
+    <dependency>
+      <groupId>com.novoda</groupId>
+      <artifactId>sqliteprovider-core</artifactId>
+      <version>1.0.0</version>
     </dependency>
 
     <dependency>
@@ -71,23 +52,6 @@
 
   <build>
     <sourceDirectory>src</sourceDirectory>
-    <plugins>
-      <plugin>
-        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
-        <artifactId>android-maven-plugin</artifactId>
-        <configuration>
-          <dex>
-            <jvmArguments>
-              <jvmArgument>-Xms256m</jvmArgument>
-              <jvmArgument>-Xmx512m</jvmArgument>
-            </jvmArguments>
-          </dex>
-          <sign>
-            <debug>both</debug>
-          </sign>
-        </configuration>
-        <extensions>true</extensions>
-      </plugin>
-    </plugins>
   </build>
+
 </project>

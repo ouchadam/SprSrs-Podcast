@@ -1,41 +1,18 @@
 package com.ouchadam.podcast.pojo;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 public class Channel {
 
-    private String title;
-    private URL link;
-    private URL rsslink;
-    private String category;
-    private Image image;
+    private final String title;
+    private final String link;
+    private final String rsslink;
+    private final String category;
+    private final Image image;
 
-    public void setTitle(String title) {
+    public Channel(String title, String link, String rsslink, String category, Image image) {
         this.title = title;
-    }
-
-    public void setLink(String link) {
-        try {
-            this.link = new URL(link);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void setRssLink(String link) {
-        try {
-            this.rsslink = new URL(link);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void setCategory(String category) {
+        this.link = link;
+        this.rsslink = rsslink;
         this.category = category;
-    }
-
-    public void setImage(Image image) {
         this.image = image;
     }
 
@@ -43,7 +20,7 @@ public class Channel {
         return title;
     }
 
-    public URL getLink() {
+    public String getLink() {
         return link;
     }
 
@@ -55,7 +32,7 @@ public class Channel {
         return image;
     }
 
-    public URL getRssLink() {
+    public String getRssLink() {
         return rsslink;
     }
 
@@ -71,4 +48,5 @@ public class Channel {
             this.imageLink = imageLink;
         }
     }
+
 }

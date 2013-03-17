@@ -41,7 +41,6 @@ public abstract class BaseListFragment extends SherlockListFragment {
     protected abstract CharSequence getFragmentPageTitle();
 
     private void setPageFragmentTitle(CharSequence charSequence) {
-        Log.e("Test", "Fragment title : " + charSequence);
         titleUpdater.updateTitle(charSequence);
     }
 

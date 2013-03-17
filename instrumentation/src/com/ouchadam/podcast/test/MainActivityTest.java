@@ -1,7 +1,8 @@
 package com.ouchadam.podcast.test;
 
 import android.test.ActivityInstrumentationTestCase2;
-import com.ouchadam.podcast.*;
+
+import com.ouchadam.podcast.activity.MainActivity;
 
 public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActivity> {
 
