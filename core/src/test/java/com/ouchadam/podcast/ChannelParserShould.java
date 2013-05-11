@@ -96,13 +96,13 @@
 //        NodeList image = getImageNode().getChildNodes();
 //        for (int i = 0; i < image.getLength(); i ++) {
 //            if (image.item(i).getNodeType() == Node.ELEMENT_NODE) {
-//                if (image.item(i).getNodeName().equalsIgnoreCase("url")) {
+//                if (image.item(i).getNodeName().equalsIgnoreCase("enclosure")) {
 //                    return;
 //                }
 //            }
 //        }
 //
-//        fail("Image has no url element");
+//        fail("Image has no enclosure element");
 //    }
 //
 //    @Test

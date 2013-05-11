@@ -1,6 +1,8 @@
 package com.ouchadam.podcast.pojo;
 
-public class Channel {
+import java.io.Serializable;
+
+public class Channel implements Serializable {
 
     private final String title;
     private final String link;
@@ -36,7 +38,7 @@ public class Channel {
         return rsslink;
     }
 
-    public static class Image {
+    public static class Image implements Serializable {
 
         public final String imageUrl;
         public final String imageTitle;

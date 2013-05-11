@@ -1,7 +1,5 @@
 package com.ouchadam.podcast.parser;
 
-
-import com.ouchadam.podcast.parser.interfaces.FeedParser;
 import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.pojo.Episode;
 
@@ -22,43 +20,21 @@ import org.w3c.dom.NodeList;
 public class FeedItemFactory implements FeedParser {
 
     protected static final String CHANNEL = "channel";
-    protected static final String PUB_DATE = "pubDate";
-    protected static final  String DESCRIPTION = "description";
-    protected static final  String LINK = "link";
-    protected static final  String IMAGE_URL = "url";
-    protected static final  String IMAGE = "image";
-    protected static final  String TITLE = "title";
-    protected static final  String ITEM = "item";
+    protected static final String LINK = "link";
+    protected static final String IMAGE_URL = "enclosure";
+    protected static final String IMAGE = "image";
+    protected static final String TITLE = "title";
+    protected static final String ITEM = "item";
     private static final String CATEGORY = "category";
 
     @Override
-    public List<Episode> parse(Document doc) {
-        int itemAmount = doc.getElementsByTagName(ITEM).getLength();
-
-        List<Episode> messages = new ArrayList<Episode>();
-        for (int i = 0; i < 10; i ++) {
-            messages.add(parseMessage(doc.getElementsByTagName(ITEM).item(i).getChildNodes()));
+    public List<Episode> parse(Document doc, int start, int end) {
+        EpisodeParser episodeParser = new EpisodeParser();
+        List<Episode> episodes = new ArrayList<Episode>();
+        for (int i = start; i < end; i++) {
+            episodes.add(episodeParser.parse(doc.getElementsByTagName(ITEM).item(i).getChildNodes()));
         }
-
-        return messages;
-    }
-
-    private static Episode parseMessage(NodeList item) {
-        final Episode message = new Episode();
-        for (int i = 0; i < item.getLength(); i ++) {
-            if (item.item(i).getNodeType() == 1) {
-                if (item.item(i).getNodeName().equalsIgnoreCase(TITLE)) {
-                    message.setTitle(nodeToString(item.item(i)));
-                } else if (item.item(i).getNodeName().equalsIgnoreCase(LINK)) {
-                    message.setLink(nodeToString(item.item(i)));
-                } else if (item.item(i).getNodeName().equalsIgnoreCase(DESCRIPTION)) {
-                    message.setDescription(nodeToString(item.item(i)));
-                } else if (item.item(i).getNodeName().equalsIgnoreCase(PUB_DATE)) {
-                    message.setDate(nodeToString(item.item(i)));
-                }
-            }
-        }
-        return message;
+        return episodes;
     }
 
     public Channel parseChannel(Document doc) {
@@ -72,7 +48,7 @@ public class FeedItemFactory implements FeedParser {
         String category = "";
         Channel.Image image = null;
 
-        for (int i = 0; i < item.getLength(); i ++) {
+        for (int i = 0; i < item.getLength(); i++) {
             Node n = item.item(i);
             if (n.getNodeType() == 1) {
                 if (n.getNodeName().equalsIgnoreCase(TITLE)) {
@@ -94,7 +70,7 @@ public class FeedItemFactory implements FeedParser {
         String url = null;
         String link = null;
 
-        for (int i = 0; i < imageNode.getLength(); i ++) {
+        for (int i = 0; i < imageNode.getLength(); i++) {
             Node n = imageNode.item(i);
             if (n.getNodeType() == 1) {
                 if (n.getNodeName().equalsIgnoreCase(TITLE)) {

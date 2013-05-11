@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CNET UK Podcast</title>
+    <link>http://crave.cnet.co.uk/podcast/</link>
+    <atom:link href="http://www.cnet.co.uk/feeds/podcasts/" rel="self" type="application/rss+xml"/>
+    <description>CNET UK Podcast</description>
+    <language>en-gb</language>
+    <managingEditor>jason.jenkins@cnet.co.uk (Jason Jenkins)</managingEditor>
+    <copyright>© Copyright 2013 CBS Interactive</copyright>
+    <category>Technology</category>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <image>
+      <url>http://www.cnet.co.uk/images/rss/logo-cnet.jpg</url>
+      <link>http://crave.cnet.co.uk/podcast/</link>
+      <title>CNET UK Podcast</title>
+      <width>88</width>
+      <height>56</height>
+    </image>
+    <ttl>20</ttl>
+        <pubDate>Sun, 17 Mar 2013 15:58:44 +0000</pubDate>
+        <lastBuildDate>Sun, 17 Mar 2013 15:58:44 +0000</lastBuildDate>
+        <itunes:subtitle>CNET UK Podcast</itunes:subtitle>
+        <itunes:summary>Britain's best technology podcast is beamed to your auditory sensors every Friday afternoon direct from CNET UK. The honey-toned team give you everything you need to know about the week's hottest tech news, the most Crave-worthy new gadgets and answer your best questions and funniest comments. There's a special feature every week, in which we tackle a burning tech topic in more detail, and lots more fun besides. Subscribe now, and let us know what you think!</itunes:summary>
+        <itunes:author>CNET UK</itunes:author>
+        <itunes:image href="http://www.cnet.co.uk/i/c/p/cnet-uk-podcast.jpg"/>
+        <itunes:owner>
+          <itunes:name>CNET UK</itunes:name>
+          <itunes:email>podcast@cnet.co.uk</itunes:email>
+        </itunes:owner>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:keywords>cnet uk, crave, mobile phones, technology, gadgets, electronics, games, apple, cent uk, carve</itunes:keywords>
+        <itunes:category text="Technology">
+          <itunes:category text="Gadgets"/>
+          <itunes:category text="Tech News"/>
+        </itunes:category>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Galaxy S4, SimCity and superfast broadband in Podcast 330</title>
+          <link>http://crave.cnet.co.uk/podcast/galaxy-s4-simcity-and-superfast-broadband-in-podcast-330-50010646/</link>
+          <pubDate>Thu, 14 Mar 2013 19:09:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_330.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010646</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:42:59</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp330.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Galaxy S4, SimCity and superfast broadband in Podcast 330</itunes:subtitle>
+          <itunes:summary>The Samsung Galaxy S4 is nearly here -- and we discuss a British broadband boost, SimCity woes and a French invasion of your phone bill.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Galaxy S4, price hikes and Sky vs O2 in Podcast 329</title>
+          <link>http://crave.cnet.co.uk/podcast/galaxy-s4-price-hikes-and-sky-vs-o2-in-podcast-329-50010594/</link>
+          <pubDate>Fri, 08 Mar 2013 15:26:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_329.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010594</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:42:59</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp329.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Galaxy S4, price hikes and Sky vs O2 in Podcast 329</itunes:subtitle>
+          <itunes:summary>We ask what the S4 has in store, say no to Orange and T-Mobile's latest price hikes, and doff our caps to a hat that talks to your phone.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Best new phones, tablets and more from MWC in Podcast 328</title>
+          <link>http://crave.cnet.co.uk/podcast/best-new-phones-tablets-and-more-from-mwc-in-podcast-328-50010543/</link>
+          <pubDate>Fri, 01 Mar 2013 16:02:02 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_328.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010543</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:39:08</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/ubuntu-best-of-mwc-podcast.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Best new phones, tablets and more from MWC in Podcast 328</itunes:subtitle>
+          <itunes:summary>In this podcast brought to you from Barcelona, the team set aside their keyboards to bring you their highlights from MWC.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>PlayStation 4, HTC One and friendless Nexus in Podcast 327</title>
+          <link>http://crave.cnet.co.uk/podcast/playstation-4-htc-one-and-friendless-nexus-in-podcast-327-50010490/</link>
+          <pubDate>Fri, 22 Feb 2013 15:09:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_327.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010490</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:42:59</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp327.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>PlayStation 4, HTC One and friendless Nexus in Podcast 327</itunes:subtitle>
+          <itunes:summary>Check out our preview of the year's coolest new phones and tablets, not to mention the Sony PlayStation 4 and the future of 4G.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Vertu Ti, Galaxy S4 and Doctor Who in Podcast 326</title>
+          <link>http://crave.cnet.co.uk/podcast/vertu-ti-galaxy-s4-and-doctor-who-in-podcast-326-50010422/</link>
+          <pubDate>Fri, 15 Feb 2013 10:47:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_326.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010422</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:45:30</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp326.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Vertu Ti, Galaxy S4 and Doctor Who in Podcast 326</itunes:subtitle>
+          <itunes:summary>Money is no object as we drop stacks on the £6,000 Vertu Ti smart phone, the Google Nexus 4 and Bill Gates fighting ducks.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Galaxy S4, Dyson Airblade Tap, broken iPhones in Podcast 325</title>
+          <link>http://crave.cnet.co.uk/podcast/galaxy-s4-dyson-airblade-tap-broken-iphones-in-podcast-325-50010373/</link>
+          <pubDate>Fri, 08 Feb 2013 14:41:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_325.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010373</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:40:39</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp325.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Galaxy S4, Dyson Airblade Tap, broken iPhones in Podcast 325</itunes:subtitle>
+          <itunes:summary>The Samsung Galaxy S4 could be coming soon, but will it be as good as the £1,000 Dyson Airblade Tap? </itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Nexus 4, BlackBerry 10 and Star Wars in Podcast 324</title>
+          <link>http://crave.cnet.co.uk/podcast/nexus-4-blackberry-10-and-star-wars-in-podcast-324-50010321/</link>
+          <pubDate>Fri, 01 Feb 2013 16:36:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_324_v2.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010321</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:29:00</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp324.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Nexus 4, BlackBerry 10 and Star Wars in Podcast 324</itunes:subtitle>
+          <itunes:summary>It's been a long wait, but BlackBerry 10 has arrived and the Google Nexus 4 is back -- are they pleasant as a pheasant?</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Galaxy Note 8, Siri on Android, BlackBerry 10 in Podcast 323</title>
+          <link>http://crave.cnet.co.uk/podcast/galaxy-note-8-siri-on-android-blackberry-10-in-podcast-323-50010246/</link>
+          <pubDate>Fri, 25 Jan 2013 17:20:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_323.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010246</guid>
+          <itunes:author>Rich Trenholm, Adrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>51:20</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp323.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Galaxy Note 8, Siri on Android, BlackBerry 10 in Podcast 323</itunes:subtitle>
+          <itunes:summary>Siri, BlackBerry 10 and the Firefox phone square up to Android while Windows 8 skyrockets in price.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Google Nexus 4, HMV and Big Bird in Podcast 322</title>
+          <link>http://crave.cnet.co.uk/podcast/google-nexus-4-hmv-and-big-bird-in-podcast-322-50010189/</link>
+          <pubDate>Fri, 18 Jan 2013 12:26:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_322.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010189</guid>
+          <itunes:author>Rich Trenholm, Jason Jenkins, Luke Westaway</itunes:author>
+          <itunes:duration>00:43:38</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp322.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Google Nexus 4, HMV and Big Bird in Podcast 322</itunes:subtitle>
+          <itunes:summary>With Blockbuster, HMV and EE closing shops, only one thing can brighten our lives: good news about the Nexus 4. That or Big Bird.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Xperia Z, 4K and a fork, live from CES in Podcast 321</title>
+          <link>http://crave.cnet.co.uk/podcast/xperia-z-4k-and-a-fork-live-from-ces-in-podcast-321-50010131/</link>
+          <pubDate>Thu, 10 Jan 2013 13:05:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_321.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010131</guid>
+          <itunes:author>Jason Jenkins, Luke Westaway, Olly Mann</itunes:author>
+          <itunes:duration>00:20:17</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp321.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Xperia Z, 4K and a fork, live from CES in Podcast 321</itunes:subtitle>
+          <itunes:summary>Jason and Luke are joined by Internet celeb Olly Mann, live at CES 2013, to discuss the themes of the show, including 4K TVs and a bossy fork.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CES predictions, Ubuntu for phones and cat cafes in Podcast 320</title>
+          <link>http://crave.cnet.co.uk/podcast/ces-predictions-ubuntu-for-phones-and-cat-cafes-in-podcast-320-50010089/</link>
+          <pubDate>Fri, 04 Jan 2013 12:32:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_320.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50010089</guid>
+          <itunes:author>Katie Collins, Jason Jenkins, Andrew Hoyle</itunes:author>
+          <itunes:duration>00:37:51</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp320.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CES predictions, Ubuntu for phones and cat cafes in Podcast 320</itunes:subtitle>
+          <itunes:summary>In the first CNET UK podcast of 2013, the team gaze into the crystal ball of tech and predict what products will be at this year's CES.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Nexus 4 and the best of the year in CNET UK Podcast 2012 </title>
+          <link>http://crave.cnet.co.uk/podcast/nexus-4-and-the-best-of-the-year-in-cnet-uk-podcast-2012-50009973/</link>
+          <pubDate>Thu, 20 Dec 2012 13:00:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_319_v2.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009973</guid>
+          <itunes:author>Rich Trenholm, Nick Hide, Luke Westaway</itunes:author>
+          <itunes:duration>37:59</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp319.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Nexus 4 and the best of the year in CNET UK Podcast 2012 </itunes:subtitle>
+          <itunes:summary>We bid a fond farewell to 2012 with the first ever CNET UK Podcast Stuff That Was Quite Good Awards.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Google Maps, O2 prices and The Hobbit in CNET UK Podcast 318</title>
+          <link>http://crave.cnet.co.uk/podcast/google-maps-o2-prices-and-the-hobbit-in-cnet-uk-podcast-318-50009972/</link>
+          <pubDate>Fri, 14 Dec 2012 17:25:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_318.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009972</guid>
+          <itunes:author>Rich Trenholm, Nick Hide, Luke Westaway</itunes:author>
+          <itunes:duration>00:37:22</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp318.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Google Maps, O2 prices and The Hobbit in CNET UK Podcast 318</itunes:subtitle>
+          <itunes:summary>The Hobbit is the first HFR film -- and it doesn't work. Plus, we lament O2's price hike and celebrate the return of Google Maps.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Google Nexus 4 and the best phone of the year in Podcast 317</title>
+          <link>http://crave.cnet.co.uk/podcast/google-nexus-4-and-the-best-phone-of-the-year-in-podcast-317-50009921/</link>
+          <pubDate>Fri, 07 Dec 2012 14:19:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_317.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009921</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:41:57</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp317.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Google Nexus 4 and the best phone of the year in Podcast 317</itunes:subtitle>
+          <itunes:summary>Phone fans! We issue a rallying call to vote in the first ever Annual CNET Readers and Listeners Bestest Phone of the Year Awards!</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Wii U and Will.i.am in CNET UK Podcast 316</title>
+          <link>http://crave.cnet.co.uk/podcast/wii-u-and-will-i-am-in-cnet-uk-podcast-316-50009879/</link>
+          <pubDate>Fri, 30 Nov 2012 12:02:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_316.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009879</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:47:33</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp316.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Wii U and Will.i.am in CNET UK Podcast 316</itunes:subtitle>
+          <itunes:summary>The Nintendo Wii U is out now, but is it any good? And is Will.i.am a hip-hop pillock or the saviour of technology?</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>BlackBerry kills laptops, Windows 8 woes in Podcast 315</title>
+          <link>http://crave.cnet.co.uk/podcast/blackberry-kills-laptops-windows-8-woes-in-podcast-315-50009809/</link>
+          <pubDate>Wed, 21 Nov 2012 17:29:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_315.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009809</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:44:38</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp315.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>BlackBerry kills laptops, Windows 8 woes in Podcast 315</itunes:subtitle>
+          <itunes:summary>The laptop is dead -- killed by BlackBerry. We discuss that bold claim, Windows 8's disappointing debut, and much more.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Nexus 4, Google Music and an alligator in Podcast 314</title>
+          <link>http://crave.cnet.co.uk/podcast/nexus-4-google-music-and-an-alligator-in-podcast-314-50009775/</link>
+          <pubDate>Fri, 16 Nov 2012 15:55:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_314.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009775</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:44:38</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp314.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Nexus 4, Google Music and an alligator in Podcast 314</itunes:subtitle>
+          <itunes:summary>The Google Nexus 4 is on sale this week -- except it isn't, because it's sold out. How did Google mess up the Nexus so badly?</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Comet sale, Fighting Fantasy and bionic hands in Podcast 313</title>
+          <link>http://crave.cnet.co.uk/podcast/comet-sale-fighting-fantasy-and-bionic-hands-in-podcast-313-50009720/</link>
+          <pubDate>Fri, 09 Nov 2012 15:22:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_313.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009720</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:45:49</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp313.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Comet sale, Fighting Fantasy and bionic hands in Podcast 313</itunes:subtitle>
+          <itunes:summary>We put our hands together for incredible bionic hands, Fighting Fantasy, the Comet sale and the rest of the week's top tech.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Google Nexus 4, Comet and £50 lightbulbs in Podcast 312</title>
+          <link>http://crave.cnet.co.uk/podcast/google-nexus-4-comet-and-50-lightbulbs-in-podcast-312-50009658/</link>
+          <pubDate>Fri, 02 Nov 2012 10:13:01 +0000</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_312.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009658</guid>
+          <itunes:author>Rich Trenholm, Jason Jenkins, Luke Westaway</itunes:author>
+          <itunes:duration>43:10</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp312.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Google Nexus 4, Comet and £50 lightbulbs in Podcast 312</itunes:subtitle>
+          <itunes:summary>Have the Google Nexus 4 and Google Nexus 10 ushered in a new era of wallet-friendly prices for our favourite gadgets?</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>iPad mini, Windows 8, 4G and more in Podcast 311</title>
+          <link>http://crave.cnet.co.uk/podcast/ipad-mini-windows-8-4g-and-more-in-podcast-311-50009604/</link>
+          <pubDate>Fri, 26 Oct 2012 15:53:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_311.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009604</guid>
+          <itunes:author>Luke Westaway</itunes:author>
+          <itunes:duration>43:00</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp311.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>iPad mini, Windows 8, 4G and more in Podcast 311</itunes:subtitle>
+          <itunes:summary>We say hello to the iPad mini, Windows 8, Microsoft Surface, the next Nexus and the UK's first 4G phone network.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Microsoft Surface prices and the next Nexus in Podcast 310</title>
+          <link>http://crave.cnet.co.uk/podcast/microsoft-surface-prices-and-the-next-nexus-in-podcast-310-50009525/</link>
+          <pubDate>Fri, 19 Oct 2012 12:39:02 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_310.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009525</guid>
+          <itunes:author>Luke Westaway</itunes:author>
+          <itunes:duration>40:00</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp310.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Microsoft Surface prices and the next Nexus in Podcast 310</itunes:subtitle>
+          <itunes:summary>Podcast time! All the week's tech news, plus a future full of cameras and why UK phone networks should all be destroyed.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Samsung Galaxy S3 Mini and Microsoft Digits in Podcast 309</title>
+          <link>http://crave.cnet.co.uk/podcast/samsung-galaxy-s3-mini-and-microsoft-digits-in-podcast-309-50009459/</link>
+          <pubDate>Fri, 12 Oct 2012 17:02:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_309.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009459</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+          <itunes:duration>00:42:31</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp309.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Samsung Galaxy S3 Mini and Microsoft Digits in Podcast 309</itunes:subtitle>
+          <itunes:summary>Samsung has created the shrunken Samsung Galaxy S3 Mini, so we've zapped the team with a shrink ray to talk top tech.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Samsung Galaxy Note 2, 4G D-Day, robot bees in Podcast 308</title>
+          <link>http://crave.cnet.co.uk/podcast/samsung-galaxy-note-2-4g-d-day-robot-bees-in-podcast-308-50009395/</link>
+          <pubDate>Fri, 05 Oct 2012 14:54:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_308.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009395</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+          <itunes:duration>00:41:29</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp308.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Samsung Galaxy Note 2, 4G D-Day, robot bees in Podcast 308</itunes:subtitle>
+          <itunes:summary>Pin back your ears as we tackle 4G, the Samsung Galaxy Note 2, technology squabbles, and robots with bee brains.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Windows 8, 4G and the purple iPhone in podcast 307</title>
+          <link>http://crave.cnet.co.uk/podcast/windows-8-4g-and-the-purple-iphone-in-podcast-307-50009322/</link>
+          <pubDate>Fri, 28 Sep 2012 16:46:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_307.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009322</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+          <itunes:duration>00:42:11</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp307.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Windows 8, 4G and the purple iPhone in podcast 307</itunes:subtitle>
+          <itunes:summary>We're gonna keep on lovin' you, says BlackBerry, and we're lovin' Windows 8, 4G and all the latest technology news.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>iPhone 5, iOS 6 Maps and the new thin PS3 in Podcast 306</title>
+          <link>http://crave.cnet.co.uk/podcast/iphone-5-ios-6-maps-and-the-new-thin-ps3-in-podcast-306-50009263/</link>
+          <pubDate>Fri, 21 Sep 2012 16:13:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_306.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009263</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+          <itunes:duration>00:42:11</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp306.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>iPhone 5, iOS 6 Maps and the new thin PS3 in Podcast 306</itunes:subtitle>
+          <itunes:summary>iOS 6 has arrived, and brought a right old map scrap, so we ask: is it time to kill software updates completely?</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>iPhone 5, iOS 6, new iPod touch and iPod nano in podcast 305</title>
+          <link>http://crave.cnet.co.uk/podcast/iphone-5-ios-6-new-ipod-touch-and-ipod-nano-in-podcast-305-50009200/</link>
+          <pubDate>Thu, 13 Sep 2012 17:25:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_305.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009200</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Jason Jenkins</itunes:author>
+          <itunes:duration>00:36:42</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp305.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>iPhone 5, iOS 6, new iPod touch and iPod nano in podcast 305</itunes:subtitle>
+          <itunes:summary>The iPhone 5 divides opinion: is it innovative enough? And we look at what it means for 4G, iOS 6, and the new iPod touch and nano.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Nokia Lumia 920 and Windows Phone 8 in Podcast 304</title>
+          <link>http://crave.cnet.co.uk/podcast/nokia-lumia-920-and-windows-phone-8-in-podcast-304-50009119/</link>
+          <pubDate>Fri, 07 Sep 2012 12:24:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_304.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009119</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Natasha Lomas</itunes:author>
+          <itunes:duration>00:34.43</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp304.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Nokia Lumia 920 and Windows Phone 8 in Podcast 304</itunes:subtitle>
+          <itunes:summary>Are the Nokia Lumia 920, 820 and Windows Phone 8 about to kill Android and the iPhone -- or is it too little, too late?</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Galaxy Note 2 and tonnes more live from IFA in Podcast 303</title>
+          <link>http://crave.cnet.co.uk/podcast/galaxy-note-2-and-tonnes-more-live-from-ifa-in-podcast-303-50009057/</link>
+          <pubDate>Fri, 31 Aug 2012 16:37:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_303.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50009057</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+          <itunes:duration>00:42:51</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp303.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Galaxy Note 2 and tonnes more live from IFA in Podcast 303</itunes:subtitle>
+          <itunes:summary>Luke, Andy and Rich take the CNET UK Podcast on tour, broadcasting (almost) live from the epicentre of the technology world: IFA.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>3D, 4G and iPhone 5 in all-new podcast 302</title>
+          <link>http://crave.cnet.co.uk/podcast/3d-4g-and-iphone-5-in-all-new-podcast-302-50008980/</link>
+          <pubDate>Fri, 24 Aug 2012 16:06:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_302_v2.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008980</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Natasha Lomas</itunes:author>
+          <itunes:duration>00:42:09</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp302.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>3D, 4G and iPhone 5 in all-new podcast 302</itunes:subtitle>
+          <itunes:summary>Welcome to a brand-new podcast for your listening pleasure, full of new features to massage your gadget nodes with aural gizmology.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>Microsoft Surface, Samsung Galaxy Beam in Podcast 301</title>
+          <link>http://crave.cnet.co.uk/podcast/microsoft-surface-samsung-galaxy-beam-in-podcast-301-50008926/</link>
+          <pubDate>Fri, 17 Aug 2012 12:18:02 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_301_v2.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008926</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Katie Collins</itunes:author>
+          <itunes:duration>00:43:45</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp301.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>Microsoft Surface, Samsung Galaxy Beam in Podcast 301</itunes:subtitle>
+          <itunes:summary>How much would you pay for the Microsoft Surface? We debate this pressing tech question and many more.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>iPhone 5, Samsung Galaxy Note 2 and Curiosity in Podcast 300</title>
+          <link>http://crave.cnet.co.uk/podcast/iphone-5-samsung-galaxy-note-2-and-curiosity-in-podcast-300-50008843/</link>
+          <pubDate>Wed, 08 Aug 2012 15:54:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_300_v2.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008843</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andy Hoyle</itunes:author>
+          <itunes:duration>00:53:11</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp300.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>iPhone 5, Samsung Galaxy Note 2 and Curiosity in Podcast 300</itunes:subtitle>
+          <itunes:summary>The CNET UK podcast hits number 300 with news of the iPhone 5, Samsung Galaxy Note 2 and Curiosity on Mars.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 299: iPhone 5, Tom Daley and Olympic tech</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-299-iphone-5-tom-daley-and-olympic-tech-50008767/</link>
+          <pubDate>Wed, 01 Aug 2012 12:45:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_299.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008767</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andy Hoyle</itunes:author>
+          <itunes:duration>00:50:53</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp299.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 299: iPhone 5, Tom Daley and Olympic tech</itunes:subtitle>
+          <itunes:summary>Technology is getting us in trouble: video games could send people to jail, and so could bullying Tom Daley. But it's not all bad news!</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 298: Apple v Samsung, 4G and the Olympics</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-298-apple-v-samsung-4g-and-the-olympics-50008727/</link>
+          <pubDate>Fri, 27 Jul 2012 16:12:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_298.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008727</guid>
+          <itunes:author>Rich Trenholm, Katie Collins, Andy Hoyle</itunes:author>
+          <itunes:duration>00:39:58</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp298.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 298: Apple v Samsung, 4G and the Olympics</itunes:subtitle>
+          <itunes:summary>We're getting into the Olympic spirit by pitting the cream of today's technology against each other.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 297: Nexus 7, Windows 8, who do we appreciate?</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-297-nexus-7-windows-8-who-do-we-appreciate-50008662/</link>
+          <pubDate>Fri, 20 Jul 2012 14:51:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_297.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008662</guid>
+          <itunes:author>Rich Trenholm, Katie Collins, Andy Hoyle</itunes:author>
+          <itunes:duration>00:39:58</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp297.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 297: Nexus 7, Windows 8, who do we appreciate?</itunes:subtitle>
+          <itunes:summary>Microsoft names the date for Windows 8 -- will it change everything? Plus we review the Google Nexus 7 and an electrifying iPhone.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 296: O2, Android gaming and Edgar Wright</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-296-o2-android-gaming-and-edgar-wright-50008606/</link>
+          <pubDate>Fri, 13 Jul 2012 16:08:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_296.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008606</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andy Hoyle</itunes:author>
+          <itunes:duration>00:50:14</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp296.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 296: O2, Android gaming and Edgar Wright</itunes:subtitle>
+          <itunes:summary>It's been a disastrous few days for O2 -- but what went wrong? Plus we meet Scott Pilgrim director Edgar Wright.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 295: YouView, iPad mini and the Higgs Boson</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-295-youview-ipad-mini-and-the-higgs-boson-50008525/</link>
+          <pubDate>Fri, 06 Jul 2012 15:38:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_295.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008525</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andy Hoyle</itunes:author>
+          <itunes:duration>00:37:53</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp295.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 295: YouView, iPad mini and the Higgs Boson</itunes:subtitle>
+          <itunes:summary>We've had to wait aaaages for the Higgs Boson particle and YouView to be revealed -- but turning up late isn't always a bad thing.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 294: Google Nexus 7 Jelly Bean vs the world</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-294-google-nexus-7-jelly-bean-vs-the-world-50008442/</link>
+          <pubDate>Fri, 29 Jun 2012 16:10:02 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_294.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008442</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andy Hoyle</itunes:author>
+          <itunes:duration>00:40:37</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp294.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 294: Google Nexus 7 Jelly Bean vs the world</itunes:subtitle>
+          <itunes:summary>Jelly Bean, the latest version of Android, has arrived on the Google Nexus 7, so we give our verdict in ear-stroking podcast form.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 293: Microsoft Surface v iPad v Android</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-293-microsoft-surface-v-ipad-v-android-50008356/</link>
+          <pubDate>Fri, 22 Jun 2012 15:06:02 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_293.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008356</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andy Hoyle</itunes:author>
+          <itunes:duration>00:43:44</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp293.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 293: Microsoft Surface v iPad v Android</itunes:subtitle>
+          <itunes:summary>With the arrival of the Microsoft Surface, we discuss which is the best tablet: Surface, iPad or Android?</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 292: iOS 6 vs Android ICS</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-292-ios-6-vs-android-ics-50008259/</link>
+          <pubDate>Fri, 15 Jun 2012 12:29:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_292.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008259</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andy Hoyle</itunes:author>
+          <itunes:duration>00:41:48</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp292.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 292: iOS 6 vs Android ICS</itunes:subtitle>
+          <itunes:summary>Now iOS 6 is here we can finally decide which is better: iOS or Android? Plus the new MacBook Pro and the top tech of the week.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 291: iPhone 5, E3 roundup and LinkedIn leaks</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-291-iphone-5-e3-roundup-and-linkedin-leaks-50008178/</link>
+          <pubDate>Fri, 08 Jun 2012 14:56:02 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_291.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008178</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Andy Hoyle</itunes:author>
+          <itunes:duration>00:40:35</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp291.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 291: iPhone 5, E3 roundup and LinkedIn leaks</itunes:subtitle>
+          <itunes:summary>We check out the best games from E3, compare the new iPhone to the old one, and worry our LinkedIn has leaked out.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 290: Prometheus and the next iPhone</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-290-prometheus-and-the-next-iphone-50008131/</link>
+          <pubDate>Fri, 01 Jun 2012 12:44:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_290.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008131</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Jason Jenkins</itunes:author>
+          <itunes:duration>00:39:33</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp290.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 290: Prometheus and the next iPhone</itunes:subtitle>
+          <itunes:summary>We review Alien prequel Prometheus in this spoiler-free podcast, and wonder if the next iPhone can top the Samsung Galaxy S3 and HTC One X.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 289: Celebrating the simpler things</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-289-celebrating-the-simpler-things-50008057/</link>
+          <pubDate>Fri, 25 May 2012 16:08:02 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_289.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50008057</guid>
+          <itunes:author>Rich Trenholm, Luke Westaway, Amie Parker-Williams</itunes:author>
+          <itunes:duration>00:40:09</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp289.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 289: Celebrating the simpler things</itunes:subtitle>
+          <itunes:summary>With the sun out, we're celebrating the simpler things in life and catching up on the latest tech news -- such as the arrival of the Galaxy S3.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 288: Who's paying for Facebook?</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-288-whos-paying-for-facebook-50007993/</link>
+          <pubDate>Fri, 18 May 2012 16:36:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_288.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50007993</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Luke Westaway</itunes:author>
+          <itunes:duration>00:40:50</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp288.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 288: Who's paying for Facebook?</itunes:subtitle>
+          <itunes:summary>What would a World Wide Web be like without ads? That's just one of the questions as the CNET team check out the top tech of the week.</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 287: Is the mobile phone the perfect gadget?</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-287-is-the-mobile-phone-the-perfect-gadget-50007915/</link>
+          <pubDate>Fri, 11 May 2012 15:32:01 +0100</pubDate>
+          <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_287.mp3" type="audio/mpeg"/>
+          <guid isPermaLink="false">cnetuk/podcast/50007915</guid>
+          <itunes:author>Rich Trenholm, Andrew Hoyle, Jason Jenkins</itunes:author>
+          <itunes:duration>00:33:50</itunes:duration>
+          <itunes:explicit>no</itunes:explicit>
+          <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp287.jpg"/>
+          <itunes:keywords></itunes:keywords>
+          <itunes:subtitle>CNET UK Podcast 287: Is the mobile phone the perfect gadget?</itunes:subtitle>
+          <itunes:summary>Bionic implants and AR goggles are all very well, but is anything actually better than the pocket-sized mobile phone?</itunes:summary>
+        </item>
+        <item>
+          <author>podcast@cnet.co.uk (CNET UK)</author>
+          <title>CNET UK Podcast 286: The Samsung Galaxy S3 cometh</title>
+          <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-286-the-samsung-galaxy-s3-cometh-50007859/</link>
+          <pubDate>Tue, 08 May 2012 09:41:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_286.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007859</guid>
+                <itunes:author>Rowdy Rich Trenholm, Don't Luke Now Westaway, Andy According to Hoyle</itunes:author>
+                <itunes:duration>00:37:53</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp286.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 286: The Samsung Galaxy S3 cometh</itunes:subtitle>
+                <itunes:summary>The Samsung Galaxy S3 has finally arrived. Was it worth the wait -- and is it worth your money?</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 285: Galaxy S3, O2 Wallet and ZX Spectrum</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-285-galaxy-s3-o2-wallet-and-zx-spectrum-50007772/</link>
+                <pubDate>Fri, 27 Apr 2012 16:33:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_285.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007772</guid>
+                <itunes:author>RD Trenholm, BL Westaway, APLF Hoyle</itunes:author>
+                <itunes:duration>00:36:25</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp285.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 285: Galaxy S3, O2 Wallet and ZX Spectrum</itunes:subtitle>
+                <itunes:summary>The ZX Spectrum is 30. It quickly became a gaming legend -- much to Spectrum's dismay. Should gadget-makers always listen to fans?</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 284: What's on your TV?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-284-whats-on-your-tv-50007693/</link>
+                <pubDate>Fri, 20 Apr 2012 14:50:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_284.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007693</guid>
+                <itunes:author>Richard D Trenholm esq, B Luke Westaway esq, Andy PLF Hoyle esq</itunes:author>
+                <itunes:duration>00:42:07</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp284.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 284: What's on your TV?</itunes:subtitle>
+                <itunes:summary>Analogue television is no more after the digital switchover. We discuss how we watch TV in the age of boxsets, Netflix and smart TVs.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 283: Why is everything broken?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-283-why-is-everything-broken-50007616/</link>
+                <pubDate>Fri, 13 Apr 2012 16:20:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_283.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007616</guid>
+                <itunes:author>Luke Westaway, Jason Jenkins, Richard Trenholm</itunes:author>
+                <itunes:duration>00:46:50</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp283.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 283: Why is everything broken?</itunes:subtitle>
+                <itunes:summary>The HTC One X and One V are having problems, and they're not alone -- Nokia, TomTom and Apple are all dealing with tech calamities.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 282: Has Ice Cream Sandwich failed?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-282-has-ice-cream-sandwich-failed-50007559/</link>
+                <pubDate>Fri, 06 Apr 2012 13:10:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_282.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007559</guid>
+                <itunes:author>Luke Westaway, Jason Jenkins, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:40:42</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp282.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 282: Has Ice Cream Sandwich failed?</itunes:subtitle>
+                <itunes:summary>We ask whether Ice Cream Sandwich has flopped, plus all the week's hottest tech news on this week's podcast.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 281: Should Apple be selling the iPad as 4G?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-281-should-apple-be-selling-the-ipad-as-4g-50007498/</link>
+                <pubDate>Fri, 30 Mar 2012 13:31:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_281.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007498</guid>
+                <itunes:author>Luke Westaway, Jason Jenkins, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:36:28</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp281.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 281: Should Apple be selling the iPad as 4G?</itunes:subtitle>
+                <itunes:summary>We discuss whether Apple should be allowed to sell the new iPad as '4G', plus all the week's tech news.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 280: ICS, GiffGaff and Jurassic Park</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-280-ics-giffgaff-and-jurassic-park-50007415/</link>
+                <pubDate>Fri, 23 Mar 2012 11:51:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_280.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007415</guid>
+                <itunes:author>Rich Trenholm, Natasha Lomas, Luke Westaway</itunes:author>
+                <itunes:duration>00:36:28</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp-280.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 280: ICS, GiffGaff and Jurassic Park</itunes:subtitle>
+                <itunes:summary>As spring arrives, which gadgets will survive our spring clean-up? And what's gone wrong with Ice Cream Sandwich, GiffGaff and Jurassic Park?</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 279: New iPad, Game and Wi-Fi on the Tube</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-279-new-ipad-game-and-wi-fi-on-the-tube-50007341/</link>
+                <pubDate>Fri, 16 Mar 2012 12:59:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_279.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007341</guid>
+                <itunes:author>Rich Trenholm, Andy Hoyle, Luke Westaway</itunes:author>
+                <itunes:duration>00:47:37</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp279.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 279: New iPad, Game and Wi-Fi on the Tube</itunes:subtitle>
+                <itunes:summary>4G is coming to your phone, the Internet is heading for the London Underground, and the new iPad is finally here.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 278: New iPad, new danger</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-278-new-ipad-new-danger-50007281/</link>
+                <pubDate>Fri, 09 Mar 2012 16:40:02 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_278.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007281</guid>
+                <itunes:author>Rich Trenholm, Jason Jenkins, Luke Westaway</itunes:author>
+                <itunes:duration>00:44:09</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp278.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 278: New iPad, new danger</itunes:subtitle>
+                <itunes:summary>The new iPad has arrived, so here's a new podcast to go with it, also starring Google Play, Apple TV, 3D TV and fighter jets.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 277: Best phones for 2012</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-277-best-phones-for-2012-50007209/</link>
+                <pubDate>Fri, 02 Mar 2012 17:46:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_277.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007209</guid>
+                <itunes:author>Rich Trenholm, Natasha Lomas, Andy Hoyle, Jason Jenkins, Luke Westaway</itunes:author>
+                <itunes:duration>00:48:07</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp277.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 277: Best phones for 2012</itunes:subtitle>
+                <itunes:summary>We're live(ish) from Barcelona, where we've been poking prodding and get excited about the best and worst new phones for 2012.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 276: Phone fiesta</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-276-phone-fiesta-50007086/</link>
+                <pubDate>Fri, 24 Feb 2012 16:26:02 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_276.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50007086</guid>
+                <itunes:author>Rich Trenholm, Andy Hoyle, Jason Jenkins</itunes:author>
+                <itunes:duration>00:37:16</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp276.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 276: Phone fiesta</itunes:subtitle>
+                <itunes:summary>Time to get excited about the brand new phones that'll rock our world this year, from Android to Windows Phone and everything in between.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 275: Your phone is a payphone</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-275-your-phone-is-a-payphone-50006988/</link>
+                <pubDate>Fri, 17 Feb 2012 16:11:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_275.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006988</guid>
+                <itunes:author>Luke Westaway, Natasha Lomas, Rich Trenholm</itunes:author>
+                <itunes:duration>00:45:26</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp275.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 275: Your phone is a payphone</itunes:subtitle>
+                <itunes:summary>The CNET team takes on Pingit and mobile payments, as well as Mountain Lion, Raspberry Pi -- and a hoverboard.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 274: Is the Internet killing television?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-274-is-the-internet-killing-television-50006902/</link>
+                <pubDate>Fri, 10 Feb 2012 16:57:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_274.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006902</guid>
+                <itunes:author>Andy Hoyle, Natasha Lomas, Rich Trenholm</itunes:author>
+                <itunes:duration>00:40:42</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp274.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 274: Is the Internet killing television?</itunes:subtitle>
+                <itunes:summary>Kodak is kaput and the Internet is killing television -- and the Olympics will kill the Internet. But the good news is The Phantom Menace is back!</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 273: Has tech ruined real life?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-273-has-tech-ruined-real-life-50006838/</link>
+                <pubDate>Fri, 03 Feb 2012 15:48:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_273.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006838</guid>
+                <itunes:author>Andy Hoyle, Natasha Lomas, Luke Westaway</itunes:author>
+                <itunes:duration>00:37:30</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp273.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 273: Has tech ruined real life?</itunes:subtitle>
+                <itunes:summary>We love our gadgets, but is it time we stopped staring at screens and just enjoyed the view?</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 272: Classic console combat</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-272-classic-console-combat-50006780/</link>
+                <pubDate>Fri, 27 Jan 2012 16:33:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_272.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006780</guid>
+                <itunes:author>Rich Trenholm, Andy Hoyle, Luke Westaway</itunes:author>
+                <itunes:duration>00:47:28</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp272.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 272: Classic console combat</itunes:subtitle>
+                <itunes:summary>Cast a misty-eyed glance at your formative gaming years to celebrate the Sega Mega Drive being named the best vintage console ever.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 271: So long SOPA</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-271-so-long-sopa-50006724/</link>
+                <pubDate>Fri, 20 Jan 2012 16:47:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_271.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006724</guid>
+                <itunes:author>Rich Trenholm, Andy Hoyle, Luke Westaway</itunes:author>
+                <itunes:duration>00:44:48</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp271.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 271: So long SOPA</itunes:subtitle>
+                <itunes:summary>The Internet has defeated SOPA and PIPA -- but does the war against piracy continue? </itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 270: Best of CES 2012 Live from Las Vegas</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-270-best-of-ces-2012-live-from-las-vegas-50006667/</link>
+                <pubDate>Fri, 13 Jan 2012 16:45:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_270.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006667</guid>
+                <itunes:author>Jason Jenkins, Bridget Carey, Luke Westaway</itunes:author>
+                <itunes:duration>00:21:49</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp270.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 270: Best of CES 2012 Live from Las Vegas</itunes:subtitle>
+                <itunes:summary>The team are in Las Vegas for the Consumer Electronics Show, and they recorded a very special episode on the CNET stage at the show. </itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 269: Back to school</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-269-back-to-school-50006560/</link>
+                <pubDate>Fri, 06 Jan 2012 15:26:02 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_269.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006560</guid>
+                <itunes:author>Rich Trenholm, Andy Hoyle, Luke Westaway</itunes:author>
+                <itunes:duration>00:35:47</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp-269.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 269: Back to school</itunes:subtitle>
+                <itunes:summary>We ask whether today's schools are equipping kids for the digital world, and look back at our own school computing, as well as ahead to the CES tech show. </itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 268: Goodbye 2011, hello 2012</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-268-goodbye-2011-hello-2012-50006469/</link>
+                <pubDate>Wed, 21 Dec 2011 15:33:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_268.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006469</guid>
+                <itunes:author>Rich Trenholm, Jason Jenkins, Amie Parker-Williams</itunes:author>
+                <itunes:duration>00:36:50</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp268.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 268: Goodbye 2011, hello 2012</itunes:subtitle>
+                <itunes:summary>Deck the halls with boughs of holly, it's the Christmas podcast! What's changed our lives in 2011 -- and what's set to rock our world in 2012?</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 267: What we Googled in 2011</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-267-what-we-googled-in-2011-50006426/</link>
+                <pubDate>Fri, 16 Dec 2011 12:49:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_267.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006426</guid>
+                <itunes:author>Rich Trenholm, Jason Jenkins, Katie Collins</itunes:author>
+                <itunes:duration>00:38:26</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp267.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 267: What we Googled in 2011</itunes:subtitle>
+                <itunes:summary>We look back on the iPhone 5, Steve Jobs and the things we Googled in 2011, from scampi to snogging.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 266: We talk tech habits with Jon Bentley</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-266-we-talk-tech-habits-with-jon-bentley-50006365/</link>
+                <pubDate>Fri, 09 Dec 2011 16:10:02 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_266.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006365</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:43:14</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp266.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 266: We talk tech habits with Jon Bentley</itunes:subtitle>
+                <itunes:summary>We talk to The Gadget Show's Jon Bentley about activities that tech has made obsolete in this week's casting of the pod.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 265: Mini-Internets and apps within apps</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-265-mini-internets-and-apps-within-apps-50006316/</link>
+                <pubDate>Fri, 02 Dec 2011 13:24:02 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_265.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006316</guid>
+                <itunes:author>Rich Trenholm, Drew Stearne, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:53:35</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp265.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 265: Mini-Internets and apps within apps</itunes:subtitle>
+                <itunes:summary>With Spotify becoming a mini-Internet for music and Facebook becoming a front-end for the web, what's the future of mini-Internets and apps within apps?</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 264: Battlecruisers in the boozer</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-264-battlecruisers-in-the-boozer-50006251/</link>
+                <pubDate>Fri, 25 Nov 2011 16:38:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_264.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006251</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:53:09</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp264.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 264: Battlecruisers in the boozer</itunes:subtitle>
+                <itunes:summary>We meet the gamers bringing the spaceships and battlecruisers of big-money Starcraft tournaments to your local boozer.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 263: Future music</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-263-future-music-50006127/</link>
+                <pubDate>Fri, 18 Nov 2011 16:32:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_263.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006127</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:44:30</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp263.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 263: Future music</itunes:subtitle>
+                <itunes:summary>It's an exciting time for music as Apple, Google and BlackBerry all launch online music services -- but a backlash is brewing against digital streaming.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 262: Game on!</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-262-game-on-50006043/</link>
+                <pubDate>Fri, 11 Nov 2011 15:08:02 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_262.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50006043</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:52:21</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp262.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 262: Game on!</itunes:subtitle>
+                <itunes:summary>As the big-name games line up to do battle for your Christmas cash, we take a look at the future of the gaming world -- and ask if the smart phone has killed the console.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 261: Cybercrime and punishment</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-261-cybercrime-and-punishment-50005948/</link>
+                <pubDate>Fri, 04 Nov 2011 13:24:01 +0000</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_261.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50005948</guid>
+                <itunes:author>Rich Trenholm, Drew Stearne, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:35:11</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp261.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 261: Cybercrime and punishment</itunes:subtitle>
+                <itunes:summary>It's CNET UK vs the cybercriminals as we discuss whether we need an Internet police -- plus the latest tech news.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 260: Will Nokia save Windows Phone?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-260-will-nokia-save-windows-phone-50005829/</link>
+                <pubDate>Fri, 28 Oct 2011 14:35:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_260.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50005829</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:46:03</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp260.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 260: Will Nokia save Windows Phone?</itunes:subtitle>
+                <itunes:summary>Can Nokia save Windows Phone, and can Windows Phone save Nokia? That's the question in this week's episode of the CNET UK podcast.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 259: Siri seems to be the hardest word</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-259-siri-seems-to-be-the-hardest-word-50005750/</link>
+                <pubDate>Fri, 21 Oct 2011 12:50:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_259.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50005750</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:42:58</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp259.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 259: Siri seems to be the hardest word</itunes:subtitle>
+                <itunes:summary>The podcast team takes on the iPhone 4S, Motorola Razr, Samsung Galaxy Nexus and Ice Cream Sandwich -- and some non-phone-related news too.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 258: BlackBerry BlackOut</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-258-blackberry-blackout-50005635/</link>
+                <pubDate>Fri, 14 Oct 2011 13:04:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_258.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50005635</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:45:47</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp258.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 258: BlackBerry BlackOut</itunes:subtitle>
+                <itunes:summary>BlackBerrys are broken, TVs are melting, and hackers are hacking -- it's all going wrong in the world of technology.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 257: A tribute to Steve Jobs </title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-257-a-tribute-to-steve-jobs-50005535/</link>
+                <pubDate>Thu, 06 Oct 2011 18:01:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_257.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50005535</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle, Jason Jenkins</itunes:author>
+                <itunes:duration>00:44.41</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp257.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 257: A tribute to Steve Jobs </itunes:subtitle>
+                <itunes:summary>We pay tribute to Steve Jobs, the charismatic and visionary mastermind behind Apple. </itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 256: Tinker tailor smart phone spy</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-256-tinker-tailor-smart-phone-spy-50005437/</link>
+                <pubDate>Fri, 30 Sep 2011 16:11:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_256.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50005437</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:42.47</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp256.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 256: Tinker tailor smart phone spy</itunes:subtitle>
+                <itunes:summary>We debate the pros and cons of tinkering with your tech, and take a look at the week's best gadgets. </itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 255: What's the future of gaming?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-255-whats-the-future-of-gaming-50005309/</link>
+                <pubDate>Fri, 23 Sep 2011 15:18:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_255.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50005309</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:53.20</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp255.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 255: What's the future of gaming?</itunes:subtitle>
+                <itunes:summary>Insert coin and press start for the CNET UK Podcast! We're powered up to discuss the future of gaming.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 254: Are smart phones taking over the world?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-254-are-smart-phones-taking-over-the-world-50005192/</link>
+                <pubDate>Fri, 16 Sep 2011 13:58:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_254.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50005192</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:30:25</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp254.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 254: Are smart phones taking over the world?</itunes:subtitle>
+                <itunes:summary>With the new version of Windows borrowing its look from Windows Phone, is the smart phone taking over the world?</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 253: Back to the Future Today</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-253-back-to-the-future-today-50005109/</link>
+                <pubDate>Fri, 09 Sep 2011 13:28:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_253.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50005109</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:42:55</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp253.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 253: Back to the Future Today</itunes:subtitle>
+                <itunes:summary>The Back to the Future shoes are real, and the CNET UK podcast is stuffed full of gadgets that prove we live in the future -- from the Samsung Galaxy Note to invisible tanks.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 252: A lost iPhone 5 and a mad 3D headset</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-252-a-lost-iphone-5-and-a-mad-3d-headset-50004974/</link>
+                <pubDate>Fri, 02 Sep 2011 13:02:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_252.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50004974</guid>
+                <itunes:author>Jason Jenkins, Rory Reid, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:30:24</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp252.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 252: A lost iPhone 5 and a mad 3D headset</itunes:subtitle>
+                <itunes:summary>Apple's prototype iPhone being abandoned in a tequila bar, Sony's crazy 3D headset, Samsung's new 7.7-inch Galaxy Tab and all the goings-on at IFA are in this week's podcast.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 251: Sayonara Steve Jobs</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-251-sayonara-steve-jobs-50004883/</link>
+                <pubDate>Fri, 26 Aug 2011 15:31:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_251.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50004883</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:38:04</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp251.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 251: Sayonara Steve Jobs</itunes:subtitle>
+                <itunes:summary>Love him or hate him, Steve Jobs is always interesting. We debate what's next for Apple, and the chances of the HP TouchPad becoming a must-have hipster accessory.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 250: Is Android doomed?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-250-is-android-doomed-50004788/</link>
+                <pubDate>Fri, 19 Aug 2011 12:32:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_250.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50004788</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:41:37</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp250.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 250: Is Android doomed?</itunes:subtitle>
+                <itunes:summary>The CNET UK Podcast has reached episode 250 in the same week our official Facebook page received its 10,000th Like. Come and celebrate!</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 249: Technology on trial</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-249-technology-on-trial-50004701/</link>
+                <pubDate>Fri, 12 Aug 2011 13:42:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_249.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50004701</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:36:48</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp249.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 249: Technology on trial</itunes:subtitle>
+                <itunes:summary>It's been a tough week for tech: Samsung and Apple battle in court and BlackBerry is blamed as rioters battle in the streets.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 248: Smart phone dumb-down</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-248-smart-phone-dumb-down-50004647/</link>
+                <pubDate>Fri, 05 Aug 2011 15:29:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_248.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50004647</guid>
+                <itunes:author>Flora Graham, Luke Westaway, Andrew Hoyle</itunes:author>
+                <itunes:duration>00:36:53</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp248.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 248: Smart phone dumb-down</itunes:subtitle>
+                <itunes:summary>Ofcom says smart phones are cutting into our leisure time, but we say Angry Birds is the definition of fun. Is it time for a mobile intervention?</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 247: Newz kid on the block</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-247-newz-kid-on-the-block-50004577/</link>
+                <pubDate>Fri, 29 Jul 2011 13:32:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_247.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50004577</guid>
+                <itunes:author>Flora Graham, Rich Trenholm, Luke Westaway</itunes:author>
+                <itunes:duration>00:45:33</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp247.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 247: Newz kid on the block</itunes:subtitle>
+                <itunes:summary>For the first time, an ISP has been ordered to block a pirate site. But you can't block the CNET UK team when we podcast the latest tech news and views.</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 246: The second coming of TV</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-246-the-second-coming-of-tv-50004510/</link>
+                <pubDate>Fri, 22 Jul 2011 16:00:01 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_246.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50004510</guid>
+                <itunes:author>Rich Trenholm, Luke Westaway, Rory Reid</itunes:author>
+                <itunes:duration>00:38:31</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp246.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 246: The second coming of TV</itunes:subtitle>
+                <itunes:summary>The CNET UK podcast team grab the remote and channel-surf the latest news in the world of technology, from the MacBook Air and BlackBerry PlayBook to fighter jets and skydiving iPhones. </itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 245: Discount me out</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-245-discount-me-out-50004439/</link>
+                <pubDate>Fri, 15 Jul 2011 13:00:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_245.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50004439</guid>
+                <itunes:author>Flora Graham, Luke Westaway, Rich Trenholm</itunes:author>
+                <itunes:duration>00:44:20</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp245.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 245: Discount me out</itunes:subtitle>
+                <itunes:summary>O2 Priority Moments has joined Groupon, Vouchercloud and a host of other coupon purveyors in a bid to part you from your cash. But are all these deals more trouble than they're worth?</itunes:summary>
+              </item>
+              <item>
+                <author>podcast@cnet.co.uk (CNET UK)</author>
+                <title>CNET UK Podcast 244: Will Google+ murder Facebook?</title>
+                <link>http://crave.cnet.co.uk/podcast/cnet-uk-podcast-244-will-google-murder-facebook-50004353/</link>
+                <pubDate>Fri, 08 Jul 2011 14:51:02 +0100</pubDate>
+                <enclosure url="http://www.podtrac.com/pts/redirect.mp3?http://cdn-media.cbsinteractive.co.uk/cnetcouk/podcasts/crave/cnetuk_podcast_244.mp3" type="audio/mpeg"/>
+                <guid isPermaLink="false">cnetuk/podcast/50004353</guid>
+                <itunes:author>Flora Graham, Luke Westaway, Jason Jenkins</itunes:author>
+                <itunes:duration>00:33:58</itunes:duration>
+                <itunes:explicit>no</itunes:explicit>
+                <itunes:image href="http://cdn-static.cnet.co.uk/i/c/blg/cat/podcasting/cp244.jpg"/>
+                <itunes:keywords></itunes:keywords>
+                <itunes:subtitle>CNET UK Podcast 244: Will Google+ murder Facebook?</itunes:subtitle>
+                <itunes:summary>You can't get an invite to Google+ for love nor money anymore, which just makes us want to use the would-be Facebook killer even more. But is it any good? We also sing Stevie Wonder's Happy Birthday and talk about the printer that prints in chocolate.</itunes:summary>
+              </item>
+                </channel>
+              </rss>

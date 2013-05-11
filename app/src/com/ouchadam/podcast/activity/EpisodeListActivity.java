@@ -3,11 +3,12 @@ package com.ouchadam.podcast.activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.fragment.ItemListFragment;
 
-public class FeedListActivity extends SherlockFragmentActivity {
+import com.ouchadam.podcast.R;
+import com.ouchadam.podcast.fragment.EpisodeListFragment;
+import com.ouchadam.podcast.pojo.Channel;
+
+public class EpisodeListActivity extends AbstractSprSrsActivity {
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -19,7 +20,8 @@ public class FeedListActivity extends SherlockFragmentActivity {
     private void initFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.add(R.id.item_fragment_container, ItemListFragment.newInstance(getIntent().getStringExtra("channel"), getIntent().getStringExtra("url")));
+        Channel channel = (Channel) getIntent().getSerializableExtra("channel");
+        ft.add(R.id.item_fragment_container, EpisodeListFragment.newInstance(channel));
         ft.commit();
     }
 

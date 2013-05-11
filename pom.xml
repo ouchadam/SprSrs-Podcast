@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -23,12 +23,11 @@
 
   <properties>
     <android.version>4.1.1.4</android.version>
-        <android-test.version>2.3.3</android-test.version>
+    <android-test.version>2.3.3</android-test.version>
     <android.sdk.platform>16</android.sdk.platform>
     <android.maven.plugin.version>3.3.2</android.maven.plugin.version>
     <junit.version>4.10</junit.version>
-    <support-library.version>r7</support-library.version>
-    <scm.branch>master</scm.branch>
+    <support-library.version>r11</support-library.version>
   </properties>
 
   <repositories>
@@ -46,24 +45,6 @@
     </repository>
 
   </repositories>
-
-  <pluginRepositories>
-
-    <pluginRepository>
-      <id>public-mvn-repo.plugin-releases</id>
-      <url>https://github.com/novoda/public-mvn-repo/raw/master/releases</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-
-  </pluginRepositories>
-
-  <scm>
-    <url><!--EXAMPLE https://github.com/novoda/SQLiteProvider/tree/${scm.branch}--></url>
-    <connection><!--EXAMPLE scm:git:git://https://github.com/novoda/SQLiteProvider.git--></connection>
-    <developerConnection><!--EXAMPLE scm:git:ssh://https://github.com/novoda/SQLiteProvider.git--></developerConnection>
-  </scm>
 
   <licenses>
     <license>

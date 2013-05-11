@@ -12,9 +12,12 @@ import android.widget.ProgressBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.novoda.imageloader.core.ImageManager;
+import com.novoda.imageloader.core.LoaderSettings;
+import com.novoda.imageloader.core.cache.LruBitmapCache;
 import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.builder.IntentFactory;
-import com.ouchadam.podcast.database.channel.ChannelListAdapter;
+import com.ouchadam.podcast.activity.AbstractSprSrsActivity;
+import com.ouchadam.podcast.adapter.ChannelListAdapter;
 import com.ouchadam.podcast.database.channel.ChannelLoader;
 import com.ouchadam.podcast.pojo.Channel;
 
@@ -25,6 +28,7 @@ public class ChannelListFragment extends BaseListFragment implements ChannelLoad
     private AddSubscriptionFragment addSubscriptionFragment;
     private ProgressBar progressBar;
     private ChannelLoader channelLoader;
+    private ImageManager imageManager;
 
     public static ChannelListFragment newInstance() {
         return new ChannelListFragment();
@@ -40,6 +44,12 @@ public class ChannelListFragment extends BaseListFragment implements ChannelLoad
         super.onAttach(activity);
         channelLoader = new ChannelLoader(activity.getApplicationContext(), getLoaderManager(), this);
         channelLoader.startWatchingData();
+        LoaderSettings settings = new LoaderSettings.SettingsBuilder()
+                .withDisconnectOnEveryCall(true)
+                .withCacheManager(new LruBitmapCache(getActivity()))
+                .withUpsampling(true)
+                .build(getActivity());
+        imageManager = new ImageManager(getActivity(), settings);
     }
 
     @Override
@@ -80,7 +90,8 @@ public class ChannelListFragment extends BaseListFragment implements ChannelLoad
     @Override
     public void onFinish(List<Channel> channels) {
         progressBar.setVisibility(View.GONE);
-        getListView().setAdapter(new ChannelListAdapter(channels, getActivity().getLayoutInflater()));
+        getListView().setAdapter(new ChannelListAdapter(channels, getActivity().getLayoutInflater(),
+                getActivity(), imageManager));
     }
 
     @Override
@@ -88,7 +99,7 @@ public class ChannelListFragment extends BaseListFragment implements ChannelLoad
         super.onListItemClick(l, v, position, id);
         ChannelListAdapter adapter = (ChannelListAdapter) l.getAdapter();
         Channel channel = adapter.getItem(position);
-        startActivity(IntentFactory.getSubscriptionFeed(channel));
+        ((AbstractSprSrsActivity) getActivity()).getNavigator().toEpisodeList(channel);
     }
 
     public void onChannelAdded() {

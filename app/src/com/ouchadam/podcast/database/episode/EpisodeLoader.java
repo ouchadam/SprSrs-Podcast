@@ -28,16 +28,16 @@ public class EpisodeLoader implements LoaderManager.LoaderCallbacks<Cursor> {
         void onFinish(List<Episode> channels);
     }
 
-    public EpisodeLoader(Context context, LoaderManager manager, Callback callback, String channel) {
+    public EpisodeLoader(Context context, LoaderManager manager, Callback callback, String channelTitle) {
         this.loaderManager = manager;
         this.context = context;
         this.callback = callback;
-        this.channel = channel;
+        this.channel = channelTitle;
         episodeRestorer = new EpisodeRestorer();
-        initChannelObserver(context);
+        initEpisodeObserver(context);
     }
 
-    private void initChannelObserver(Context context) {
+    private void initEpisodeObserver(Context context) {
         context.getContentResolver().registerContentObserver(EPISODE.getUri(), false, new ContentObserver(new Handler()) {
             @Override
             public void onChange(boolean selfChange) {
@@ -49,7 +49,7 @@ public class EpisodeLoader implements LoaderManager.LoaderCallbacks<Cursor> {
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
-        return new ChannelAsyncTaskLoader(context, channel);
+        return new EpisodeAsyncTaskLoader(context, channel);
     }
 
     @Override
@@ -77,11 +77,10 @@ public class EpisodeLoader implements LoaderManager.LoaderCallbacks<Cursor> {
         return context;
     }
 
-    private static class ChannelAsyncTaskLoader extends CursorLoader {
+    private static class EpisodeAsyncTaskLoader extends CursorLoader {
 
-        public ChannelAsyncTaskLoader(Context context, String channel) {
-            super(context, EPISODE.getUri(), null, Tables.Episode.CHANNEL.name() + "=?", new String[]{ channel }, null);
-            forceLoad();
+        public EpisodeAsyncTaskLoader(Context context, String channel) {
+            super(context, EPISODE.getUri(), null, Tables.Episode.CHANNEL.name() + "=?", new String[]{channel}, null);
         }
 
     }

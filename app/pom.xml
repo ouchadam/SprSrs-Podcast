@@ -43,6 +43,12 @@
     </dependency>
 
     <dependency>
+      <groupId>com.novoda.imageloader</groupId>
+      <artifactId>imageloader-core</artifactId>
+      <version>1.5.8</version>
+    </dependency>
+
+    <dependency>
       <groupId>com.ouchadam.podcast</groupId>
       <artifactId>core</artifactId>
       <version>1.0</version>

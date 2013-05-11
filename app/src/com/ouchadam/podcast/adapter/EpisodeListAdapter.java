@@ -13,13 +13,13 @@ import com.ouchadam.podcast.R;
 
 import java.util.List;
 
-public class FeedItemAdapter extends ArrayAdapter<Episode> {
+public class EpisodeListAdapter extends ArrayAdapter<Episode> {
 
     private final int itemLayout;
     private final List<Episode> messages;
     private final LayoutInflater layoutInflater;
 
-    public FeedItemAdapter(Context context, int textViewResourceId, List<Episode> messages) {
+    public EpisodeListAdapter(Context context, int textViewResourceId, List<Episode> messages) {
         super(context, textViewResourceId, messages);
         this.messages = messages;
         this.itemLayout = textViewResourceId;

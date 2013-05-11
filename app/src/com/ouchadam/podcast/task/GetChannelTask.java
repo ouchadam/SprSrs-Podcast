@@ -1,15 +1,15 @@
-package com.ouchadam.podcast;
+package com.ouchadam.podcast.task;
 
 import android.content.ContentResolver;
 import android.os.AsyncTask;
 import android.util.Log;
 
 import com.ouchadam.podcast.database.ContentProviderOperationExecutable;
-import com.ouchadam.podcast.database.Persister;
 import com.ouchadam.podcast.database.SprSrsProvider;
-import com.ouchadam.podcast.database.episode.EpisodeMarshaller;
+import com.ouchadam.podcast.database.channel.ChannelMarshaller;
+import com.ouchadam.podcast.database.Persister;
 import com.ouchadam.podcast.parser.FeedParserFactory;
-import com.ouchadam.podcast.pojo.Episode;
+import com.ouchadam.podcast.pojo.Channel;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -18,13 +18,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 
 import org.xml.sax.SAXException;
 
-public class GetEpisodesTask extends AsyncTask<String, Void, Void> {
+public class GetChannelTask extends AsyncTask<String, Void, Void> {
 
-    public GetEpisodesTask(ContentResolver contentResolver) {
+    public GetChannelTask(ContentResolver contentResolver) {
         this.contentResolver = contentResolver;
     }
 
@@ -33,20 +32,19 @@ public class GetEpisodesTask extends AsyncTask<String, Void, Void> {
     @Override
     protected Void doInBackground(String... strings) {
         String url = strings[0];
-        String channel = strings[1];
-        List<Episode> episodes = new FetchEpisodesTask().getEpisodes(url);
-        Persister<List<Episode>> episodePersister = new Persister<List<Episode>>(new ContentProviderOperationExecutable(contentResolver), new EpisodeMarshaller(channel));
-        episodePersister.persist(episodes);
-        contentResolver.notifyChange(SprSrsProvider.URIs.EPISODE.getUri(), null);
+        Channel channel = new FetchChannelTask().getChannel(url);
+        Persister<Channel> channelPersister = new Persister<Channel>(new ContentProviderOperationExecutable(contentResolver), new ChannelMarshaller(url));
+        channelPersister.persist(channel);
+        contentResolver.notifyChange(SprSrsProvider.URIs.CHANNEL.getUri(), null);
         return null;
     }
 
-    private static class FetchEpisodesTask {
+    private static class FetchChannelTask {
 
         private static final DocumentBuilderFactory FACTORY = DocumentBuilderFactory.newInstance();
         private final DocumentBuilder builder;
 
-        public FetchEpisodesTask() {
+        public FetchChannelTask() {
             try {
                 builder = FACTORY.newDocumentBuilder();
             } catch (ParserConfigurationException e) {
@@ -54,10 +52,10 @@ public class GetEpisodesTask extends AsyncTask<String, Void, Void> {
             }
         }
 
-        public List<Episode> getEpisodes(String url) {
+        public Channel getChannel(String url) {
             try {
-                List<Episode> episodes = FeedParserFactory.getItemParser(builder.parse(getInputStream(url)));
-                return episodes;
+                Channel channel = FeedParserFactory.getChannelParser(builder.parse(getInputStream(url)));
+                return channel;
             } catch (SAXException e) {
                 e.printStackTrace();
             } catch (IOException e) {

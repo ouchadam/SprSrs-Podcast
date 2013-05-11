@@ -5,19 +5,19 @@ import android.content.Loader;
 import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.loader.ImageLoader;
 import com.ouchadam.podcast.pojo.Episode;
 
 import java.io.IOException;
 
-public class DetailsActivity extends SherlockFragmentActivity implements View.OnClickListener, MediaPlayer.OnPreparedListener, LoaderManager.LoaderCallbacks<Bitmap> {
+public class EpisodeDetailsActivity extends AbstractSprSrsActivity implements View.OnClickListener, MediaPlayer.OnPreparedListener, LoaderManager.LoaderCallbacks<Bitmap> {
 
     private static final int LOADER_IMAGE = 1;
     private Episode episode;
@@ -73,6 +73,7 @@ public class DetailsActivity extends SherlockFragmentActivity implements View.On
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setOnPreparedListener(this);
         try {
+            Log.e("XXXXXX", "Trying to load : " + episode.getLink());
             mediaPlayer.setDataSource(episode.getLink());
             mediaPlayer.prepareAsync();
         } catch (IOException e) {
@@ -87,7 +88,7 @@ public class DetailsActivity extends SherlockFragmentActivity implements View.On
 
     @Override
     public Loader<Bitmap> onCreateLoader(int i, Bundle bundle) {
-        return new ImageLoader(this, " ");
+        return new ImageLoader(this, "");
     }
 
     @Override

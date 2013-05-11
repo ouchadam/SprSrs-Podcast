@@ -2,12 +2,12 @@ package com.ouchadam.podcast.activity;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
+
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.TitleUpdater;
 import com.ouchadam.podcast.adapter.PageAdapter;
 
-public class MainActivity extends SherlockFragmentActivity implements TitleUpdater {
+public class MainActivity extends AbstractSprSrsActivity implements TitleUpdater {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

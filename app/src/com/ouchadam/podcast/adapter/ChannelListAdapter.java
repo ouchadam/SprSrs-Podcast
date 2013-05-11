@@ -1,5 +1,6 @@
-package com.ouchadam.podcast.database.channel;
+package com.ouchadam.podcast.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.novoda.imageloader.core.ImageManager;
+import com.novoda.imageloader.core.model.ImageTag;
+import com.novoda.imageloader.core.model.ImageTagFactory;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.pojo.Channel;
 
@@ -16,10 +20,27 @@ public class ChannelListAdapter extends BaseAdapter {
 
     private final List<Channel> channels;
     private final LayoutInflater layoutInflater;
+    private final Context context;
+    private final ImageTagFactory imageTagFactory;
+    private final ImageManager imageManager;
 
-    public ChannelListAdapter(List<Channel> channels, LayoutInflater layoutInflater) {
+    public ChannelListAdapter(List<Channel> channels, LayoutInflater layoutInflater, Context context,
+                              ImageManager imageManager) {
         this.channels = channels;
         this.layoutInflater = layoutInflater;
+        this.context = context;
+        this.imageTagFactory = createImageTagFactory();
+        this.imageManager = imageManager;
+    }
+
+    private static ImageTagFactory createImageTagFactory() {
+        ImageTagFactory imageTagFactory = ImageTagFactory.newInstance(200, 200, R.drawable.app_launcher);
+        return setupImageTagFactory(imageTagFactory);
+    }
+
+    private static ImageTagFactory setupImageTagFactory(ImageTagFactory imageTagFactory) {
+        imageTagFactory.setErrorImageId(R.drawable.app_launcher);
+        return imageTagFactory;
     }
 
     @Override
@@ -60,7 +81,15 @@ public class ChannelListAdapter extends BaseAdapter {
     private void updateViews(ViewHolder holder, Channel channel) {
         holder.title.setText(channel.getTitle());
         holder.category.setText(channel.getCategory());
-        holder.channelImage.setImageResource(R.drawable.feedicon);
+        loadProductImage(holder.channelImage, channel.getImage().imageUrl);
+    }
+
+    private void loadProductImage(ImageView view, String imageUrl) {
+        if (imageUrl != null) {
+            ImageTag tag = imageTagFactory.build(imageUrl, context);
+            view.setTag(tag);
+            imageManager.getLoader().load(view);
+        }
     }
 
     private static class ViewHolder {

@@ -12,38 +12,40 @@ import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
-import com.ouchadam.podcast.GetEpisodesTask;
 import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.adapter.FeedItemAdapter;
-import com.ouchadam.podcast.builder.IntentFactory;
+import com.ouchadam.podcast.activity.AbstractSprSrsActivity;
+import com.ouchadam.podcast.adapter.EpisodeListAdapter;
 import com.ouchadam.podcast.database.episode.EpisodeLoader;
+import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.pojo.Episode;
+import com.ouchadam.podcast.task.GetEpisodesTask;
 
 import java.util.List;
 
-public class ItemListFragment extends SherlockListFragment implements EpisodeLoader.Callback {
+public class EpisodeListFragment extends SherlockListFragment implements EpisodeLoader.Callback {
 
     private ProgressBar progressBar;
     private EpisodeLoader episodeLoader;
+    private Channel channel;
 
-    public ItemListFragment() {}
+    public EpisodeListFragment() {}
 
-    public static ItemListFragment newInstance(String channel, String url) {
-        ItemListFragment fragment = new ItemListFragment();
-        fragment.setArguments(createArgs(channel, url));
+    public static EpisodeListFragment newInstance(Channel channel) {
+        EpisodeListFragment fragment = new EpisodeListFragment();
+        fragment.setArguments(createArgs(channel));
         return fragment;
     }
 
-    private static Bundle createArgs(String channel, String url) {
+    private static Bundle createArgs(Channel channel) {
         Bundle b = new Bundle();
-        b.putString("channel", channel);
-        b.putString("url", url);
+        b.putSerializable("channel", channel);
         return b;
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+        channel = (Channel) getArguments().getSerializable("channel");
         startLoadingFeed();
     }
 
@@ -54,7 +56,7 @@ public class ItemListFragment extends SherlockListFragment implements EpisodeLoa
     }
 
     private void startLoadingFeed(){
-        episodeLoader = new EpisodeLoader(getActivity(), getLoaderManager(), this, getArguments().getString("channel"));
+        episodeLoader = new EpisodeLoader(getActivity(), getLoaderManager(), this, channel.getTitle());
         episodeLoader.startWatchingData();
     }
 
@@ -77,9 +79,10 @@ public class ItemListFragment extends SherlockListFragment implements EpisodeLoa
     }
 
     @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-        super.onListItemClick(l, v, position, id);
-        startActivity(IntentFactory.getMessageDetails(((Episode) l.getItemAtPosition(position))));
+    public void onListItemClick(ListView listView, View v, int position, long id) {
+        super.onListItemClick(listView, v, position, id);
+        Episode episode = (Episode) listView.getItemAtPosition(position);
+        ((AbstractSprSrsActivity) getActivity()).getNavigator().toEpisodeDetails(episode);
     }
 
     @Override
@@ -101,15 +104,14 @@ public class ItemListFragment extends SherlockListFragment implements EpisodeLoa
     }
 
     private void startRefreshService() {
-        String url = getArguments().getString("url");
-        String channel = getArguments().getString("channel");
-        new GetEpisodesTask(getActivity().getContentResolver()).execute(url, channel);
+        new GetEpisodesTask(getActivity().getContentResolver()).start(channel);
     }
 
     @Override
     public void onFinish(List<Episode> episodes) {
         progressBar.setVisibility(View.GONE);
-        getListView().setAdapter(new FeedItemAdapter(getActivity().getApplicationContext(), R.layout.adapter_item_layout, episodes));
+        EpisodeListAdapter adapter = new EpisodeListAdapter(getActivity().getApplicationContext(), R.layout.adapter_item_layout, episodes);
+        getListView().setAdapter(adapter);
     }
 
 }

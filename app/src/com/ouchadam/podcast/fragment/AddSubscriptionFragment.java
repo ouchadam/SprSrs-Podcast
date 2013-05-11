@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.actionbarsherlock.app.SherlockFragment;
-import com.ouchadam.podcast.GetChannelTask;
+import com.ouchadam.podcast.task.GetChannelTask;
 import com.ouchadam.podcast.R;
 
 public class AddSubscriptionFragment extends SherlockFragment implements View.OnClickListener {
