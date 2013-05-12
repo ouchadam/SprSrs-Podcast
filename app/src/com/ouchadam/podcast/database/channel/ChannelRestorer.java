@@ -17,7 +17,6 @@ public class ChannelRestorer implements CursorRestorer<List<Channel>> {
         while (cursor.moveToNext()) {
             channels.add(createChannelFromCursor(cursor));
         }
-        cursor.close();
         return channels;
     }
 

@@ -17,7 +17,6 @@ public class EpisodeRestorer implements CursorRestorer<List<Episode>> {
         while (cursor.moveToNext()) {
             channels.add(createEpisodeFromCursor(cursor));
         }
-        cursor.close();
         return channels;
     }
 

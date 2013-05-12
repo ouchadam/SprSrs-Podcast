@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
+import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 
@@ -47,8 +48,35 @@ public class DataUpdater<T> implements LoaderManager.LoaderCallbacks<Cursor> {
 
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-        T data = restorer.restore(cursor);
-        listener.onDataUpdated(data);
+        Async<T> async = new Async<T>(context, cursor, restorer, listener);
+        async.forceLoad();
+    }
+
+    private static class Async<T> extends AsyncTaskLoader<T> {
+
+        private final Cursor cursor;
+        private final CursorRestorer<T> restorer;
+        private final DataUpdatedListener<T> listener;
+
+        public Async(Context context, Cursor cursor, CursorRestorer<T> restorer, DataUpdatedListener<T> listener) {
+            super(context);
+            this.cursor = cursor;
+            this.restorer = restorer;
+            this.listener = listener;
+        }
+
+        @Override
+        public T loadInBackground() {
+            return restorer.restore(cursor);
+        }
+
+        @Override
+        public void deliverResult(T data) {
+            super.deliverResult(data);
+            if (data != null) {
+                listener.onDataUpdated(data);
+            }
+        }
     }
 
     @Override

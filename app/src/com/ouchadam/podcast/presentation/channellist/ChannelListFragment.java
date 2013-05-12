@@ -96,8 +96,7 @@ public class ChannelListFragment extends BaseListFragment implements DataUpdater
     @Override
     public void onDataUpdated(List<Channel> data) {
         progressBar.setVisibility(View.GONE);
-        getListView().setAdapter(new ChannelListAdapter(data, getActivity().getLayoutInflater(),
-                getActivity(), imageManager));
+        getListView().setAdapter(new ChannelListAdapter(data, getActivity().getLayoutInflater(), getActivity(), imageManager));
     }
 
     @Override
