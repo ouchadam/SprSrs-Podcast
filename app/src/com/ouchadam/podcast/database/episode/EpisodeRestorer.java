@@ -2,22 +2,15 @@ package com.ouchadam.podcast.database.episode;
 
 import android.database.Cursor;
 
-import com.ouchadam.podcast.database.Tables;
 import com.ouchadam.podcast.database.CursorRestorer;
+import com.ouchadam.podcast.database.Tables;
 import com.ouchadam.podcast.pojo.Episode;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class EpisodeRestorer implements CursorRestorer<List<Episode>> {
+public class EpisodeRestorer implements CursorRestorer<Episode> {
 
     @Override
-    public List<Episode> restore(Cursor cursor) {
-        List<Episode> channels = new ArrayList<Episode>();
-        while (cursor.moveToNext()) {
-            channels.add(createEpisodeFromCursor(cursor));
-        }
-        return channels;
+    public Episode restore(Cursor cursor) {
+        return createEpisodeFromCursor(cursor);
     }
 
     private Episode createEpisodeFromCursor(Cursor cursor) {

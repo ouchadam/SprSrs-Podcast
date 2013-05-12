@@ -10,7 +10,7 @@ import org.w3c.dom.Document;
 public abstract class FeedParserFactory {
 
 	public static List<Episode> getItemParser(Document doc){
-        return new FeedItemFactory().parse(doc, 0, 20);
+        return new FeedItemFactory().parse(doc, 0, 15);
 	}
 
     public static Channel getChannelParser(Document doc){

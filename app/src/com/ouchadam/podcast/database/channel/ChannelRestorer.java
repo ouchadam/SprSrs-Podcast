@@ -6,18 +6,11 @@ import com.ouchadam.podcast.database.CursorRestorer;
 import com.ouchadam.podcast.database.Tables;
 import com.ouchadam.podcast.pojo.Channel;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class ChannelRestorer implements CursorRestorer<List<Channel>> {
+public class ChannelRestorer implements CursorRestorer<Channel> {
 
     @Override
-    public List<Channel> restore(Cursor cursor) {
-        List<Channel> channels = new ArrayList<Channel>();
-        while (cursor.moveToNext()) {
-            channels.add(createChannelFromCursor(cursor));
-        }
-        return channels;
+    public Channel restore(Cursor cursor) {
+        return createChannelFromCursor(cursor);
     }
 
     private Channel createChannelFromCursor(Cursor cursor) {

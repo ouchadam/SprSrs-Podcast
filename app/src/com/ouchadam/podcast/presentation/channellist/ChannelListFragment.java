@@ -20,7 +20,7 @@ import com.ouchadam.podcast.base.AbstractSprSrsActivity;
 import com.ouchadam.podcast.base.BaseListFragment;
 import com.ouchadam.podcast.database.DataUpdater;
 import com.ouchadam.podcast.database.SprSrsProvider;
-import com.ouchadam.podcast.database.channel.ChannelRestorer;
+import com.ouchadam.podcast.database.channel.ChannelListRestorer;
 import com.ouchadam.podcast.pojo.Channel;
 
 import java.util.List;
@@ -56,7 +56,7 @@ public class ChannelListFragment extends BaseListFragment implements DataUpdater
 
         DataUpdater.Query query = new DataUpdater.QueryBuilder().withUri(SprSrsProvider.URIs.CHANNEL.getUri()).build();
 
-        dataUpdater = new DataUpdater<List<Channel>>(activity, query, new ChannelRestorer(), this, getLoaderManager());
+        dataUpdater = new DataUpdater<List<Channel>>(activity, query, new ChannelListRestorer(), this, getLoaderManager());
         dataUpdater.startWatchingData();
         imageManager = new ImageManager(getActivity(), createLoaderSettings());
     }

@@ -22,7 +22,7 @@ public class EpisodeListActivity extends AbstractSprSrsActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
         Channel channel = (Channel) getIntent().getSerializableExtra("channel");
-        ft.add(R.id.item_fragment_container, EpisodeListFragment.newInstance(channel));
+        ft.add(R.id.item_fragment_container, EpisodeListFragment.newInstance(channel.getTitle()));
         ft.commit();
     }
 

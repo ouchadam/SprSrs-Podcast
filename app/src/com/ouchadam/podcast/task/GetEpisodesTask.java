@@ -1,12 +1,15 @@
 package com.ouchadam.podcast.task;
 
 import android.content.ContentResolver;
+import android.database.Cursor;
 import android.os.AsyncTask;
 import android.util.Log;
 
 import com.ouchadam.podcast.database.ContentProviderOperationExecutable;
 import com.ouchadam.podcast.database.Persister;
 import com.ouchadam.podcast.database.SprSrsProvider;
+import com.ouchadam.podcast.database.Tables;
+import com.ouchadam.podcast.database.channel.ChannelRestorer;
 import com.ouchadam.podcast.database.episode.EpisodeMarshaller;
 import com.ouchadam.podcast.parser.FeedParserFactory;
 import com.ouchadam.podcast.pojo.Channel;
@@ -23,7 +26,7 @@ import java.util.List;
 
 import org.xml.sax.SAXException;
 
-public class GetEpisodesTask extends AsyncTask<Channel, Void, Void> {
+public class GetEpisodesTask extends AsyncTask<String, Void, Void> {
 
     private final FetchEpisodesTask fetchEpisodesTask;
     private final ContentResolver contentResolver;
@@ -35,18 +38,28 @@ public class GetEpisodesTask extends AsyncTask<Channel, Void, Void> {
         fetchEpisodesTask = new FetchEpisodesTask();
     }
 
-    public void start(Channel channel) {
-        execute(channel);
+    public void start(String channelTitle) {
+        execute(channelTitle);
     }
 
     @Override
-    protected Void doInBackground(Channel... what) {
-        Channel channel = what[0];
+    protected Void doInBackground(String... what) {
+        String channelTitle = what[0];
+        Channel channel = getChannel(channelTitle);
         List<Episode> episodes = fetchEpisodesTask.getEpisodes(channel.getRssLink());
         Persister<List<Episode>> episodePersister = new Persister<List<Episode>>(executor, new EpisodeMarshaller(channel.getTitle()));
         episodePersister.persist(episodes);
-        contentResolver.notifyChange(SprSrsProvider.URIs.EPISODE.getUri(), null);
         return null;
+    }
+
+    private Channel getChannel(String channelTitle) {
+        Cursor query = contentResolver.query(SprSrsProvider.URIs.CHANNEL.getUri(), null, Tables.Channel.TITLE.name() + "=?", new String[]{channelTitle}, null);
+        Channel channel = null;
+        if (query.moveToFirst()) {
+            channel = new ChannelRestorer().restore(query);
+        }
+        query.close();
+        return channel;
     }
 
     private static class FetchEpisodesTask {

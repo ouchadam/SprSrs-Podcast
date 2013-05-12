@@ -27,17 +27,20 @@ public class EpisodeListAdapter extends ArrayAdapter<Episode> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
-
-        if (convertView == null) {
-            convertView = layoutInflater.inflate(itemLayout, null);
-            holder = initViews(convertView);
-            convertView.setTag(holder);
-        } else {
-            holder = (ViewHolder) convertView.getTag();
+    public View getView(int position, View adapterView, ViewGroup parent) {
+        if (adapterView == null) {
+            adapterView = createAdapterView();
         }
+        ViewHolder holder = (ViewHolder) adapterView.getTag();
         setViewText(holder, position);
+        return adapterView;
+    }
+
+    private View createAdapterView() {
+        View convertView;
+        convertView = layoutInflater.inflate(itemLayout, null);
+        ViewHolder holder = initViews(convertView);
+        convertView.setTag(holder);
         return convertView;
     }
 
