@@ -5,9 +5,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.ouchadam.podcast.database.ContentProviderOperationExecutable;
-import com.ouchadam.podcast.database.SprSrsProvider;
-import com.ouchadam.podcast.database.channel.ChannelMarshaller;
 import com.ouchadam.podcast.database.Persister;
+import com.ouchadam.podcast.database.channel.ChannelMarshaller;
 import com.ouchadam.podcast.parser.FeedParserFactory;
 import com.ouchadam.podcast.pojo.Channel;
 
@@ -23,11 +22,15 @@ import org.xml.sax.SAXException;
 
 public class GetChannelTask extends AsyncTask<String, Void, Void> {
 
+    private final ContentResolver contentResolver;
+
     public GetChannelTask(ContentResolver contentResolver) {
         this.contentResolver = contentResolver;
     }
 
-    private final ContentResolver contentResolver;
+    public void start(String url) {
+        execute(url);
+    }
 
     @Override
     protected Void doInBackground(String... strings) {
@@ -35,7 +38,6 @@ public class GetChannelTask extends AsyncTask<String, Void, Void> {
         Channel channel = new FetchChannelTask().getChannel(url);
         Persister<Channel> channelPersister = new Persister<Channel>(new ContentProviderOperationExecutable(contentResolver), new ChannelMarshaller(url));
         channelPersister.persist(channel);
-        contentResolver.notifyChange(SprSrsProvider.URIs.CHANNEL.getUri(), null);
         return null;
     }
 

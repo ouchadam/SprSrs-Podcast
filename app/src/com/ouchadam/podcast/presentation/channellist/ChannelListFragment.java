@@ -2,7 +2,6 @@ package com.ouchadam.podcast.presentation.channellist;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,20 +14,28 @@ import com.actionbarsherlock.view.MenuItem;
 import com.novoda.imageloader.core.ImageManager;
 import com.novoda.imageloader.core.LoaderSettings;
 import com.novoda.imageloader.core.cache.LruBitmapCache;
+import com.novoda.util.ClassCaster;
 import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.base.BaseListFragment;
 import com.ouchadam.podcast.base.AbstractSprSrsActivity;
-import com.ouchadam.podcast.database.channel.ChannelLoader;
+import com.ouchadam.podcast.base.BaseListFragment;
+import com.ouchadam.podcast.database.DataUpdater;
+import com.ouchadam.podcast.database.SprSrsProvider;
+import com.ouchadam.podcast.database.channel.ChannelRestorer;
 import com.ouchadam.podcast.pojo.Channel;
 
 import java.util.List;
 
-public class ChannelListFragment extends BaseListFragment implements ChannelLoader.Callback {
+public class ChannelListFragment extends BaseListFragment implements DataUpdater.DataUpdatedListener<List<Channel>> {
 
-    private AddSubscriptionFragment addSubscriptionFragment;
     private ProgressBar progressBar;
-    private ChannelLoader channelLoader;
+    private DataUpdater<List<Channel>> dataUpdater;
     private ImageManager imageManager;
+
+    private ShowSubscriptionDialog showSubscriptionDialogListener;
+
+    public interface ShowSubscriptionDialog {
+        void onShowSubscriptionDialog();
+    }
 
     public static ChannelListFragment newInstance() {
         return new ChannelListFragment();
@@ -42,11 +49,15 @@ public class ChannelListFragment extends BaseListFragment implements ChannelLoad
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        if (channelLoader != null) {
-            channelLoader.stopWatchingData();
+        showSubscriptionDialogListener = ClassCaster.toListener(activity);
+        if (dataUpdater != null) {
+            dataUpdater.stopWatchingData();
         }
-        channelLoader = new ChannelLoader(activity.getApplicationContext(), getLoaderManager(), this);
-        channelLoader.startWatchingData();
+
+        DataUpdater.Query query = new DataUpdater.QueryBuilder().withUri(SprSrsProvider.URIs.CHANNEL.getUri()).build();
+
+        dataUpdater = new DataUpdater<List<Channel>>(activity, query, new ChannelRestorer(), this, getLoaderManager());
+        dataUpdater.startWatchingData();
         imageManager = new ImageManager(getActivity(), createLoaderSettings());
     }
 
@@ -75,28 +86,17 @@ public class ChannelListFragment extends BaseListFragment implements ChannelLoad
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.subscription_menu_add:
-                initFragment();
+                showSubscriptionDialogListener.onShowSubscriptionDialog();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    private void initFragment() {
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        if (addSubscriptionFragment == null) {
-            addSubscriptionFragment = AddSubscriptionFragment.newInstance();
-        }
-        addSubscriptionFragment.setTargetFragment(this, 0);
-        ft.add(R.id.add_subscription_container, addSubscriptionFragment).commit();
-        View view = getActivity().findViewById(R.id.add_subscription_container);
-        view.setVisibility(View.VISIBLE);
-    }
-
     @Override
-    public void onFinish(List<Channel> channels) {
+    public void onDataUpdated(List<Channel> data) {
         progressBar.setVisibility(View.GONE);
-        getListView().setAdapter(new ChannelListAdapter(channels, getActivity().getLayoutInflater(),
+        getListView().setAdapter(new ChannelListAdapter(data, getActivity().getLayoutInflater(),
                 getActivity(), imageManager));
     }
 
@@ -106,14 +106,6 @@ public class ChannelListFragment extends BaseListFragment implements ChannelLoad
         ChannelListAdapter adapter = (ChannelListAdapter) l.getAdapter();
         Channel channel = adapter.getItem(position);
         ((AbstractSprSrsActivity) getActivity()).getNavigator().toEpisodeList(channel);
-    }
-
-    public void onChannelAdded() {
-        View view = getActivity().findViewById(R.id.add_subscription_container);
-        view.setVisibility(View.GONE);
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.remove(addSubscriptionFragment).commit();
-        addSubscriptionFragment = null;
     }
 
 }

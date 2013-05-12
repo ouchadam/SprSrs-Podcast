@@ -10,7 +10,6 @@
     <FrameLayout
             android:id="@+id/add_subscription_container"
             style="@style/MatchWidth"
-            android:layout_alignParentBottom="true"
-            android:visibility="gone"/>
+            android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
