@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.activity;
+package com.ouchadam.podcast.presentation.activity;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import com.ouchadam.podcast.R;
 import com.ouchadam.podcast.TitleUpdater;
 import com.ouchadam.podcast.adapter.PageAdapter;
+import com.ouchadam.podcast.base.AbstractSprSrsActivity;
 
 public class MainActivity extends AbstractSprSrsActivity implements TitleUpdater {
 

@@ -1,8 +1,8 @@
-package com.ouchadam.podcast.fragment;
+package com.ouchadam.podcast.base;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
+
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;

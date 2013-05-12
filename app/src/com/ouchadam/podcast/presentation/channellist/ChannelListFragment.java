@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.fragment;
+package com.ouchadam.podcast.presentation.channellist;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -16,8 +16,8 @@ import com.novoda.imageloader.core.ImageManager;
 import com.novoda.imageloader.core.LoaderSettings;
 import com.novoda.imageloader.core.cache.LruBitmapCache;
 import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.activity.AbstractSprSrsActivity;
-import com.ouchadam.podcast.adapter.ChannelListAdapter;
+import com.ouchadam.podcast.base.BaseListFragment;
+import com.ouchadam.podcast.base.AbstractSprSrsActivity;
 import com.ouchadam.podcast.database.channel.ChannelLoader;
 import com.ouchadam.podcast.pojo.Channel;
 
@@ -42,14 +42,20 @@ public class ChannelListFragment extends BaseListFragment implements ChannelLoad
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+        if (channelLoader != null) {
+            channelLoader.stopWatchingData();
+        }
         channelLoader = new ChannelLoader(activity.getApplicationContext(), getLoaderManager(), this);
         channelLoader.startWatchingData();
-        LoaderSettings settings = new LoaderSettings.SettingsBuilder()
-                .withDisconnectOnEveryCall(true)
-                .withCacheManager(new LruBitmapCache(getActivity()))
-                .withUpsampling(true)
-                .build(getActivity());
-        imageManager = new ImageManager(getActivity(), settings);
+        imageManager = new ImageManager(getActivity(), createLoaderSettings());
+    }
+
+    private LoaderSettings createLoaderSettings() {
+        return new LoaderSettings.SettingsBuilder()
+                    .withDisconnectOnEveryCall(true)
+                    .withCacheManager(new LruBitmapCache(getActivity()))
+                    .withUpsampling(true)
+                    .build(getActivity());
     }
 
     @Override
@@ -109,4 +115,5 @@ public class ChannelListFragment extends BaseListFragment implements ChannelLoad
         ft.remove(addSubscriptionFragment).commit();
         addSubscriptionFragment = null;
     }
+
 }

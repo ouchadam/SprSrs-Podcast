@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.fragment;
+package com.ouchadam.podcast.presentation.channellist;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,9 +13,7 @@ import com.ouchadam.podcast.R;
 
 public class AddSubscriptionFragment extends SherlockFragment implements View.OnClickListener {
 
-    private Button addSubBtn;
     private EditText editText;
-    private Button cancelSubBtn;
 
     public AddSubscriptionFragment(){}
 
@@ -36,9 +34,9 @@ public class AddSubscriptionFragment extends SherlockFragment implements View.On
     }
 
     private void initAddBtn(View view) {
-        addSubBtn = (Button) view.findViewById(R.id.add_subscription_btn);
+        Button addSubBtn = (Button) view.findViewById(R.id.add_subscription_btn);
         addSubBtn.setOnClickListener(this);
-        cancelSubBtn = (Button) view.findViewById(R.id.cancel_subscription_btn);
+        Button cancelSubBtn = (Button) view.findViewById(R.id.cancel_subscription_btn);
         cancelSubBtn.setOnClickListener(this);
     }
 

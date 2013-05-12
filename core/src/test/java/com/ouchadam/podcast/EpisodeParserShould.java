@@ -38,10 +38,11 @@ public class EpisodeParserShould {
 
     @Test
     public void parse_date_tags() throws Exception {
-        final String xml = "<item><date>test</date></item>";
+        String date = "Sun, 17 Mar 2013 15:58:44 +0000";
+        final String xml = "<item><pubDate>" + date + "</pubDate></item>";
         Document feed = feedParserHelper.createDocFromString(xml);
         Episode episode = episodeParser.parse(feed.getElementsByTagName("item").item(0).getChildNodes());
 
-        assertThat(episode.getDate()).isEqualTo("test");
+        assertThat(episode.getDate()).isEqualTo(date);
     }
 }

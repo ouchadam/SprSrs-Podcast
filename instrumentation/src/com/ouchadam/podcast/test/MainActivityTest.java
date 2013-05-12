@@ -2,7 +2,7 @@ package com.ouchadam.podcast.test;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.ouchadam.podcast.activity.MainActivity;
+import com.ouchadam.podcast.presentation.activity.MainActivity;
 
 public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActivity> {
 

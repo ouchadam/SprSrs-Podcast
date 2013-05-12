@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.adapter;
+package com.ouchadam.podcast.presentation.channellist;
 
 import android.content.Context;
 import android.view.LayoutInflater;

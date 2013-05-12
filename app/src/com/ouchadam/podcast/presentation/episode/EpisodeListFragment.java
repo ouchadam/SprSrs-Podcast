@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.fragment;
+package com.ouchadam.podcast.presentation.episode;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,8 +13,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.activity.AbstractSprSrsActivity;
-import com.ouchadam.podcast.adapter.EpisodeListAdapter;
+import com.ouchadam.podcast.base.AbstractSprSrsActivity;
 import com.ouchadam.podcast.database.episode.EpisodeLoader;
 import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.pojo.Episode;

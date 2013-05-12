@@ -1,4 +1,6 @@
-package com.ouchadam.podcast.fragment;
+package com.ouchadam.podcast.presentation.download;
+
+import com.ouchadam.podcast.base.BaseListFragment;
 
 public class DownloadsFragment extends BaseListFragment {
 

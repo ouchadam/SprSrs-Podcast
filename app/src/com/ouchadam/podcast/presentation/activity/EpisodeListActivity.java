@@ -1,11 +1,12 @@
-package com.ouchadam.podcast.activity;
+package com.ouchadam.podcast.presentation.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import com.ouchadam.podcast.R;
-import com.ouchadam.podcast.fragment.EpisodeListFragment;
+import com.ouchadam.podcast.base.AbstractSprSrsActivity;
+import com.ouchadam.podcast.presentation.episode.EpisodeListFragment;
 import com.ouchadam.podcast.pojo.Channel;
 
 public class EpisodeListActivity extends AbstractSprSrsActivity {

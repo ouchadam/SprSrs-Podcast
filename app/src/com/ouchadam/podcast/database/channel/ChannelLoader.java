@@ -70,10 +70,6 @@ public class ChannelLoader implements LoaderManager.LoaderCallbacks<Cursor> {
         return hashCode();
     }
 
-    public Context getContext() {
-        return context;
-    }
-
     private static class ChannelAsyncTaskLoader extends CursorLoader {
 
         public ChannelAsyncTaskLoader(Context context) {

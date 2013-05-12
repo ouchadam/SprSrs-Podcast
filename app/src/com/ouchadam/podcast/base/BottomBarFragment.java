@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.fragment;
+package com.ouchadam.podcast.base;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

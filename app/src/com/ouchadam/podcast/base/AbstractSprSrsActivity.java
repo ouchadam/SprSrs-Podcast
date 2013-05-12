@@ -1,4 +1,4 @@
-package com.ouchadam.podcast.activity;
+package com.ouchadam.podcast.base;
 
 import android.os.Bundle;
 

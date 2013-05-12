@@ -10,7 +10,7 @@
             android:layout_weight="0.1"/>
 
     <fragment
-            android:name="com.ouchadam.podcast.fragment.BottomBarFragment"
+            android:name="com.ouchadam.podcast.base.BottomBarFragment"
             style="@style/MatchWidth"
             android:layout_weight="0.9"/>
 

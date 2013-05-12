@@ -17,7 +17,7 @@
     android:label="@string/app_name"
     android:theme="@style/MyTheme">
 
-    <activity android:name=".activity.MainActivity">
+    <activity android:name=".presentation.activity.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
@@ -25,10 +25,10 @@
     </activity>
 
     <activity
-      android:name=".activity.EpisodeListActivity"
+      android:name=".presentation.activity.EpisodeListActivity"
       android:label="Episodes" />
     <activity
-      android:name=".activity.EpisodeDetailsActivity"
+      android:name=".presentation.activity.EpisodeDetailsActivity"
       android:label="Details" />
 
     <!-- PROVIDERS -->

@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.ouchadam.podcast.fragment.ChannelListFragment;
-import com.ouchadam.podcast.fragment.DownloadsFragment;
+import com.ouchadam.podcast.presentation.channellist.ChannelListFragment;
+import com.ouchadam.podcast.presentation.download.DownloadsFragment;
 
 public class PageAdapter extends FragmentStatePagerAdapter {
 

@@ -4,12 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
-import com.ouchadam.podcast.activity.EpisodeDetailsActivity;
-import com.ouchadam.podcast.activity.EpisodeListActivity;
+import com.ouchadam.podcast.presentation.activity.EpisodeDetailsActivity;
+import com.ouchadam.podcast.presentation.activity.EpisodeListActivity;
 import com.ouchadam.podcast.pojo.Channel;
 import com.ouchadam.podcast.pojo.Episode;
-
-import static com.ouchadam.podcast.navigation.Navigator.ActivityIntentFactory.getActivity;
 
 public class Navigator {
 
@@ -38,19 +36,12 @@ public class Navigator {
     }
 
     private void navigateTo(Class<? extends Activity> klass) {
-        Intent activity = getActivity(context, klass);
+        Intent activity = intentBuilder.start(klass).build();
         start(activity);
     }
 
     private void start(Intent intent) {
         context.startActivity(intent);
-    }
-
-    protected static class ActivityIntentFactory {
-        public static Intent getActivity(Context context, Class<? extends Activity> klass) {
-            return new Intent(context, klass);
-        }
-
     }
 
 }

@@ -6,8 +6,6 @@ import android.content.Intent;
 
 import java.io.Serializable;
 
-import static com.ouchadam.podcast.navigation.Navigator.ActivityIntentFactory.getActivity;
-
 public class IntentBuilder {
 
     private final Context context;
@@ -18,7 +16,12 @@ public class IntentBuilder {
     }
 
     public IntentBuilder start(Class<? extends Activity> klass) {
-        this.intent = getActivity(context, klass);
+        this.intent = ActivityIntentFactory.getActivity(context, klass);
+        return this;
+    }
+
+    public IntentBuilder start() {
+        this.intent = new Intent();
         return this;
     }
 
@@ -49,6 +52,12 @@ public class IntentBuilder {
             throw new RuntimeException("You must call start on the IntentBuilder");
         }
         return intent;
+    }
+
+    protected static class ActivityIntentFactory {
+        public static Intent getActivity(Context context, Class<? extends Activity> klass) {
+            return new Intent(context, klass);
+        }
     }
 
 }
